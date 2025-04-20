@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.logo-corner {
+  position: fixed;
+  top: 8px;
+  left: -17px;
+  z-index: 100;
+}
+
+.logo-img {
+  height: 108px;
+  width: auto;
+  opacity: 0.9; 
+}
+
+.landing-container {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #e0f7fa, #ffffff);
+  z-index: 1;
+}
+
+.landing-box {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 400px;
+}
+
+.landing-box h1 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #00796b;
+}
+
+.tagline {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.role-button {
+  text-decoration: none;
+  padding: 12px 24px;
+  background-color: #00796b;
+  color: white;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  text-align: center;
+}
+
+.role-button:hover {
+  background-color: #004d40;
+}
