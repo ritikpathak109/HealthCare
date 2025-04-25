@@ -1,3 +1,4 @@
+/* Reset & base styles */
 * {
   margin: 0;
   padding: 0;
@@ -8,21 +9,43 @@ html, body {
   height: 100%;
   width: 100%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
 }
 
-.logo-corner {
+/* Logo and portal name in navbar */
+.navbar {
   position: fixed;
-  top: 8px;
-  left: 8px; /* Changed from -17px to fit mobile view better */
-  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #00796b;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 200;
 }
 
-.logo-img {
-  height: 80px; /* Reduced for better fit on small screens */
+.navbar .logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo-img {
+  height: 80px;
   width: auto;
   opacity: 0.9;
+  margin-right: 10px;
 }
 
+.navbar .portal-name {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Landing Page */
 .landing-container {
   position: fixed;
   inset: 0;
@@ -32,6 +55,7 @@ html, body {
   background: linear-gradient(to right, #e0f7fa, #ffffff);
   z-index: 1;
   padding: 20px; /* Prevents the box from touching edges on mobile */
+  margin-top: 80px; /* Space below navbar */
 }
 
 .landing-box {
@@ -96,5 +120,9 @@ html, body {
 
   .logo-img {
     height: 60px;
+  }
+
+  .portal-name {
+    font-size: 18px;
   }
 }

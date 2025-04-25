@@ -12,32 +12,50 @@ html, body {
   overflow-x: hidden;
 }
 
-/* Logo in corner */
-.logo-corner {
+/* Navbar styles */
+.navbar {
+  background-color: #00796b; /* Match the landing page navbar color */
+  padding: 10px 20px; /* Adjusted padding to match the landing page */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   position: fixed;
-  top: 8px;
-  left: 8px;
-  z-index: 100;
-  padding: 10px; /* Added padding for spacing */
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10; /* Ensure navbar stays on top */
 }
 
-.logo-img {
-  height: 80px;
+.navbar .logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo-img {
+  height: 80px; /* Adjusted logo size */
   width: auto;
   opacity: 0.9;
+  margin-right: 10px;
+}
+
+.navbar .portal-name {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Main wrapper */
 .wrapper {
   min-height: 100vh;
-  background: linear-gradient(to right, #e0f7fa, #ffffff);
+  background: linear-gradient(to right, #e0f7fa, #ffffff); /* Gradient background */
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
   z-index: 1;
   overflow-y: auto;
-  margin-top: 100px; /* Added margin-top to avoid overlap with logo */
+  margin-top: 80px; /* Adjusted margin-top to align with navbar height */
 }
 
 /* Form container */
@@ -102,7 +120,7 @@ select:focus {
 button {
   margin-top: 20px;
   padding: 12px;
-  background-color: #009688;
+  background-color: #00796b;
   color: white;
   border: none;
   border-radius: 6px;
@@ -112,7 +130,7 @@ button {
 }
 
 button:hover {
-  background-color: #00796b;
+  background-color: #004d40;
 }
 
 /* Responsive adjustments */
@@ -123,7 +141,7 @@ button:hover {
   }
 
   .logo-img {
-    height: 60px;
+    height: 60px; /* Adjust logo size for small screens */
   }
 
   .container {
