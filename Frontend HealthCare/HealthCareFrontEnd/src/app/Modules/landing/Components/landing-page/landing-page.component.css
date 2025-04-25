@@ -13,14 +13,14 @@ html, body {
 .logo-corner {
   position: fixed;
   top: 8px;
-  left: -17px;
+  left: 8px; /* Changed from -17px to fit mobile view better */
   z-index: 100;
 }
 
 .logo-img {
-  height: 108px;
+  height: 80px; /* Reduced for better fit on small screens */
   width: auto;
-  opacity: 0.9; 
+  opacity: 0.9;
 }
 
 .landing-container {
@@ -31,6 +31,7 @@ html, body {
   justify-content: center;
   background: linear-gradient(to right, #e0f7fa, #ffffff);
   z-index: 1;
+  padding: 20px; /* Prevents the box from touching edges on mobile */
 }
 
 .landing-box {
@@ -39,7 +40,7 @@ html, body {
   padding: 40px;
   border-radius: 12px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  width: 90%;
+  width: 100%;
   max-width: 400px;
 }
 
@@ -72,6 +73,28 @@ html, body {
   text-align: center;
 }
 
-.role-button:hover {
-  background-color: #004d40;
+/* Hover for larger devices only */
+@media (hover: hover) {
+  .role-button:hover {
+    background-color: #004d40;
+  }
+}
+
+/* Responsive styles for smaller devices */
+@media (max-width: 480px) {
+  .landing-box {
+    padding: 24px;
+  }
+
+  .landing-box h1 {
+    font-size: 20px;
+  }
+
+  .tagline {
+    font-size: 14px;
+  }
+
+  .logo-img {
+    height: 60px;
+  }
 }
