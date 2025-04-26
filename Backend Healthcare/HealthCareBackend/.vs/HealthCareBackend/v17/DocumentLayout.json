@@ -102,8 +102,7 @@
               "RelativeToolTip": "HealthCareBackend\\Repositories\\MasterTableRepository.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAYwBoAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T15:41:45.318Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-25T15:41:45.318Z"
             },
             {
               "$type": "Document",
@@ -115,8 +114,7 @@
               "RelativeToolTip": "HealthCareBackend\\DTOs\\StateDTO.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T15:34:36.485Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-25T15:34:36.485Z"
             },
             {
               "$type": "Document",
@@ -128,8 +126,7 @@
               "RelativeToolTip": "HealthCareBackend\\DTOs\\RoleDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T15:34:02.943Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-25T15:34:02.943Z"
             },
             {
               "$type": "Document",
@@ -141,8 +138,7 @@
               "RelativeToolTip": "HealthCareBackend\\Models\\MyDbContext.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAqwA4AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T13:01:57.709Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-17T13:01:57.709Z"
             },
             {
               "$type": "Document",
@@ -152,7 +148,7 @@
               "RelativeDocumentMoniker": "HealthCareBackend\\Program.cs",
               "ToolTip": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\Program.cs",
               "RelativeToolTip": "HealthCareBackend\\Program.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAkwDcAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAkwC8AAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-18T07:07:44.179Z",
               "EditorCaption": ""
@@ -167,8 +163,7 @@
               "RelativeToolTip": "HealthCareBackend\\Services\\MasterTableService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T15:44:18.845Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-25T15:44:18.845Z"
             },
             {
               "$type": "Document",
@@ -180,8 +175,7 @@
               "RelativeToolTip": "HealthCareBackend\\DTOs\\GenderDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T15:34:09.875Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-25T15:34:09.875Z"
             },
             {
               "$type": "Document",
@@ -193,8 +187,7 @@
               "RelativeToolTip": "HealthCareBackend\\Controllers\\MasterTableController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T15:50:40.187Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-25T15:50:40.187Z"
             },
             {
               "$type": "Document",
@@ -206,8 +199,7 @@
               "RelativeToolTip": "HealthCareBackend\\WeatherForecast.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T16:09:14.552Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-25T16:09:14.552Z"
             },
             {
               "$type": "Document",
@@ -219,8 +211,7 @@
               "RelativeToolTip": "HealthCareBackend\\Services\\PatientRegistrationService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T05:52:04.275Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-20T05:52:04.275Z"
             },
             {
               "$type": "Document",
@@ -232,8 +223,7 @@
               "RelativeToolTip": "HealthCareBackend\\DTOs\\CountryDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T15:34:25.927Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-25T15:34:25.927Z"
             },
             {
               "$type": "Document",
@@ -257,8 +247,7 @@
               "RelativeToolTip": "HealthCareBackend\\Repositories\\LoginRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T13:25:47.016Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-17T13:25:47.016Z"
             },
             {
               "$type": "Document",
@@ -282,8 +271,7 @@
               "RelativeToolTip": "HealthCareBackend\\Controllers\\PatientRegistrationController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T05:54:34.83Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-20T05:54:34.83Z"
             },
             {
               "$type": "Document",
