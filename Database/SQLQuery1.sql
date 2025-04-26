@@ -10,7 +10,7 @@ VALUES
 ('Patient'),
 ('Doctor');
 
-
+select * from RoleMaster
 
 -- GENDER MASTER TABLE (MALE, FEMALE, OTHER)
 CREATE TABLE GenderMaster (
@@ -84,6 +84,8 @@ CREATE TABLE UsersLogin (
 
 -- STORES PATIENT-SPECIFIC INFO
 CREATE TABLE PatientsDetails (
+	PatientFirstName varchar(150),
+	PatientLastName varchar(150),
     PatientId INT IDENTITY(1,1) PRIMARY KEY,
     DateofBirth Date,
     GenderId INT foreign key references GenderMaster(GenderId),
@@ -97,6 +99,8 @@ CREATE TABLE PatientsDetails (
     CreatedDate DATETIME DEFAULT GETDATE(),
     UpdatedDate DATETIME DEFAULT GETDATE()
 );
+
+
 
 -- Stored procedure foor login
 create procedure USP_UserLogin
@@ -113,7 +117,9 @@ end
 
 
 --STORED PROCEDURE TO ADD PATIENT DATA
-CREATE PROCEDURE USP_RegisterPatient
+create PROCEDURE USP_RegisterPatient
+	@PatientFirstName NVarchar(150),
+	@PatientLastName Nvarchar(150),
     @UserName NVARCHAR(150),
     @UserEmail NVARCHAR(150),
     @UserPassword NVARCHAR(255),
@@ -133,12 +139,13 @@ BEGIN
 
     SET @UserId = SCOPE_IDENTITY();
 
-    INSERT INTO PatientsDetails(DateofBirth, GenderId, CountryId, StateId, PatientAddress, PatientPhoneNumber, UserId)
-    VALUES ( @DateofBirth, @GenderId, @CountryId, @StateId, @PatientAddress, @PatientPhoneNumber, @UserId);
+    INSERT INTO PatientsDetails(PatientFirstName, PatientLastName, DateofBirth, GenderId, CountryId, StateId, PatientAddress, PatientPhoneNumber, UserId)
+    VALUES (@PatientFirstName, @PatientLastName, @DateofBirth, @GenderId, @CountryId, @StateId, @PatientAddress, @PatientPhoneNumber, @UserId);
 END
 
 exec USP_RegisterPatient 'ritikpathak109', 'ritikpathak109@gamil.com', 'Ritik@123', 2, '2001-01-14', 1, 1,1 ,'Dhaula Kuan New Delhi', 7011291675
 select * from UsersLogin
+
 select * from PatientsDetails
 
 

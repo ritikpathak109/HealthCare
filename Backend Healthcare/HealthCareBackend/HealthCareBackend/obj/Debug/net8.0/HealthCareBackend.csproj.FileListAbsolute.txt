@@ -138,3 +138,4 @@ C:\Users\ritik\Desktop\HealthCare Project\Backend Healthcare\HealthCareBackend\H
 C:\Users\ritik\Desktop\HealthCare Project\Backend Healthcare\HealthCareBackend\HealthCareBackend\obj\Debug\net8.0\HealthCareBackend.pdb
 C:\Users\ritik\Desktop\HealthCare Project\Backend Healthcare\HealthCareBackend\HealthCareBackend\obj\Debug\net8.0\HealthCareBackend.genruntimeconfig.cache
 C:\Users\ritik\Desktop\HealthCare Project\Backend Healthcare\HealthCareBackend\HealthCareBackend\obj\Debug\net8.0\ref\HealthCareBackend.dll
+C:\Users\ritik\Desktop\HealthCare Project\Backend Healthcare\HealthCareBackend\HealthCareBackend\obj\Debug\net8.0\HealthCareBackend.sourcelink.json

@@ -8,7 +8,11 @@ namespace HealthCareBackend.Models
         public MyDbContext(DbContextOptions options): base(options) {}
 
         public DbSet<LoginResultDTO> LoginResult { get; set; }
-
+        public DbSet<PatientRegistrationDTO> PatientsDetails { get; set; }
+        public DbSet<CountryDTO> CountryMaster { get; set; }
+        public DbSet<StateDTO> StateMaster { get; set; }
+        public DbSet<RoleDTO> RoleMaster { get; set; }
+        public DbSet<GenderDTO> GenderMaster { get; set; }
 
     }
 }

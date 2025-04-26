@@ -22,12 +22,24 @@ builder.Services.AddSwaggerGen();
 // Register your services and repositories
 builder.Services.AddScoped<LoginRepository>();
 builder.Services.AddScoped<LoginService>();
+builder.Services.AddScoped<PatientRegistrationService>();
+builder.Services.AddScoped<PatientRegistrationRepository>();
+builder.Services.AddScoped<MasterTableRepository>();
+builder.Services.AddScoped<MasterTableService>();
 
 // Configure DbContext with the correct connection string
 builder.Services.AddDbContext<MyDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
-
+builder.Services.AddCors(b =>
+{
+    b.AddPolicy("policyCors", p =>
+    {
+        p.AllowAnyOrigin();
+        p.AllowAnyHeader();
+        p.AllowAnyMethod();
+    });
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -36,7 +48,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseCors("policyCors");
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

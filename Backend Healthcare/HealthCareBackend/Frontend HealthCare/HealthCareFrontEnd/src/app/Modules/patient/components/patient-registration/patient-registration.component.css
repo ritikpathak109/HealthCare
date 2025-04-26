@@ -1,0 +1,150 @@
+/* Reset & base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #00796b; /* Match the landing page navbar color */
+  padding: 10px 20px; /* Adjusted padding to match the landing page */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10; /* Ensure navbar stays on top */
+}
+
+.navbar .logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo-img {
+  height: 80px; /* Adjusted logo size */
+  width: auto;
+  opacity: 0.9;
+  margin-right: 10px;
+}
+
+.navbar .portal-name {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Main wrapper */
+.wrapper {
+  min-height: 100vh;
+  background: linear-gradient(to right, #e0f7fa, #ffffff); /* Gradient background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 1;
+  overflow-y: auto;
+  margin-top: 80px; /* Adjusted margin-top to align with navbar height */
+}
+
+/* Form container */
+.container {
+  width: 100%;
+  max-width: 700px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 128, 128, 0.2);
+}
+
+/* Header */
+h2 {
+  text-align: center;
+  color: #00796b;
+  margin-bottom: 25px;
+}
+
+/* Form structure */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Two-column rows */
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+/* Individual form groups */
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 100px;
+}
+
+label {
+  margin-bottom: 6px;
+  color: #004d4d;
+  font-size: 14px;
+}
+
+input,
+select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  width: 100%;
+}
+
+select:focus {
+  border-color: #4facfe;
+}
+
+/* Submit button */
+button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #004d40;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .logo-img {
+    height: 60px; /* Adjust logo size for small screens */
+  }
+
+  .container {
+    padding: 20px;
+  }
+}
