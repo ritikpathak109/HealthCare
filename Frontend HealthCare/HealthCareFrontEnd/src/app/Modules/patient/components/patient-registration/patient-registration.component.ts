@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { PatientServiceService } from 'src/app/Services/patient-service.service';
 
 @Component({
@@ -10,73 +11,95 @@ import { PatientServiceService } from 'src/app/Services/patient-service.service'
 })
 export class PatientRegistrationComponent implements OnInit {
 
-
   selectedCountry: any;
   countries: any;
   states: any;
   roles: any;
   gender: any;
 
-  constructor(private fb: FormBuilder, private empreg: PatientServiceService,private route: Router) {}
+  constructor(private fb: FormBuilder, private patientregsrv: PatientServiceService, private route: Router, private toastr: ToastrService,) {}
 
-
-
-  patitentRegisterForm = this.fb.group({
-    PatientFirstName: ['', [Validators.required]],
-    PatientLastName: ['', [Validators.required]],
-    UserName: ['', [Validators.required]],
-    UserEmail: ['', [Validators.required]],
-    UserPassword: ['', [Validators.required]],
+  patientRegisterForm = this.fb.group({
+    PatientFirstName: ['', [Validators.required, Validators.pattern('^[a-zA-Z ]*$'), Validators.minLength(3)]], 
+    PatientLastName: ['', [Validators.required, Validators.pattern('^[a-zA-Z ]*$'),  Validators.minLength(3)]],  
+    UserName: ['', [Validators.required, Validators.minLength(3)]],  
+    UserEmail: ['', [Validators.required, Validators.email, Validators.pattern('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$')]],  
+    UserPassword: ['', [Validators.required, Validators.pattern('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$')]],  
     RoleId: ['', [Validators.required]],
     DateofBirth: ['', [Validators.required]],
     GenderId: ['', [Validators.required]],
     CountryId: ['', [Validators.required]],
     StateId: ['', [Validators.required]],
-    PatientAddress: ['', [Validators.required]],
-    PatientPhoneNumber: ['', [Validators.required]],
- 
+    PatientAddress: ['', [Validators.required,  Validators.minLength(5)]],
+    PatientPhoneNumber: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]], 
   });
+
   ngOnInit() {
     this.loadCountries();
-    this.patitentRegisterForm.get('CountryId')?.valueChanges.subscribe((countryId) => {
+    this.patientRegisterForm.get('CountryId')?.valueChanges.subscribe((countryId) => {
       if (countryId) {
         this.loadStates(countryId);
+      } else {
+        this.states = [];
+        this.patientRegisterForm.get('StateId')?.setValue('');
       }
     });
+
     this.loadRoles();
     this.loadGender();
   }
 
+  onSubmit() {
+    if (this.patientRegisterForm.valid) {
+      console.log(this.patientRegisterForm.value);
+      if (confirm('Do you want to register this employee? ')) {
+        const formData= this.patientRegisterForm.value;
+        this.patientregsrv.registerPatient(formData).subscribe((res) => {
+     
+          this.toastr.success('Registration Successful!', '', {
+            timeOut: 1500,
+            positionClass: 'toast-top-left',
+          });
+          
+       
+          setTimeout(() => {
+            this.patientRegisterForm.reset();
+          }, 1500); 
+        });
+      }
+    } else {
+      this.toastr.error('Please fill Registration form correctly!', '', {
+        timeOut: 1500,
+        positionClass: 'toast-top-left',
+      });
+    }
+  }
 
   loadCountries() {
-    this.empreg.getCountires().subscribe((res) => {
+    this.patientregsrv.getCountires().subscribe((res) => {
       this.countries = res;
       console.log(this.countries);
     });
   }
+
   loadStates(countryId: any) {
-    this.empreg.getStates(countryId).subscribe((res) => {
+    this.patientregsrv.getStates(countryId).subscribe((res) => {
       this.states = res;
-      console.log(this.states);
+     
     });
-  }
-  onCountryChange(cid: any) {
-    this.empreg.getStates(cid).subscribe((data) => {
-      this.states = data;
-    });
-    console.log(this.states);
   }
 
   loadRoles() {
-    this.empreg.getRoles().subscribe((res) => {
+    this.patientregsrv.getRoles().subscribe((res) => {
       this.roles = res;
-      console.log(this.roles);
+     
     });
   }
+
   loadGender() {
-    this.empreg.getGenders().subscribe((res) => {
+    this.patientregsrv.getGenders().subscribe((res) => {
       this.gender = res;
-      console.log(this.gender);
+    
     });
   }
 }

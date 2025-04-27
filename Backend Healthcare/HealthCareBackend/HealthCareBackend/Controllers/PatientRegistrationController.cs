@@ -17,7 +17,7 @@ namespace HealthCareBackend.Controllers
         }
 
         [HttpPost("Register-Patient")]
-        public IActionResult RegisterPatient([FromForm] PatientRegistrationDTO patientDto)
+        public IActionResult RegisterPatient([FromBody] PatientRegistrationDTO patientDto)
         {
             if (patientDto == null)
             {

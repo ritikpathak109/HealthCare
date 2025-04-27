@@ -206,90 +206,19 @@
         ],
         "requestBody": {
           "content": {
-            "multipart/form-data": {
+            "application/json": {
               "schema": {
-                "type": "object",
-                "properties": {
-                  "PatientFirstName": {
-                    "type": "string"
-                  },
-                  "PatientLastName": {
-                    "type": "string"
-                  },
-                  "UserName": {
-                    "type": "string"
-                  },
-                  "UserEmail": {
-                    "type": "string"
-                  },
-                  "UserPassword": {
-                    "type": "string"
-                  },
-                  "RoleId": {
-                    "type": "integer",
-                    "format": "int32"
-                  },
-                  "DateofBirth": {
-                    "type": "string",
-                    "format": "date-time"
-                  },
-                  "GenderId": {
-                    "type": "integer",
-                    "format": "int32"
-                  },
-                  "CountryId": {
-                    "type": "integer",
-                    "format": "int32"
-                  },
-                  "StateId": {
-                    "type": "integer",
-                    "format": "int32"
-                  },
-                  "PatientAddress": {
-                    "type": "string"
-                  },
-                  "PatientPhoneNumber": {
-                    "type": "string"
-                  }
-                }
-              },
-              "encoding": {
-                "PatientFirstName": {
-                  "style": "form"
-                },
-                "PatientLastName": {
-                  "style": "form"
-                },
-                "UserName": {
-                  "style": "form"
-                },
-                "UserEmail": {
-                  "style": "form"
-                },
-                "UserPassword": {
-                  "style": "form"
-                },
-                "RoleId": {
-                  "style": "form"
-                },
-                "DateofBirth": {
-                  "style": "form"
-                },
-                "GenderId": {
-                  "style": "form"
-                },
-                "CountryId": {
-                  "style": "form"
-                },
-                "StateId": {
-                  "style": "form"
-                },
-                "PatientAddress": {
-                  "style": "form"
-                },
-                "PatientPhoneNumber": {
-                  "style": "form"
-                }
+                "$ref": "#/components/schemas/PatientRegistrationDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PatientRegistrationDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PatientRegistrationDTO"
               }
             }
           }
@@ -351,6 +280,60 @@
             "format": "int32"
           },
           "countryName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PatientRegistrationDTO": {
+        "type": "object",
+        "properties": {
+          "patientFirstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "patientLastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "userName": {
+            "type": "string",
+            "nullable": true
+          },
+          "userEmail": {
+            "type": "string",
+            "nullable": true
+          },
+          "userPassword": {
+            "type": "string",
+            "nullable": true
+          },
+          "roleId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dateofBirth": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "genderId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "countryId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "stateId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "patientAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "patientPhoneNumber": {
             "type": "string",
             "nullable": true
           }

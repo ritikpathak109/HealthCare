@@ -7,8 +7,8 @@ import { HttpClient } from '@angular/common/http';
 export class PatientServiceService {
 
   constructor(private http: HttpClient) { }
-  getPatients() {
-    return this.http.get('http://localhost:5165/api/Patient/Register-Patient');
+  registerPatient(addUser:any){
+    return this.http.post('http://localhost:5165/api/Patient/Register-Patient',addUser)
   }
   getCountires(){
     return this.http.get('http://localhost:5165/api/MasterTable/Get-Countries')

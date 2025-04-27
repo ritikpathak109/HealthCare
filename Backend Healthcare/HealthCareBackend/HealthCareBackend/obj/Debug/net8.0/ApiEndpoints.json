@@ -110,64 +110,9 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "PatientFirstName",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "PatientLastName",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "UserName",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "UserEmail",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "UserPassword",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "RoleId",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "DateofBirth",
-        "Type": "System.DateTime",
-        "IsRequired": false
-      },
-      {
-        "Name": "GenderId",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "CountryId",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "StateId",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "PatientAddress",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "PatientPhoneNumber",
-        "Type": "System.String",
-        "IsRequired": false
+        "Name": "patientDto",
+        "Type": "HealthCareBackend.DTOs.PatientRegistrationDTO",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
