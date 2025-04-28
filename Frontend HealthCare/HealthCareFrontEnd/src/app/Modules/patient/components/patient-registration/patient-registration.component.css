@@ -131,6 +131,7 @@ select:focus {
   width: 200px; /* Added width for the button */
   margin-left: auto;
   margin-right: auto;
+  font-weight: bold;
 }
 
 .btn:hover {

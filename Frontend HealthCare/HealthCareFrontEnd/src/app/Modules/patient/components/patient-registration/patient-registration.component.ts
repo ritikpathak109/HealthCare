@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ToastrService } from 'ngx-toastr';
+
 import { PatientServiceService } from 'src/app/Services/patient-service.service';
 
 @Component({
@@ -17,7 +17,7 @@ export class PatientRegistrationComponent implements OnInit {
   roles: any;
   gender: any;
 
-  constructor(private fb: FormBuilder, private patientregsrv: PatientServiceService, private route: Router, private toastr: ToastrService,) {}
+  constructor(private fb: FormBuilder, private patientregsrv: PatientServiceService, private route: Router) {}
 
   patientRegisterForm = this.fb.group({
     PatientFirstName: ['', [Validators.required, Validators.pattern('^[a-zA-Z ]*$'), Validators.minLength(3)]], 

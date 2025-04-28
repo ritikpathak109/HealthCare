@@ -113,6 +113,7 @@ button {
     border-radius: 6px;
     cursor: pointer;
     font-size: 16px;
+    font-weight: bold;
     transition: background-color 0.3s;
 }
 
@@ -124,8 +125,9 @@ button:hover {
 .form-footer {
     margin-top: 20px;
     text-align: center;
-    font-size: 12px;
+    font-size: 16px;
     color: #555;
+    cursor: pointer;
 }
 
 .form-footer a {
