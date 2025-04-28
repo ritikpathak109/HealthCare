@@ -1,21 +1,21 @@
-/* Reset & base styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   overflow-x: hidden;
 }
 
-/* Navbar styles */
+/* Navbar styles (same as before) */
 .navbar {
-  background-color: #00796b; /* Match the landing page navbar color */
-  padding: 10px 20px; /* Adjusted padding to match the landing page */
+  background-color: #00796b;
+  padding: 10px 20px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -23,7 +23,7 @@ html, body {
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 10; /* Ensure navbar stays on top */
+  z-index: 10;
 }
 
 .navbar .logo-container {
@@ -32,7 +32,7 @@ html, body {
 }
 
 .navbar .logo-img {
-  height: 80px; /* Adjusted logo size */
+  height: 80px;
   width: auto;
   opacity: 0.9;
   margin-right: 10px;
@@ -45,20 +45,20 @@ html, body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Main wrapper */
+/* Main wrapper (modified for spacing) */
 .wrapper {
   min-height: 100vh;
-  background: linear-gradient(to right, #e0f7fa, #ffffff); /* Gradient background */
+  background: linear-gradient(to right, #e0f7fa, #ffffff);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
   z-index: 1;
   overflow-y: auto;
-  margin-top: 80px; /* Adjusted margin-top to align with navbar height */
+  margin-top: 80px; /* Added margin-top to create space below navbar */
 }
 
-/* Form container */
+/* Container (modified to add margin) */
 .container {
   width: 100%;
   max-width: 700px;
@@ -66,22 +66,23 @@ html, body {
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 128, 128, 0.2);
+  margin-top: 20px; /* Added margin-top to create space above the container */
 }
 
-/* Header */
+/* Header (same as before) */
 h2 {
   text-align: center;
   color: #00796b;
   margin-bottom: 25px;
 }
 
-/* Form structure */
+/* Form structure (same as before) */
 form {
   display: flex;
   flex-direction: column;
 }
 
-/* Two-column rows */
+/* Form row (same as before) */
 .form-row {
   display: flex;
   gap: 20px;
@@ -89,7 +90,7 @@ form {
   flex-wrap: wrap;
 }
 
-/* Individual form groups */
+/* Form group (same as before) */
 .form-group {
   flex: 1;
   display: flex;
@@ -116,8 +117,8 @@ select:focus {
   border-color: #4facfe;
 }
 
-/* Submit button */
-button {
+/* Submit button (modified for centering) */
+.btn {
   margin-top: 20px;
   padding: 12px;
   background-color: #00796b;
@@ -127,13 +128,19 @@ button {
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s;
+  width: 200px; /* Added width for the button */
+  margin-left: auto;
+  margin-right: auto;
 }
 
-button:hover {
+.btn:hover {
   background-color: #004d40;
 }
+.form-row.justify-content-center{
+  justify-content: center;
+}
 
-/* Responsive adjustments */
+/* Responsive adjustments (same as before) */
 @media (max-width: 768px) {
   .form-row {
     flex-direction: column;
@@ -141,7 +148,7 @@ button:hover {
   }
 
   .logo-img {
-    height: 60px; /* Adjust logo size for small screens */
+    height: 60px;
   }
 
   .container {

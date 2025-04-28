@@ -22,6 +22,9 @@ export class PatientServiceService {
   getGenders(){
     return this.http.get('http://localhost:5165/api/MasterTable/Get-Gender')
   }
+  loginUser(login:any){
+    return this.http.post('http://localhost:5165/api/Login/LoginUser',login,{responseType:'text'})
+  }
 
   
 }

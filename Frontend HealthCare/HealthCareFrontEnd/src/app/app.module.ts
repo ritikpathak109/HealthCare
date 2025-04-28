@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -20,10 +21,8 @@ import { CommonModule } from '@angular/common';
     FormsModule,
     CommonModule,
     ReactiveFormsModule,
+    RouterModule
 
-    ToastrModule.forRoot({ timeOut: 5000, 
-      positionClass: 'toast-top-right', 
-      preventDuplicates: true, })
   ],
   providers: [],
   bootstrap: [AppComponent]

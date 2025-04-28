@@ -55,23 +55,12 @@ export class PatientRegistrationComponent implements OnInit {
       if (confirm('Do you want to register this employee? ')) {
         const formData= this.patientRegisterForm.value;
         this.patientregsrv.registerPatient(formData).subscribe((res) => {
-     
-          this.toastr.success('Registration Successful!', '', {
-            timeOut: 1500,
-            positionClass: 'toast-top-left',
-          });
-          
-       
-          setTimeout(() => {
-            this.patientRegisterForm.reset();
-          }, 1500); 
+          alert('Registration Successful!');
+        this.patientRegisterForm.reset();
         });
       }
     } else {
-      this.toastr.error('Please fill Registration form correctly!', '', {
-        timeOut: 1500,
-        positionClass: 'toast-top-left',
-      });
+      alert('Please fill Registration form correctly!');
     }
   }
 

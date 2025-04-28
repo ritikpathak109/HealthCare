@@ -5,6 +5,7 @@ import { LandingRoutingModule } from './landing-routing.module';
 import { LandingPageComponent } from './Components/landing-page/landing-page.component';
 
 
+
 @NgModule({
   declarations: [
     LandingPageComponent
