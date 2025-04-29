@@ -8,6 +8,6 @@ export class LoginService {
 
   constructor(private http: HttpClient) { }
   loginUser(login:any){
-    return this.http.post('http://localhost:5165/api/Login/LoginUser',login,{responseType:'text'})
+    return this.http.post<any>('http://localhost:5165/api/Login/LoginUser',login)
   }
 }

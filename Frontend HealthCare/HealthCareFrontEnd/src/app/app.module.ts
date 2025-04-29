@@ -8,6 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { LoginModule } from './Modules/login/login.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { RouterModule } from '@angular/router';
     FormsModule,
     CommonModule,
     ReactiveFormsModule,
-    RouterModule
+    RouterModule,
+    LoginModule
 
   ],
   providers: [],

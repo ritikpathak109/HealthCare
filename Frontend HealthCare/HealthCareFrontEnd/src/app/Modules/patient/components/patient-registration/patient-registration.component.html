@@ -135,15 +135,9 @@
             <span>*</span> Address must be at least 5 characters long.
           </div>
         </div>
-        <div class="form-group">
-          <label>Role</label>
-          <select formControlName="RoleId">
-            <option value="">--Select--</option>
-            <option *ngFor="let role of roles" [value]="role.roleId">{{ role.roleName }}</option>
-          </select>
-          <div *ngIf="patientRegisterForm.get('RoleId')?.hasError('required') && patientRegisterForm.get('RoleId')?.touched" style="color: red; font-weight: bold; font-size: 12px;">
-            <span>*</span> Role is required.
-          </div>
+         <div class="form-group">
+            <label>Role</label>
+            <input type="text" formControlName="RoleName" readonly/>
         </div>
       </div>
       <div class="form-row justify-content-center">
