@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
-const ROLE_IDS: { [key: string]: number } = {
-  'patient': 1,
-  'doctor': 2,
-  'admin': 3,
-};
-
 @Component({
   selector: 'app-landing-page',
   templateUrl: './landing-page.component.html',
@@ -16,26 +10,20 @@ export class LandingPageComponent {
   constructor(private router: Router) { }
 
   navigateToAdmin() {
-    this.setRoleAndNavigate('admin');
+    localStorage.setItem('userRoleId', '1');
+    localStorage.setItem('userRoleName', 'admin');
+    this.router.navigate(['/admin']);
   }
 
   navigateToDoctor() {
-    this.setRoleAndNavigate('doctor');
+    localStorage.setItem('userRoleId', '3');
+    localStorage.setItem('userRoleName', 'doctor');
+    this.router.navigate(['/doctor']);
   }
 
   navigateToPatient() {
-    this.setRoleAndNavigate('patient');
+    localStorage.setItem('userRoleId', '2');
+    localStorage.setItem('userRoleName', 'patient');
+    this.router.navigate(['/patient']);
   }
-
-  private setRoleAndNavigate(roleName: string) {
-    const roleId = ROLE_IDS[roleName];
-    if (roleId) {
-      localStorage.setItem('userRoleId', roleId.toString());
-      localStorage.setItem('userRoleName', roleName);
-      this.router.navigate([`/${roleName}`]);
-    } else {
-      console.error(`Role ID not found for role: ${roleName}`);
-    }
-  }
-
 }

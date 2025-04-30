@@ -16,7 +16,8 @@ export class PatientRegistrationComponent implements OnInit {
   states: any;
   roles: any;
   gender: any;
-
+  RoleName: any;
+  selectedRoleName: string = '';
   constructor(private fb: FormBuilder, private patientregsrv: PatientServiceService, private route: Router) {}
 
   patientRegisterForm = this.fb.group({
@@ -25,16 +26,26 @@ export class PatientRegistrationComponent implements OnInit {
     UserName: ['', [Validators.required, Validators.minLength(3)]],  
     UserEmail: ['', [Validators.required, Validators.email, Validators.pattern('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$')]],  
     UserPassword: ['', [Validators.required, Validators.pattern('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$')]],  
-    RoleId: ['', [Validators.required]],
+    RoleId: ['', [Validators.required], ],
     DateofBirth: ['', [Validators.required]],
     GenderId: ['', [Validators.required]],
     CountryId: ['', [Validators.required]],
     StateId: ['', [Validators.required]],
     PatientAddress: ['', [Validators.required,  Validators.minLength(5)]],
     PatientPhoneNumber: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]], 
+  
   });
 
   ngOnInit() {
+    const selectedRoleId = localStorage.getItem('userRoleId');
+   
+  
+    if (selectedRoleId) {
+      this.patientRegisterForm.patchValue({
+        RoleId: selectedRoleId
+      });
+    }
+
     this.loadCountries();
     this.patientRegisterForm.get('CountryId')?.valueChanges.subscribe((countryId) => {
       if (countryId) {
@@ -51,12 +62,15 @@ export class PatientRegistrationComponent implements OnInit {
 
   onSubmit() {
     if (this.patientRegisterForm.valid) {
-      console.log(this.patientRegisterForm.value);
       if (confirm('Do you want to register this employee? ')) {
         const formData= this.patientRegisterForm.value;
         this.patientregsrv.registerPatient(formData).subscribe((res) => {
           alert('Registration Successful!');
         this.patientRegisterForm.reset();
+        localStorage.removeItem('userRoleId');
+        localStorage.removeItem('userRoleName');
+        this.route.navigate(['/login']);
+
         });
       }
     } else {

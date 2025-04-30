@@ -106,8 +106,7 @@
               "RelativeToolTip": "HealthCareBackend\\DTOs\\PatientRegistrationDTO.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAywBgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T05:43:56.937Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-20T05:43:56.937Z"
             },
             {
               "$type": "Document",
@@ -117,7 +116,7 @@
               "RelativeDocumentMoniker": "HealthCareBackend\\Repositories\\PatientRegistrationRepository.cs",
               "ToolTip": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\Repositories\\PatientRegistrationRepository.cs",
               "RelativeToolTip": "HealthCareBackend\\Repositories\\PatientRegistrationRepository.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAcwCgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAA2wCgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-20T05:50:04.083Z",
               "EditorCaption": ""
@@ -168,8 +167,7 @@
               "RelativeToolTip": "HealthCareBackend\\DTOs\\LoginResultDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T12:56:31.276Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-17T12:56:31.276Z"
             },
             {
               "$type": "Document",

@@ -10,9 +10,11 @@
     <h1>Welcome to HealthEase Portal</h1>
     <p class="tagline">Select your role to proceed</p>
     <div class="button-group">
-      <a routerLink="/admin" class="role-button">Admin</a>
-      <a routerLink="/doctor" class="role-button">Doctor</a>
-      <a routerLink="/patient" class="role-button">Patient</a>
+      <button class="role-button" (click)="navigateToAdmin()">Admin</button>
+      <button class="role-button"  (click)="navigateToDoctor()">Doctor</button>
+      <button class="role-button"  (click)="navigateToPatient()">Patient</button>
+      
+      
     </div>
   </div>
 </div>
