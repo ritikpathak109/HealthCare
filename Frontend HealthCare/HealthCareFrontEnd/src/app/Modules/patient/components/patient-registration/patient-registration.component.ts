@@ -38,8 +38,6 @@ export class PatientRegistrationComponent implements OnInit {
 
   ngOnInit() {
     const selectedRoleId = localStorage.getItem('userRoleId');
-   
-  
     if (selectedRoleId) {
       this.patientRegisterForm.patchValue({
         RoleId: selectedRoleId

@@ -100,15 +100,28 @@ CREATE TABLE PatientsDetails (
     UpdatedDate DATETIME DEFAULT GETDATE()
 );
 
+--VIEW TO GET DYNAMIC AGE
+CREATE VIEW vw_PatientProfile AS
+SELECT 
+    p.PatientId,
+    u.UserName,
+    p.PatientPhoneNumber,
+	p.PatientFirstName,
+	P.PatientLastName,
+
+    YEAR(GETDATE()) - YEAR(p.DateOfBirth) AS Age
+FROM PatientsDetails p
+JOIN UsersLogin u ON p.UserId = u.UserId
+WHERE p.IsDeleted = 0 AND p.IsActive = 1;
 
 
 -- Stored procedure foor login
-create procedure USP_UserLogin
+alter procedure USP_UserLogin
 @UserName varchar(150),
 @UserPassword varchar(150)
 as
 begin
-select UL.UserName, R.RoleName from UsersLogin UL join RoleMaster R on UL.RoleId=R.RoleId
+select UL.UserName,Ul.UserId, R.RoleName, R.RoleId from UsersLogin UL join RoleMaster R on UL.RoleId=R.RoleId
 where UL.UserName= @UserName
 and UL.UserPassword= @UserPassword and UL.IsDeleted=0 and UL.IsActive=1
 end

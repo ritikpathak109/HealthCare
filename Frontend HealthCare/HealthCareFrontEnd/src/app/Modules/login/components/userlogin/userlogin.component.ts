@@ -37,13 +37,14 @@ onLogin() {
 
       localStorage.setItem('userName', res.userName);
       localStorage.setItem('roleName', res.roleName);
-
+      localStorage.setItem('userId', res.userId);
+    
       if (res.roleName === 'Admin') {
         this.router.navigate(['/admin']);
       } else if (res.roleName === 'Doctor') {
         this.router.navigate(['/doctor']);
       } else if (res.roleName === 'Patient') {
-        this.router.navigate(['/patient']);
+        this.router.navigate(['/patient/dashboard']);
       } else {
         alert('Unknown role!');
       }

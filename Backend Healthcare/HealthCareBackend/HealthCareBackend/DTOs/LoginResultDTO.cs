@@ -8,6 +8,10 @@ namespace HealthCareBackend.DTOs
         public string UserName { get; set; }
         public string RoleName { get; set; }
 
-       
+        public int RoleId { get; set; }
+        public int UserId { get; set; }
+
+
+
     }
 }
