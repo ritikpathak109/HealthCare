@@ -162,17 +162,37 @@ select * from UsersLogin
 select * from PatientsDetails
 
 
+CREATE PROCEDURE USP_GetPatientProfile
+    @UserId INT
+AS
+BEGIN
+    SELECT 
+        p.PatientId,
+        p.UserId,
+        u.UserEmail,
+        p.PatientFirstName,
+        p.PatientLastName,
+        p.PatientPhoneNumber,
+        p.PatientAddress,
+        g.Gender,
+        c.CountryName,
+        s.StateName,
+        DATEDIFF(YEAR, p.DateOfBirth, GETDATE()) AS Age
+    FROM 
+        PatientsDetails p
+    JOIN 
+        GenderMaster g ON p.GenderId = g.GenderId
+    JOIN 
+        CountryMaster c ON p.CountryId = c.CountryId
+    JOIN 
+        StateMaster s ON p.StateId = s.StateId
+    JOIN 
+        UsersLogin u ON p.UserId = u.UserId
+    WHERE 
+        p.UserId = @UserId AND p.IsDeleted = 0;
+END;
 
---VIEW TO GET DYNAMIC AGE
-CREATE VIEW vw_PatientProfile AS
-SELECT 
-    p.PatientId,
-    u.UserName,
-    p.PatientPhoneNumber,
-    YEAR(GETDATE()) - YEAR(p.DateOfBirth) AS Age
-FROM PatientsDetails p
-JOIN UsersLogin u ON p.UserId = u.UserId
-WHERE p.IsDeleted = 0 AND p.IsActive = 1;
+
 
 
 
