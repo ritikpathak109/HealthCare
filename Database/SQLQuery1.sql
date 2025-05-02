@@ -192,6 +192,8 @@ BEGIN
         p.UserId = @UserId AND p.IsDeleted = 0;
 END;
 
+exec usp_getpatientprofile 1
+
 
 
 
