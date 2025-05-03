@@ -26,6 +26,8 @@ builder.Services.AddScoped<PatientRegistrationService>();
 builder.Services.AddScoped<PatientRegistrationRepository>();
 builder.Services.AddScoped<MasterTableRepository>();
 builder.Services.AddScoped<MasterTableService>();
+builder.Services.AddScoped<PatientDetailService>();
+builder.Services.AddScoped<PatientDetailsRepository>();
 
 // Configure DbContext with the correct connection string
 builder.Services.AddDbContext<MyDbContext>(options =>

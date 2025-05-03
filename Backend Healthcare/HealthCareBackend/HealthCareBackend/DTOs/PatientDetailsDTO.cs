@@ -12,7 +12,7 @@ namespace HealthCareBackend.DTOs
             public string PatientLastName { get; set; }
             public string PatientPhoneNumber { get; set; }
             public string PatientAddress { get; set; }
-            public string GenderName { get; set; }
+            public string Gender { get; set; }
             public string CountryName { get; set; }
             public string StateName { get; set; }
             public int Age { get; set; }

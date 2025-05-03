@@ -22,6 +22,9 @@ export class PatientServiceService {
   getGenders(){
     return this.http.get('http://localhost:5165/api/MasterTable/Get-Gender')
   }
+  getPatientDetails(userId:any){
+    return this.http.get(`http://localhost:5165/api/PatientDetails/Get-PatientDetails/${userId}`)
+  }
   
 
   

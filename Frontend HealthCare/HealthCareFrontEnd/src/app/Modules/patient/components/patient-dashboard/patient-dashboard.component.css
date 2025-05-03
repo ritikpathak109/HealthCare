@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #00796b;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.navbar .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo-img {
+    height: 80px;
+    width: auto;
+    opacity: 0.9;
+    margin-right: 10px;
+}
+
+.navbar .portal-name {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Main Content Wrapper */
+.main-content {
+    background: linear-gradient(to right, #e0f7fa, #ffffff);
+    min-height: calc(100vh - 50px);
+    padding: 90px 20px 20px 20px; /* Increased padding-top to account for fixed navbar and add more space*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container Styles */
+.container {
+    width: 100%;
+    max-width: 800px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 128, 128, 0.2);
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+h2 {
+    text-align: center;
+    color: #00796b;
+    margin-bottom: 25px;
+}
+
+.card {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+}
+
+.card h3 {
+    color: #00796b;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.card p {
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 16px;
+}
+
+.card p strong {
+    color: #004d40;
+}
+
+@media (max-width: 768px) {
+    .navbar .logo-img {
+        height: 60px;
+    }
+
+    .container {
+        padding: 20px;
+        margin-top: 80px;
+    }
+
+    .main-content {
+        padding-top: 80px;
+    }
+}

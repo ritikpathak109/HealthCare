@@ -1,6 +1,7 @@
 ﻿using HealthCareBackend.DTOs;
 using HealthCareBackend.Models;
 using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 
 namespace HealthCareBackend.Repositories
 {
@@ -14,18 +15,13 @@ namespace HealthCareBackend.Repositories
 
         }
 
- 
-
-        public List<PatientDetailsDTO> PatientDetails(int userId)
+        public List<PatientDetailsDTO> GetPateintbyId(int userId)
         {
-            var parameter = new[]{
-                new SqlParameter("@UserId ", userId ),
-                
-            };
-           return _context.USP_GetPatientProfile("EXEC USP_GetPatientProfile @UserId", parameter).ToList();
+            var param = new SqlParameter("@UserId", userId);
 
-
+            return _context.USP_GetPatientProfile.FromSqlRaw("EXEC USP_GetPatientProfile @UserId", param).ToList();
         }
+
 
     }
 
