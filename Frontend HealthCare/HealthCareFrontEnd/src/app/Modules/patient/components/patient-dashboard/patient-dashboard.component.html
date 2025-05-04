@@ -1,26 +1,26 @@
 <nav class="navbar">
   <div class="logo-container">
-      <img src="assets/images/Logo.png" alt="HealthEase Logo" class="logo-img">
-      <span class="portal-name">HealthEase</span>
+    <img src="assets/images/Logo.png" alt="HealthEase Logo" class="logo-img" />
+    <span class="portal-name">HealthEase</span>
   </div>
 </nav>
 
 <div class="main-content">
   <div class="container">
-      <h2>Patient Details</h2>
-      <div class="card">
-          <h3>Patient Information</h3>
-          <p><strong>Patient ID:</strong> {{ patientDetails.patientId }}</p>
-    <p><strong>First Name:</strong> {{ patientDetails.patientFirstName }}</p>
-    <p><strong>Last Name:</strong> {{ patientDetails.patientLastName }}</p>
-    <p><strong>User ID:</strong> {{ patientDetails.userId }}</p>
-    <p><strong>Email:</strong> {{ patientDetails.userEmail }}</p>
-    <p><strong>Phone Number:</strong> {{ patientDetails.patientPhoneNumber }}</p>
-    <p><strong>Address:</strong> {{ patientDetails.patientAddress }}</p>
-    <p><strong>Gender:</strong> {{ patientDetails.gender }}</p>
-    <p><strong>Country:</strong> {{ patientDetails.countryName }}</p>
-    <p><strong>State:</strong> {{ patientDetails.stateName }}</p>
-    <p><strong>Age:</strong> {{ patientDetails.age }} years</p>
-      </div>
+    <h2>Patient Details</h2>
+    <div class="card">
+      <h3>Patient Information</h3>
+      <p><strong>Patient ID:</strong> {{ patientDetails?.patientId }}</p>
+      <p><strong>First Name:</strong> {{ patientDetails?.patientFirstName }}</p>
+      <p><strong>Last Name:</strong> {{ patientDetails?.patientLastName }}</p>
+      <p><strong>User ID:</strong> {{ patientDetails?.userId }}</p>
+      <p><strong>Email:</strong> {{ patientDetails?.userEmail }}</p>
+      <p><strong>Phone Number:</strong> {{ patientDetails?.patientPhoneNumber }}</p>
+      <p><strong>Address:</strong> {{ patientDetails?.patientAddress }}</p>
+      <p><strong>Gender:</strong> {{ patientDetails?.gender }}</p>
+      <p><strong>Country:</strong> {{ patientDetails?.countryName }}</p>
+      <p><strong>State:</strong> {{ patientDetails?.stateName }}</p>
+      <p><strong>Age:</strong> {{ patientDetails?.age }} years</p>
+    </div>
   </div>
 </div>

@@ -100,6 +100,10 @@ CREATE TABLE PatientsDetails (
     UpdatedDate DATETIME DEFAULT GETDATE()
 );
 
+
+ALTER TABLE PatientsDetails
+ADD ProfilePicture NVARCHAR(MAX) NULL;
+
 --VIEW TO GET DYNAMIC AGE
 CREATE VIEW vw_PatientProfile AS
 SELECT 

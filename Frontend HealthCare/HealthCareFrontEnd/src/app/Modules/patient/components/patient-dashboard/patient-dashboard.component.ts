@@ -20,6 +20,7 @@ export class PatientDashboardComponent implements OnInit {
 
     if (this.userId) {
       this.loadPatientDetails(this.userId);
+
     }
   }
 
@@ -27,6 +28,7 @@ export class PatientDashboardComponent implements OnInit {
     this.patientser.getPatientDetails(userId).subscribe((res:any)=> {
       this.patientDetails = res[0];
       console.log(this.patientDetails);
+      
 
     });
   }

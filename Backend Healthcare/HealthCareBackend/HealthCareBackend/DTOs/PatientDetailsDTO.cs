@@ -16,6 +16,8 @@ namespace HealthCareBackend.DTOs
             public string CountryName { get; set; }
             public string StateName { get; set; }
             public int Age { get; set; }
+            public string ProfilePicture { get; set; }
+        
 
     }
 }
