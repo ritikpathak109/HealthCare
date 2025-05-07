@@ -99,7 +99,7 @@ CREATE TABLE PatientsDetails (
     CreatedDate DATETIME DEFAULT GETDATE(),
     UpdatedDate DATETIME DEFAULT GETDATE()
 );
-
+select * from PatientsDetails
 
 ALTER TABLE PatientsDetails
 ADD ProfilePicture NVARCHAR(MAX) NULL;
@@ -166,7 +166,7 @@ select * from UsersLogin
 select * from PatientsDetails
 
 
-CREATE PROCEDURE USP_GetPatientProfile
+alter PROCEDURE USP_GetPatientProfile
     @UserId INT
 AS
 BEGIN
@@ -176,6 +176,7 @@ BEGIN
         u.UserEmail,
         p.PatientFirstName,
         p.PatientLastName,
+		p.ProfilePicture,
         p.PatientPhoneNumber,
         p.PatientAddress,
         g.Gender,

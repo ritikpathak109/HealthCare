@@ -28,6 +28,8 @@ builder.Services.AddScoped<MasterTableRepository>();
 builder.Services.AddScoped<MasterTableService>();
 builder.Services.AddScoped<PatientDetailService>();
 builder.Services.AddScoped<PatientDetailsRepository>();
+builder.Services.AddScoped<PatientProfilePictureRepository>();
+builder.Services.AddScoped<PatientProfilePictureService>();
 
 // Configure DbContext with the correct connection string
 builder.Services.AddDbContext<MyDbContext>(options =>
@@ -52,6 +54,7 @@ if (app.Environment.IsDevelopment())
 }
 app.UseCors("policyCors");
 app.UseHttpsRedirection();
+app.UseStaticFiles();
 
 app.UseAuthorization();
 

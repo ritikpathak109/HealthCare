@@ -144,6 +144,27 @@
     ]
   },
   {
+    "ContainingType": "HealthCareBackend.Controllers.PatientProfilePictureController",
+    "Method": "UploadProfilePicture",
+    "RelativePath": "api/PatientProfilePicture/Upload/{userId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "HealthCareBackend.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",
