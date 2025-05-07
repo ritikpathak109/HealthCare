@@ -50,5 +50,32 @@ namespace HealthCareBackend.Controllers
             else
                 return StatusCode(500, "Something went wrong.");
         }
+
+        [HttpGet("GetProfilePicture/{userId}")]
+        public async Task<IActionResult> GetProfilePicture(int userId)
+        {
+            var fileName = await _service.GetProfilePictureFileNameAsync(userId);
+
+            if (string.IsNullOrEmpty(fileName))
+            {
+                return NotFound("No profile picture found for this user.");
+            }
+
+            var filePath = Path.Combine(_environment.WebRootPath, "ProfilePicture", fileName);
+
+            if (!System.IO.File.Exists(filePath))
+            {
+                return NotFound("Profile picture file not found on server.");
+            }
+
+            var contentType = "image/" + Path.GetExtension(filePath).TrimStart('.'); // e.g., image/png
+            var fileBytes = await System.IO.File.ReadAllBytesAsync(filePath);
+
+            return File(fileBytes, contentType);
+        }
+
+
+
     }
+
 }

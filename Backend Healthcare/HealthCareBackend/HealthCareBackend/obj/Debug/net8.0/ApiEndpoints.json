@@ -145,6 +145,22 @@
   },
   {
     "ContainingType": "HealthCareBackend.Controllers.PatientProfilePictureController",
+    "Method": "GetProfilePicture",
+    "RelativePath": "api/PatientProfilePicture/GetProfilePicture/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HealthCareBackend.Controllers.PatientProfilePictureController",
     "Method": "UploadProfilePicture",
     "RelativePath": "api/PatientProfilePicture/Upload/{userId}",
     "HttpMethod": "POST",

@@ -16,5 +16,11 @@ namespace HealthCareBackend.Services
         {
             return await _repository.SaveProfilePictureAsync(userId, fileName);
         }
+
+        public async Task<string?> GetProfilePictureFileNameAsync(int userId)
+        {
+            return await _repository.GetProfilePictureFileNameAsync(userId);
+        }
+
     }
 }

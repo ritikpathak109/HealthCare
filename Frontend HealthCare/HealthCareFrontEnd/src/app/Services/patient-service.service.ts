@@ -26,6 +26,19 @@ export class PatientServiceService {
     return this.http.get(`http://localhost:5165/api/PatientDetails/Get-PatientDetails/${userId}`)
   }
   
+  uploadProfilePicture(userId: string, file: File) {
+    const formData = new FormData();
+    formData.append('file', file);
+  
+    return this.http.post(`http://localhost:5165/api/PatientProfilePicture/Upload/${userId}`, formData);
+  }
+  getProfilePicture(userId: string) {
+    return this.http.get(`http://localhost:5165/api/PatientProfilePicture/Get/${userId}`, {
+      responseType: 'text'
+    });
+  }
+  
+  
 
   
 }

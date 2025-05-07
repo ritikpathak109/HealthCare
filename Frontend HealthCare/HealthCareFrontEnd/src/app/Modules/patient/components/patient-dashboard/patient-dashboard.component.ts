@@ -11,6 +11,8 @@ export class PatientDashboardComponent implements OnInit {
   roleName: string | null = '';
   userId: string | null = '';
   patientDetails: any;
+  profileImageUrl: string = '';
+selectedFile: File | null = null;
   constructor(private patientser: PatientServiceService ) {}
 
   ngOnInit(): void {
@@ -20,6 +22,7 @@ export class PatientDashboardComponent implements OnInit {
 
     if (this.userId) {
       this.loadPatientDetails(this.userId);
+      this.loadProfilePicture(this.userId);
 
     }
   }
@@ -33,5 +36,22 @@ export class PatientDashboardComponent implements OnInit {
     });
   }
 
+  loadProfilePicture(userId: string) {
+    this.patientser.getProfilePicture(userId).subscribe((imageUrl: string) => {
+      this.profileImageUrl = imageUrl;
+    });
+  }
+  
+  onFileSelected(event: any) {
+    this.selectedFile = event.target.files[0];
+  }
+  
+  uploadPicture() {
+    if (this.userId && this.selectedFile) {
+      this.patientser.uploadProfilePicture(this.userId, this.selectedFile).subscribe(() => {
+        this.loadProfilePicture(this.userId!); // reload image
+      });
+    }
 
+  }
 }

@@ -8,6 +8,18 @@
 <div class="main-content">
   <div class="container">
     <h2>Patient Details</h2>
+
+    <div class="profile-section">
+      <h3>Profile Picture</h3>
+      <div class="image-preview">
+        <img *ngIf="profileImageUrl" [src]="profileImageUrl" alt="Profile Picture" />
+        <p *ngIf="!profileImageUrl">No profile picture uploaded yet.</p>
+      </div>
+      <input type="file" (change)="onFileSelected($event)" />
+      <button (click)="uploadPicture()">Upload Picture</button>
+    </div>
+
+
     <div class="card">
       <h3>Patient Information</h3>
       <p><strong>Patient ID:</strong> {{ patientDetails?.patientId }}</p>

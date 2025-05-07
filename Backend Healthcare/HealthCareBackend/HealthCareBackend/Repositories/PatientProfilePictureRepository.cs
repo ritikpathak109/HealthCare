@@ -37,5 +37,16 @@ namespace HealthCareBackend.Repositories
 
             return true;
         }
+
+
+        public async Task<string?> GetProfilePictureFileNameAsync(int userId)
+        {
+            var patient = await _context.PatientsDetails
+                .AsNoTracking()
+                .SingleOrDefaultAsync(p => p.UserId == userId);
+
+            return patient?.ProfilePicture;
+        }
+
     }
 }
