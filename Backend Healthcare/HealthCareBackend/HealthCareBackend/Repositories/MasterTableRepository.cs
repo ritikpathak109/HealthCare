@@ -31,6 +31,11 @@ namespace HealthCareBackend.Repositories
         {
             return _context.RoleMaster.ToList();
         }
+
+        public List<DoctorSpecializationDTO> GetSpecialization()
+        {
+            return _context.DoctorSpecializationMaster.ToList();
+        }
     }
 
 }

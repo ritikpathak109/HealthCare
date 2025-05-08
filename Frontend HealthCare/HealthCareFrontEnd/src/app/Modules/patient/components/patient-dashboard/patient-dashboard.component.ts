@@ -32,7 +32,6 @@ selectedFile: File | null = null;
   loadPatientDetails(userId: string){
     this.patientser.getPatientDetails(userId).subscribe((res:any)=> {
       this.patientDetails = res[0];
-      console.log(this.patientDetails);
       
 
     });

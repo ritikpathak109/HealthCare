@@ -1,3 +1,4 @@
+--PATEINT PORTAL TABLES
 
 -- ROLE MASTER TABLE (ADMIN, PATIENT, DOCTOR)
 CREATE TABLE RoleMaster (
@@ -104,19 +105,7 @@ select * from PatientsDetails
 ALTER TABLE PatientsDetails
 ADD ProfilePicture NVARCHAR(MAX) NULL;
 
---VIEW TO GET DYNAMIC AGE
-CREATE VIEW vw_PatientProfile AS
-SELECT 
-    p.PatientId,
-    u.UserName,
-    p.PatientPhoneNumber,
-	p.PatientFirstName,
-	P.PatientLastName,
 
-    YEAR(GETDATE()) - YEAR(p.DateOfBirth) AS Age
-FROM PatientsDetails p
-JOIN UsersLogin u ON p.UserId = u.UserId
-WHERE p.IsDeleted = 0 AND p.IsActive = 1;
 
 
 -- Stored procedure foor login
@@ -201,6 +190,110 @@ exec usp_getpatientprofile 1
 
 
 
+--DOCTOR PORTAL TABLES
+
+--SPECILIZATION MASTER TABLE
+CREATE TABLE DoctorSpecializationMaster (
+    SpecializationId INT PRIMARY KEY IDENTITY(1,1),
+    SpecializationName NVARCHAR(100)
+);
+
+
+INSERT INTO DoctorSpecializationMaster (SpecializationName)
+VALUES 
+('General Physician'),
+('ENT Specialist'),
+('Gynecologist'),
+('Psychiatrist'),
+('Ophthalmologist'),
+('Oncologist'),
+('Dentist'),
+('Radiologist'),
+('Urologist'),
+('Nephrologist'),
+('Gastroenterologist'),
+('Pulmonologist'),
+('Endocrinologist'),
+('Rheumatologist'),
+('Surgeon'),
+('Plastic Surgeon'),
+('Anesthesiologist'),
+('Dermatologist'),
+('Cardiologist'),
+('Pediatrician'),
+('Orthopedic'),
+('Neurologist'),
+('Hematologist'),
+('Hepatologist'),
+('Pathologist'),
+('Immunologist'),
+('Sports Medicine Specialist'),
+('Emergency Medicine Specialist'),
+('Clinical Geneticist'),
+('Medical Oncologist'),
+('Surgical Oncologist'),
+('Physiotherapist');
 
 
 
+--DOCOTOR DETAILS TABLE FOR REGISTRATION
+CREATE TABLE DoctorDetails (
+    DoctorId INT PRIMARY KEY IDENTITY(1,1),
+    UserId INT NOT NULL foreign key references UsersLogin(UserId),  
+    DoctorFirstName NVARCHAR(100),
+    DoctorLastName NVARCHAR(100),
+	DoctorEmail nvarchar(100),
+    DoctorPhoneNumber NVARCHAR(15),
+    DoctorAddress NVARCHAR(250),
+    GenderId INT,
+    CountryId INT,
+    StateId INT,
+    SpecializationId INT foreign key references DoctorSpecializationMaster(SpecializationId),
+    ExperienceYears INT,
+ 	IsActive TINYINT DEFAULT 1,        
+    IsDeleted TINYINT DEFAULT 0,    
+    CreatedDate DATETIME DEFAULT GETDATE(),
+    UpdatedDate DATETIME Default getDate()
+);
+
+drop table DoctorDetails
+
+--STORED PROCEDURE TO REGISTER DOCTOR
+
+drop procedure USP_RegisterDoctor
+create PROCEDURE USP_RegisterDoctor
+    @UserName NVARCHAR(100),
+    @UserPassword NVARCHAR(100),
+    @RoleId INT,
+    @DoctorFirstName NVARCHAR(100),
+    @DoctorLastName NVARCHAR(100),
+    @DoctorPhoneNumber NVARCHAR(15),
+	@DoctorEmail nvarchar(100),
+    @DoctorAddress NVARCHAR(250),
+    @GenderId INT,
+    @CountryId INT,
+    @StateId INT,
+    @SpecializationId INT,
+    @ExperienceYears INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    INSERT INTO UsersLogin (UserName, UserPassword,UserEmail, RoleId)
+    VALUES (@UserName, @UserPassword, @DoctorEmail, @RoleId)
+
+    DECLARE @UserId INT = SCOPE_IDENTITY()
+
+ 
+    INSERT INTO DoctorDetails (DoctorFirstName,DoctorLastName, DoctorPhoneNumber, DoctorAddress, DoctorEmail, GenderId,CountryId, StateId,SpecializationId,ExperienceYears,UserId) 
+		VALUES (@DoctorFirstName, @DoctorLastName, @DoctorPhoneNumber,@DoctorAddress,@DoctorEmail, @GenderId,@CountryId,@StateId, @SpecializationId,@ExperienceYears,@UserId )
+END
+
+
+exec USP_RegisterDoctor 'dradityasingh', 'Aditya@123', 3, 'Aditya', 'Singh', '8956412470', 'adityasingh@gmail.com', 'lucknow', 1, 1, 1, 1, 5
+
+select * from UsersLogin
+
+select * from DoctorDetails
+
+delete from UsersLogin where UserId= 18

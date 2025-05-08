@@ -31,6 +31,7 @@ builder.Services.AddScoped<PatientDetailsRepository>();
 builder.Services.AddScoped<PatientProfilePictureRepository>();
 builder.Services.AddScoped<PatientProfilePictureService>();
 
+
 // Configure DbContext with the correct connection string
 builder.Services.AddDbContext<MyDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))

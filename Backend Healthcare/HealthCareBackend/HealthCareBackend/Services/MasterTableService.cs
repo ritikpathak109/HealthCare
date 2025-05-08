@@ -27,6 +27,10 @@ namespace HealthCareBackend.Services
         {
             return _masterTableRepository.GetGenders();
         }
+        public List<DoctorSpecializationDTO> GetSpecializations()
+        {
+            return _masterTableRepository.GetSpecialization();
+        }
 
     }
 }

@@ -45,5 +45,12 @@ namespace HealthCareBackend.Controllers
             var gender = _masterTableService.GetGender();
             return Ok(gender);
         }
+
+        [HttpGet("Get-DoctorSpecialization")]
+        public ActionResult<List<DoctorSpecializationDTO>> getDoctorSpecialization()
+        {
+            var specialization = _masterTableService.GetSpecializations();
+            return Ok(specialization);
+        }
     }
 }

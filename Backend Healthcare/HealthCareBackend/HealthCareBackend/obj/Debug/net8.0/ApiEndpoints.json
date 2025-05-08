@@ -77,6 +77,26 @@
   },
   {
     "ContainingType": "HealthCareBackend.Controllers.MasterTableController",
+    "Method": "getDoctorSpecialization",
+    "RelativePath": "api/MasterTable/Get-Specialization",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[HealthCareBackend.DTOs.DoctorSpecializationDTO, HealthCareBackend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HealthCareBackend.Controllers.MasterTableController",
     "Method": "GetStates",
     "RelativePath": "api/MasterTable/Get-States/{countryId}",
     "HttpMethod": "GET",
