@@ -34,7 +34,7 @@ export class PatientServiceService {
   }
   getProfilePicture(userId: string) {
     return this.http.get(`http://localhost:5165/api/PatientProfilePicture/Get/${userId}`, {
-      responseType: 'text'
+      responseType: 'blob'
     });
   }
   

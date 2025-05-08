@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5P2OoT6ActrhEvyefNyLq44hW0d1NT9hS6eSZJfXGaI=",
+  "Hash": "5jpI17M6XEpcbmxf7Ym/wx2w6HrTC1/OS4a7tFeu2HE=",
   "Source": "HealthCareBackend",
   "BasePath": "_content/HealthCareBackend",
   "Mode": "Default",
@@ -16,6 +16,27 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\wwwroot\\ProfilePicture\\ac7ae678-9791-43d1-b224-250c8dadc4cd.jpeg",
+      "SourceId": "HealthCareBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\wwwroot\\",
+      "BasePath": "_content/HealthCareBackend",
+      "RelativePath": "ProfilePicture/ac7ae678-9791-43d1-b224-250c8dadc4cd#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "wj33kx790t",
+      "Integrity": "vJwfjZ0N94pNOx+Xq+k6Br27gCUdwKyjGnskLfK26Wc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\ProfilePicture\\ac7ae678-9791-43d1-b224-250c8dadc4cd.jpeg"
+    },
     {
       "Identity": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\wwwroot\\ProfilePicture\\c2fdf0ae-8129-4411-9e4a-6f05f0efc983.jpg",
       "SourceId": "HealthCareBackend",
@@ -36,30 +57,91 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\ProfilePicture\\c2fdf0ae-8129-4411-9e4a-6f05f0efc983.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\wwwroot\\ProfilePicture\\e13d5ee9-0716-4eae-b7ac-9ddbcdd5e85c.png",
-      "SourceId": "HealthCareBackend",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\wwwroot\\",
-      "BasePath": "_content/HealthCareBackend",
-      "RelativePath": "ProfilePicture/e13d5ee9-0716-4eae-b7ac-9ddbcdd5e85c#[.{fingerprint}]?.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "4jcb29jzbw",
-      "Integrity": "MApH9GT/FJF692UbQ7dSzXYsbYJMqzlJi0xVGS9FeUo=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\ProfilePicture\\e13d5ee9-0716-4eae-b7ac-9ddbcdd5e85c.png"
     }
   ],
   "Endpoints": [
+    {
+      "Route": "ProfilePicture/ac7ae678-9791-43d1-b224-250c8dadc4cd.jpeg",
+      "AssetFile": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\wwwroot\\ProfilePicture\\ac7ae678-9791-43d1-b224-250c8dadc4cd.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "135626"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vJwfjZ0N94pNOx+Xq+k6Br27gCUdwKyjGnskLfK26Wc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 03:30:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vJwfjZ0N94pNOx+Xq+k6Br27gCUdwKyjGnskLfK26Wc="
+        }
+      ]
+    },
+    {
+      "Route": "ProfilePicture/ac7ae678-9791-43d1-b224-250c8dadc4cd.wj33kx790t.jpeg",
+      "AssetFile": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\wwwroot\\ProfilePicture\\ac7ae678-9791-43d1-b224-250c8dadc4cd.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "135626"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vJwfjZ0N94pNOx+Xq+k6Br27gCUdwKyjGnskLfK26Wc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 08 May 2025 03:30:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wj33kx790t"
+        },
+        {
+          "Name": "label",
+          "Value": "ProfilePicture/ac7ae678-9791-43d1-b224-250c8dadc4cd.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vJwfjZ0N94pNOx+Xq+k6Br27gCUdwKyjGnskLfK26Wc="
+        }
+      ]
+    },
     {
       "Route": "ProfilePicture/c2fdf0ae-8129-4411-9e4a-6f05f0efc983.0dzpgzli0v.jpg",
       "AssetFile": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\wwwroot\\ProfilePicture\\c2fdf0ae-8129-4411-9e4a-6f05f0efc983.jpg",
@@ -139,88 +221,6 @@
         {
           "Name": "integrity",
           "Value": "sha256-RMs5FNViIBdajmyLVmqyNRtP6+8/a4tnVK1bsmQdwY0="
-        }
-      ]
-    },
-    {
-      "Route": "ProfilePicture/e13d5ee9-0716-4eae-b7ac-9ddbcdd5e85c.4jcb29jzbw.png",
-      "AssetFile": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\wwwroot\\ProfilePicture\\e13d5ee9-0716-4eae-b7ac-9ddbcdd5e85c.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1277532"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"MApH9GT/FJF692UbQ7dSzXYsbYJMqzlJi0xVGS9FeUo=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 07 May 2025 16:12:32 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "4jcb29jzbw"
-        },
-        {
-          "Name": "label",
-          "Value": "ProfilePicture/e13d5ee9-0716-4eae-b7ac-9ddbcdd5e85c.png"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-MApH9GT/FJF692UbQ7dSzXYsbYJMqzlJi0xVGS9FeUo="
-        }
-      ]
-    },
-    {
-      "Route": "ProfilePicture/e13d5ee9-0716-4eae-b7ac-9ddbcdd5e85c.png",
-      "AssetFile": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\wwwroot\\ProfilePicture\\e13d5ee9-0716-4eae-b7ac-9ddbcdd5e85c.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1277532"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"MApH9GT/FJF692UbQ7dSzXYsbYJMqzlJi0xVGS9FeUo=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 07 May 2025 16:12:32 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-MApH9GT/FJF692UbQ7dSzXYsbYJMqzlJi0xVGS9FeUo="
         }
       ]
     }

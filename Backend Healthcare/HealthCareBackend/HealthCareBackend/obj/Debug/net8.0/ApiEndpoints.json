@@ -146,7 +146,7 @@
   {
     "ContainingType": "HealthCareBackend.Controllers.PatientProfilePictureController",
     "Method": "GetProfilePicture",
-    "RelativePath": "api/PatientProfilePicture/GetProfilePicture/{userId}",
+    "RelativePath": "api/PatientProfilePicture/Get/{userId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

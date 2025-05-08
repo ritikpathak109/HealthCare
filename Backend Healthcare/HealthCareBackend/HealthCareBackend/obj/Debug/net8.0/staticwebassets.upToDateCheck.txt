@@ -1,2 +1,2 @@
+wwwroot\ProfilePicture\ac7ae678-9791-43d1-b224-250c8dadc4cd.jpeg
 wwwroot\ProfilePicture\c2fdf0ae-8129-4411-9e4a-6f05f0efc983.jpg
-wwwroot\ProfilePicture\e13d5ee9-0716-4eae-b7ac-9ddbcdd5e85c.png

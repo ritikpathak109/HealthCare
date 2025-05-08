@@ -51,7 +51,7 @@ namespace HealthCareBackend.Controllers
                 return StatusCode(500, "Something went wrong.");
         }
 
-        [HttpGet("GetProfilePicture/{userId}")]
+        [HttpGet("Get/{userId}")]
         public async Task<IActionResult> GetProfilePicture(int userId)
         {
             var fileName = await _service.GetProfilePictureFileNameAsync(userId);

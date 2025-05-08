@@ -12,10 +12,11 @@
     <div class="profile-section">
       <h3>Profile Picture</h3>
       <div class="image-preview">
-        <img *ngIf="profileImageUrl" [src]="profileImageUrl" alt="Profile Picture" />
-        <p *ngIf="!profileImageUrl">No profile picture uploaded yet.</p>
+        <img *ngIf="imageUrl" [src]="imageUrl" alt="Profile Picture" />
+        <p *ngIf="!imageUrl">No profile picture uploaded yet.</p>
+        
       </div>
-      <input type="file" (change)="onFileSelected($event)" />
+      <input id="fileInput" type="file" (change)="onFileSelected($event)" />
       <button (click)="uploadPicture()">Upload Picture</button>
     </div>
 

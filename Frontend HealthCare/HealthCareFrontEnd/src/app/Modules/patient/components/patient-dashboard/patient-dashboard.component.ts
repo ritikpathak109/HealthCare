@@ -12,6 +12,8 @@ export class PatientDashboardComponent implements OnInit {
   userId: string | null = '';
   patientDetails: any;
   profileImageUrl: string = '';
+  imageUrl: string | ArrayBuffer | null = null;
+
 selectedFile: File | null = null;
   constructor(private patientser: PatientServiceService ) {}
 
@@ -37,9 +39,14 @@ selectedFile: File | null = null;
   }
 
   loadProfilePicture(userId: string) {
-    this.patientser.getProfilePicture(userId).subscribe((imageUrl: string) => {
-      this.profileImageUrl = imageUrl;
+    this.patientser.getProfilePicture(userId).subscribe(response => {
+      const reader = new FileReader();
+      reader.readAsDataURL(response);
+      reader.onloadend = () => {
+        this.imageUrl = reader.result;
+      };
     });
+    
   }
   
   onFileSelected(event: any) {
@@ -49,9 +56,17 @@ selectedFile: File | null = null;
   uploadPicture() {
     if (this.userId && this.selectedFile) {
       this.patientser.uploadProfilePicture(this.userId, this.selectedFile).subscribe(() => {
-        this.loadProfilePicture(this.userId!); // reload image
+        this.loadProfilePicture(this.userId!);
+        alert('Profile picture uploaded successfully.');
+  
+        // Reset file input
+        this.selectedFile = null;
+        const fileInput = document.getElementById('fileInput') as HTMLInputElement;
+        if (fileInput) {
+          fileInput.value = ''; 
+        }
       });
     }
-
   }
+  
 }

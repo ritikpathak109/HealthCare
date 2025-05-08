@@ -322,7 +322,7 @@
         }
       }
     },
-    "/api/PatientProfilePicture/GetProfilePicture/{userId}": {
+    "/api/PatientProfilePicture/Get/{userId}": {
       "get": {
         "tags": [
           "PatientProfilePicture"
