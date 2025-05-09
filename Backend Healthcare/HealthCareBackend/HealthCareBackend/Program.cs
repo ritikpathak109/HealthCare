@@ -30,7 +30,8 @@ builder.Services.AddScoped<PatientDetailService>();
 builder.Services.AddScoped<PatientDetailsRepository>();
 builder.Services.AddScoped<PatientProfilePictureRepository>();
 builder.Services.AddScoped<PatientProfilePictureService>();
-
+builder.Services.AddScoped<DoctorRegistrationService>();
+builder.Services.AddScoped<DoctorRegistrationRepository>();
 
 // Configure DbContext with the correct connection string
 builder.Services.AddDbContext<MyDbContext>(options =>

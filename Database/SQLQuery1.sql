@@ -239,15 +239,16 @@ VALUES
 --DOCOTOR DETAILS TABLE FOR REGISTRATION
 CREATE TABLE DoctorDetails (
     DoctorId INT PRIMARY KEY IDENTITY(1,1),
-    UserId INT NOT NULL foreign key references UsersLogin(UserId),  
+    UserId INT NOT NULL foreign key references UsersLogin(UserId) on delete cascade,  
     DoctorFirstName NVARCHAR(100),
     DoctorLastName NVARCHAR(100),
 	DoctorEmail nvarchar(100),
+	DoctorDateofBirth date,
     DoctorPhoneNumber NVARCHAR(15),
     DoctorAddress NVARCHAR(250),
-    GenderId INT,
-    CountryId INT,
-    StateId INT,
+    GenderId INT foreign key references GenderMaster(GenderId),
+    CountryId INT foreign key references CountryMaster(CountryId),
+    StateId INT foreign key references StateMaster(StateId),
     SpecializationId INT foreign key references DoctorSpecializationMaster(SpecializationId),
     ExperienceYears INT,
  	IsActive TINYINT DEFAULT 1,        
@@ -260,14 +261,14 @@ drop table DoctorDetails
 
 --STORED PROCEDURE TO REGISTER DOCTOR
 
-drop procedure USP_RegisterDoctor
-create PROCEDURE USP_RegisterDoctor
+alter PROCEDURE USP_RegisterDoctor
     @UserName NVARCHAR(100),
     @UserPassword NVARCHAR(100),
     @RoleId INT,
     @DoctorFirstName NVARCHAR(100),
     @DoctorLastName NVARCHAR(100),
     @DoctorPhoneNumber NVARCHAR(15),
+	@DoctorDateofBirth date,
 	@DoctorEmail nvarchar(100),
     @DoctorAddress NVARCHAR(250),
     @GenderId INT,
@@ -285,15 +286,15 @@ BEGIN
     DECLARE @UserId INT = SCOPE_IDENTITY()
 
  
-    INSERT INTO DoctorDetails (DoctorFirstName,DoctorLastName, DoctorPhoneNumber, DoctorAddress, DoctorEmail, GenderId,CountryId, StateId,SpecializationId,ExperienceYears,UserId) 
-		VALUES (@DoctorFirstName, @DoctorLastName, @DoctorPhoneNumber,@DoctorAddress,@DoctorEmail, @GenderId,@CountryId,@StateId, @SpecializationId,@ExperienceYears,@UserId )
+    INSERT INTO DoctorDetails (DoctorFirstName,DoctorLastName, DoctorPhoneNumber, DoctorAddress,DoctorDateofBirth, DoctorEmail, GenderId,CountryId, StateId,SpecializationId,ExperienceYears,UserId) 
+		VALUES (@DoctorFirstName, @DoctorLastName, @DoctorPhoneNumber,@DoctorAddress, @DoctorDateofBirth, @DoctorEmail, @GenderId,@CountryId,@StateId, @SpecializationId,@ExperienceYears,@UserId )
 END
 
 
-exec USP_RegisterDoctor 'dradityasingh', 'Aditya@123', 3, 'Aditya', 'Singh', '8956412470', 'adityasingh@gmail.com', 'lucknow', 1, 1, 1, 1, 5
+exec USP_RegisterDoctor 'drakashayyy', 'Akashay@123', 3, 'Akashhhay', 'Sharma', '89588555','1963-01-20', 'akashayyyy@gmail.com','lucknow', 1, 1, 1, 4, 3
 
+delete from DoctorDetails where doctorid=1
 select * from UsersLogin
 
 select * from DoctorDetails
 
-delete from UsersLogin where UserId= 18

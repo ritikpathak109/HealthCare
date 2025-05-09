@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "HealthCareBackend.Controllers.DoctorRegistrationController",
+    "Method": "RegisterDoctor",
+    "RelativePath": "api/DoctorRegistration/Register-Doctor",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "doctorDto",
+        "Type": "HealthCareBackend.DTOs.DoctorRegistrationDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "HealthCareBackend.Controllers.LoginController",
     "Method": "Login",
     "RelativePath": "api/Login/LoginUser",
@@ -26,6 +42,26 @@
     "ReturnTypes": [
       {
         "Type": "System.Collections.Generic.List\u00601[[HealthCareBackend.DTOs.CountryDTO, HealthCareBackend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HealthCareBackend.Controllers.MasterTableController",
+    "Method": "getDoctorSpecialization",
+    "RelativePath": "api/MasterTable/Get-DoctorSpecialization",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[HealthCareBackend.DTOs.DoctorSpecializationDTO, HealthCareBackend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -66,26 +102,6 @@
     "ReturnTypes": [
       {
         "Type": "System.Collections.Generic.List\u00601[[HealthCareBackend.DTOs.RoleDTO, HealthCareBackend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "HealthCareBackend.Controllers.MasterTableController",
-    "Method": "getDoctorSpecialization",
-    "RelativePath": "api/MasterTable/Get-Specialization",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.List\u00601[[HealthCareBackend.DTOs.DoctorSpecializationDTO, HealthCareBackend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

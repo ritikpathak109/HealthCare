@@ -5,6 +5,37 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/DoctorRegistration/Register-Doctor": {
+      "post": {
+        "tags": [
+          "DoctorRegistration"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DoctorRegistrationDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DoctorRegistrationDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DoctorRegistrationDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Login/LoginUser": {
       "post": {
         "tags": [
@@ -199,7 +230,7 @@
         }
       }
     },
-    "/api/MasterTable/Get-Specialization": {
+    "/api/MasterTable/Get-DoctorSpecialization": {
       "get": {
         "tags": [
           "MasterTable"
@@ -435,6 +466,68 @@
           "countryName": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DoctorRegistrationDTO": {
+        "type": "object",
+        "properties": {
+          "userName": {
+            "type": "string",
+            "nullable": true
+          },
+          "userPassword": {
+            "type": "string",
+            "nullable": true
+          },
+          "roleId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "doctorFirstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "doctorLastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "doctorPhoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "doctorDateOfBirth": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "doctorEmail": {
+            "type": "string",
+            "nullable": true
+          },
+          "doctorAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "genderId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "countryId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "stateId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "specializationId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "experienceYears": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
