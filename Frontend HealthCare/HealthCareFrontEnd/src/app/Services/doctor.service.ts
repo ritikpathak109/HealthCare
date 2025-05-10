@@ -15,6 +15,14 @@ export class DoctorService {
   getSpecialization() {
     return this.http.get('http://localhost:5165/api/MasterTable/Get-DoctorSpecialization');
   }
-
+ getCountires(){
+    return this.http.get('http://localhost:5165/api/MasterTable/Get-Countries')
+  }
+  getStates(countryId:any){
+    return this.http.get(`http://localhost:5165/api/MasterTable/Get-States/${countryId}`)
+  }
+  getGenders(){
+    return this.http.get('http://localhost:5165/api/MasterTable/Get-Gender')
+  }
   
 }

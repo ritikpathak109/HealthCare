@@ -50,9 +50,7 @@
                     <label>Gender</label>
                     <select>
                         <option value="">--Select--</option>
-                        <option value="1">Male</option>
-                        <option value="2">Female</option>
-                        <option value="3">Other</option>
+                             <option *ngFor="let gender of gender" [value]="gender.genderId">{{ gender.gender }}</option>
                     </select>
                 </div>
 
@@ -66,9 +64,7 @@
                     <label>Country</label>
                     <select>
                         <option value="">--Select--</option>
-                        <option value="1">USA</option>
-                        <option value="2">Canada</option>
-                        <option value="3">UK</option>
+                   <option *ngFor="let country of countries" [value]="country.countryID">{{ country.countryName }}</option>
                     </select>
                 </div>
 
@@ -76,9 +72,7 @@
                     <label>State</label>
                     <select>
                         <option value="">--Select--</option>
-                        <option value="1">California</option>
-                        <option value="2">Texas</option>
-                        <option value="3">New York</option>
+                      <option *ngFor="let state of states" [value]="state.stateId">{{ state.stateName }}</option>
                     </select>
                 </div>
             </div>
@@ -88,9 +82,7 @@
                     <label>Specialization</label>
                     <select>
                         <option value="">--Select--</option>
-                        <option value="1">Cardiology</option>
-                        <option value="2">Dermatology</option>
-                        <option value="3">Pediatrics</option>
+                        <option *ngFor="let specialization of specialization" [value]="specialization.specializationId">{{ specialization.specializationName }}</option>
                     </select>
                 </div>
 
