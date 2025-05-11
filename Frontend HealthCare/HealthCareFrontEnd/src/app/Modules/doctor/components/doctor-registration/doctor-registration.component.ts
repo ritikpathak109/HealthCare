@@ -30,11 +30,13 @@ specialization: any;
       StateId: ['', [Validators.required]],
       DoctorAddress: ['', [Validators.required,  Validators.minLength(5)]],
       DoctorPhoneNumber: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]], 
+      SpecializationId: ['', [Validators.required]],
+      ExperienceYears: ['', [Validators.required ]],
     
     });
   ngOnInit() {
     
-    this.loadSpecialization();
+    
     this.loadCountries();
      this.doctorRegisterForm.get('CountryId')?.valueChanges.subscribe((countryId) => {
       if (countryId) {
@@ -45,6 +47,7 @@ specialization: any;
       }
     });
     this.loadGender();
+    this.loadSpecialization();
   
     
   }
@@ -59,18 +62,16 @@ specialization: any;
     this.doctorService.getCountires().subscribe((res) => {
       this.countries = res;
       console.log(this.countries);
-    });
+    }); 
   }
 
   loadStates(countryId: any) {
     this.doctorService.getStates(countryId).subscribe((res) => {
       this.states = res;
-      console.log(this.states);
      
     });
   }
 
- 
   loadGender() {
     this.doctorService.getGenders().subscribe((res) => {
       this.gender = res;

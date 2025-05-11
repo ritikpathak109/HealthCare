@@ -172,7 +172,7 @@
               "RelativeDocumentMoniker": "HealthCareBackend\\DTOs\\DoctorRegistrationDTO.cs",
               "ToolTip": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\DTOs\\DoctorRegistrationDTO.cs",
               "RelativeToolTip": "HealthCareBackend\\DTOs\\DoctorRegistrationDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-09T15:29:59.127Z",
               "EditorCaption": ""
@@ -187,8 +187,7 @@
               "RelativeToolTip": "HealthCareBackend\\Repositories\\PatientRegistrationRepository.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAACEAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T05:50:04.083Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-20T05:50:04.083Z"
             },
             {
               "$type": "Document",

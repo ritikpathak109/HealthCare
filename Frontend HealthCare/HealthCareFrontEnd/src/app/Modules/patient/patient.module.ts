@@ -19,7 +19,6 @@ import { PatientDashboardComponent } from './components/patient-dashboard/patien
     PatientRoutingModule,
     HttpClientModule,
     FormsModule,
-    CommonModule,
     ReactiveFormsModule,
  
     ToastrModule.forRoot({ timeOut: 5000,  positionClass: 'toast-top-right',  preventDuplicates: true, })
