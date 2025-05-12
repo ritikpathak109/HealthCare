@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1F3F3976-B9CA-430F-84FE-0B5E0C28DDB8}|HealthCareBackend\\HealthCareBackend.csproj|c:\\users\\ritik\\desktop\\healthcare project\\backend healthcare\\healthcarebackend\\healthcarebackend\\repositories\\mastertablerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F3F3976-B9CA-430F-84FE-0B5E0C28DDB8}|HealthCareBackend\\HealthCareBackend.csproj|solutionrelative:healthcarebackend\\repositories\\mastertablerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1F3F3976-B9CA-430F-84FE-0B5E0C28DDB8}|HealthCareBackend\\HealthCareBackend.csproj|c:\\users\\ritik\\desktop\\healthcare project\\backend healthcare\\healthcarebackend\\healthcarebackend\\dtos\\doctorregistrationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1F3F3976-B9CA-430F-84FE-0B5E0C28DDB8}|HealthCareBackend\\HealthCareBackend.csproj|solutionrelative:healthcarebackend\\dtos\\doctorregistrationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -69,10 +73,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1F3F3976-B9CA-430F-84FE-0B5E0C28DDB8}|HealthCareBackend\\HealthCareBackend.csproj|c:\\users\\ritik\\desktop\\healthcare project\\backend healthcare\\healthcarebackend\\healthcarebackend\\services\\mastertableservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1F3F3976-B9CA-430F-84FE-0B5E0C28DDB8}|HealthCareBackend\\HealthCareBackend.csproj|solutionrelative:healthcarebackend\\services\\mastertableservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F3F3976-B9CA-430F-84FE-0B5E0C28DDB8}|HealthCareBackend\\HealthCareBackend.csproj|c:\\users\\ritik\\desktop\\healthcare project\\backend healthcare\\healthcarebackend\\healthcarebackend\\repositories\\mastertablerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F3F3976-B9CA-430F-84FE-0B5E0C28DDB8}|HealthCareBackend\\HealthCareBackend.csproj|solutionrelative:healthcarebackend\\repositories\\mastertablerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1F3F3976-B9CA-430F-84FE-0B5E0C28DDB8}|HealthCareBackend\\HealthCareBackend.csproj|c:\\users\\ritik\\desktop\\healthcare project\\backend healthcare\\healthcarebackend\\healthcarebackend\\repositories\\patientdetailsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -150,23 +150,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "DoctorRegistrationController.cs",
-              "DocumentMoniker": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\Controllers\\DoctorRegistrationController.cs",
-              "RelativeDocumentMoniker": "HealthCareBackend\\Controllers\\DoctorRegistrationController.cs",
-              "ToolTip": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\Controllers\\DoctorRegistrationController.cs",
-              "RelativeToolTip": "HealthCareBackend\\Controllers\\DoctorRegistrationController.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAwBkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T16:47:25.257Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "DoctorRegistrationDTO.cs",
               "DocumentMoniker": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\DTOs\\DoctorRegistrationDTO.cs",
               "RelativeDocumentMoniker": "HealthCareBackend\\DTOs\\DoctorRegistrationDTO.cs",
@@ -174,12 +162,11 @@
               "RelativeToolTip": "HealthCareBackend\\DTOs\\DoctorRegistrationDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T15:29:59.127Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-09T15:29:59.127Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "PatientRegistrationRepository.cs",
               "DocumentMoniker": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\Repositories\\PatientRegistrationRepository.cs",
               "RelativeDocumentMoniker": "HealthCareBackend\\Repositories\\PatientRegistrationRepository.cs",
@@ -187,11 +174,12 @@
               "RelativeToolTip": "HealthCareBackend\\Repositories\\PatientRegistrationRepository.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAACEAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T05:50:04.083Z"
+              "WhenOpened": "2025-04-20T05:50:04.083Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "PatientRegistrationDTO.cs",
               "DocumentMoniker": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\DTOs\\PatientRegistrationDTO.cs",
               "RelativeDocumentMoniker": "HealthCareBackend\\DTOs\\PatientRegistrationDTO.cs",
@@ -203,7 +191,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "DoctorSpecializationDTO.cs",
               "DocumentMoniker": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\DTOs\\DoctorSpecializationDTO.cs",
               "RelativeDocumentMoniker": "HealthCareBackend\\DTOs\\DoctorSpecializationDTO.cs",
@@ -215,7 +203,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
+              "Title": "MasterTableRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\Repositories\\MasterTableRepository.cs",
+              "RelativeDocumentMoniker": "HealthCareBackend\\Repositories\\MasterTableRepository.cs",
+              "ToolTip": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\Repositories\\MasterTableRepository.cs",
+              "RelativeToolTip": "HealthCareBackend\\Repositories\\MasterTableRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T15:41:45.318Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DoctorRegistrationController.cs",
+              "DocumentMoniker": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\Controllers\\DoctorRegistrationController.cs",
+              "RelativeDocumentMoniker": "HealthCareBackend\\Controllers\\DoctorRegistrationController.cs",
+              "ToolTip": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\Controllers\\DoctorRegistrationController.cs",
+              "RelativeToolTip": "HealthCareBackend\\Controllers\\DoctorRegistrationController.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAwBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T16:47:25.257Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "PatientRegistrationController.cs",
               "DocumentMoniker": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\Controllers\\PatientRegistrationController.cs",
               "RelativeDocumentMoniker": "HealthCareBackend\\Controllers\\PatientRegistrationController.cs",
@@ -227,7 +240,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "DoctorRegistrationRepository.cs",
               "DocumentMoniker": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\Repositories\\DoctorRegistrationRepository.cs",
               "RelativeDocumentMoniker": "HealthCareBackend\\Repositories\\DoctorRegistrationRepository.cs",
@@ -239,7 +252,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\Program.cs",
               "RelativeDocumentMoniker": "HealthCareBackend\\Program.cs",
@@ -251,7 +264,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "DoctorRegistrationService.cs",
               "DocumentMoniker": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\Services\\DoctorRegistrationService.cs",
               "RelativeDocumentMoniker": "HealthCareBackend\\Services\\DoctorRegistrationService.cs",
@@ -263,7 +276,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "PatientProfilePictureRepository.cs",
               "DocumentMoniker": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\Repositories\\PatientProfilePictureRepository.cs",
               "RelativeDocumentMoniker": "HealthCareBackend\\Repositories\\PatientProfilePictureRepository.cs",
@@ -275,7 +288,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "PatientRegistrationService.cs",
               "DocumentMoniker": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\Services\\PatientRegistrationService.cs",
               "RelativeDocumentMoniker": "HealthCareBackend\\Services\\PatientRegistrationService.cs",
@@ -287,7 +300,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "MyDbContext.cs",
               "DocumentMoniker": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\Models\\MyDbContext.cs",
               "RelativeDocumentMoniker": "HealthCareBackend\\Models\\MyDbContext.cs",
@@ -299,7 +312,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "PatientDetailsController.cs",
               "DocumentMoniker": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\Controllers\\PatientDetailsController.cs",
               "RelativeDocumentMoniker": "HealthCareBackend\\Controllers\\PatientDetailsController.cs",
@@ -311,7 +324,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "LoginController.cs",
               "DocumentMoniker": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "HealthCareBackend\\Controllers\\LoginController.cs",
@@ -323,7 +336,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "MasterTableController.cs",
               "DocumentMoniker": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\Controllers\\MasterTableController.cs",
               "RelativeDocumentMoniker": "HealthCareBackend\\Controllers\\MasterTableController.cs",
@@ -335,7 +348,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "PatientDetailsDTO.cs",
               "DocumentMoniker": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\DTOs\\PatientDetailsDTO.cs",
               "RelativeDocumentMoniker": "HealthCareBackend\\DTOs\\PatientDetailsDTO.cs",
@@ -359,7 +372,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "MasterTableService.cs",
               "DocumentMoniker": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\Services\\MasterTableService.cs",
               "RelativeDocumentMoniker": "HealthCareBackend\\Services\\MasterTableService.cs",
@@ -368,18 +381,6 @@
               "ViewState": "AgIAABEAAAAAAAAAAAAAAB0AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-25T15:44:18.845Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "MasterTableRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\Repositories\\MasterTableRepository.cs",
-              "RelativeDocumentMoniker": "HealthCareBackend\\Repositories\\MasterTableRepository.cs",
-              "ToolTip": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\Repositories\\MasterTableRepository.cs",
-              "RelativeToolTip": "HealthCareBackend\\Repositories\\MasterTableRepository.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACIAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T15:41:45.318Z"
             },
             {
               "$type": "Document",

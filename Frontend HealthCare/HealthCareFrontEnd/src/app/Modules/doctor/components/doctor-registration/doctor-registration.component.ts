@@ -35,6 +35,13 @@ specialization: any;
     
     });
   ngOnInit() {
+
+   const selectedRoleId = localStorage.getItem('userRoleId');
+    if (selectedRoleId) {
+      this.doctorRegisterForm.patchValue({
+        RoleId: selectedRoleId
+      });
+    }
     
     
     this.loadCountries();
@@ -50,6 +57,24 @@ specialization: any;
     this.loadSpecialization();
   
     
+  }
+
+  
+  onSubmit() {
+    if (this.doctorRegisterForm.valid) {
+      if (confirm('Do you want to register this employee? ')) {
+        const formData= this.doctorRegisterForm.value;
+        this.doctorService.registerDoctor(formData).subscribe((res) => {
+          alert('Registration Successful!');
+        this.doctorRegisterForm.reset();
+        localStorage.removeItem('userRoleId');
+        localStorage.removeItem('userRoleName');
+        this.route.navigate(['/login']);
+        });
+      }
+    } else {
+      alert('Please fill Registration form correctly!');
+    }
   }
 
   loadSpecialization() {

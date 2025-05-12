@@ -10,7 +10,7 @@
     <div class="container">
         <h2>Doctor Registration</h2>
 
-       <form [formGroup]="doctorRegisterForm">
+       <form [formGroup]="doctorRegisterForm" (ngSubmit)="onSubmit()">
   <div class="form-row">
     <div class="form-group">
       <label>First Name</label>
