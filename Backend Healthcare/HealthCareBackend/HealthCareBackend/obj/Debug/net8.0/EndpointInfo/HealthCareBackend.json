@@ -268,6 +268,44 @@
         }
       }
     },
+    "/api/MasterTable/Get-AppointmentStatus": {
+      "get": {
+        "tags": [
+          "MasterTable"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AppointmentStatusDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AppointmentStatusDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AppointmentStatusDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/Patient/Register-Patient": {
       "post": {
         "tags": [
@@ -456,6 +494,20 @@
   },
   "components": {
     "schemas": {
+      "AppointmentStatusDTO": {
+        "type": "object",
+        "properties": {
+          "statusId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "CountryDTO": {
         "type": "object",
         "properties": {

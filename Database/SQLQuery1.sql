@@ -190,6 +190,40 @@ exec usp_getpatientprofile 1
 
 
 
+--APPOINTEMENT STATUS TABLE FOR PATIENT
+CREATE TABLE AppointmentStatusMaster (
+    StatusId INT PRIMARY KEY IDENTITY(1,1),
+    [Status] VARCHAR(50) NOT NULL
+);
+
+INSERT INTO AppointmentStatusMaster (Status)
+VALUES 
+('Approved'),
+('Cancelled'),
+('Completed');
+
+
+
+CREATE TABLE Appointments (
+    AppointmentId INT PRIMARY KEY IDENTITY(1,1),
+    PatientId INT foreign key references PatientsDetails(PatientId),
+    DoctorId INT foreign key references DoctorDetails(DoctorId) ,
+    AppointmentDate DATE ,
+    AppointmentTime TIME NOT NULL,
+    ReasonForVisit NVARCHAR(255),
+    StatusId INT foreign key references AppointmentStatusMaster(StatusId) ,
+    IsDeleted BIT DEFAULT 0,
+    CreatedDate DATETIME DEFAULT GETDATE(),
+    UpdatedDate DATETIME DEFAULT GETDATE()
+);
+
+
+
+
+
+
+
+
 --DOCTOR PORTAL TABLES
 
 --SPECILIZATION MASTER TABLE

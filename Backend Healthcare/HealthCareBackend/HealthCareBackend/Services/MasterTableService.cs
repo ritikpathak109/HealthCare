@@ -31,6 +31,11 @@ namespace HealthCareBackend.Services
         {
             return _masterTableRepository.GetSpecialization();
         }
+        public List<AppointmentStatusDTO> GetAppointmentStatuses()
+        {
+            return _masterTableRepository.GetAppointmentStatus();
+        }
+
 
     }
 }

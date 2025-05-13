@@ -52,5 +52,12 @@ namespace HealthCareBackend.Controllers
             var specialization = _masterTableService.GetSpecializations();
             return Ok(specialization);
         }
+
+        [HttpGet("Get-AppointmentStatus")]
+        public ActionResult<List<AppointmentStatusDTO>> getAppointmentStatus()
+        {
+            var status = _masterTableService.GetAppointmentStatuses();
+            return Ok(status);
+        }
     }
 }

@@ -11,19 +11,19 @@ export class LandingPageComponent {
 
   navigateToAdmin() {
     localStorage.setItem('userRoleId', '1');
-    localStorage.setItem('userRoleName', 'admin');
+    localStorage.setItem('roleName', 'admin');
     this.router.navigate(['/admin']);
   }
 
   navigateToDoctor() {
     localStorage.setItem('userRoleId', '3');
-    localStorage.setItem('userRoleName', 'doctor');
+    localStorage.setItem('roleName', 'doctor');
     this.router.navigate(['/doctor']);
   }
 
   navigateToPatient() {
     localStorage.setItem('userRoleId', '2');
-    localStorage.setItem('userRoleName', 'patient');
+    localStorage.setItem('roleName', 'patient');
     this.router.navigate(['/patient']);
   }
 }

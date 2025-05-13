@@ -66,7 +66,7 @@ export class PatientRegistrationComponent implements OnInit {
           alert('Registration Successful!');
         this.patientRegisterForm.reset();
         localStorage.removeItem('userRoleId');
-        localStorage.removeItem('userRoleName');
+        localStorage.removeItem('roleName');
         this.route.navigate(['/login']);
 
         });

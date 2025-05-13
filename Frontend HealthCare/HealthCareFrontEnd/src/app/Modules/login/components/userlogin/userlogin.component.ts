@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoginService } from 'src/app/Services/login.service';
@@ -8,7 +8,7 @@ import { LoginService } from 'src/app/Services/login.service';
   templateUrl: './userlogin.component.html',
   styleUrls: ['./userlogin.component.css']
 })
-export class UserloginComponent {
+export class UserloginComponent implements OnInit {
   userForm: FormGroup;
 
   constructor(private router: Router, private fb: FormBuilder, private loginser: LoginService) {
@@ -17,7 +17,12 @@ export class UserloginComponent {
       UserPassword: ['', [Validators.required]],
     });
   }
-
+  ngOnInit(){
+    localStorage.removeItem('userName');
+    localStorage.removeItem('roleName');
+    localStorage.removeItem('userId');
+    localStorage.removeItem('userRoleId');
+  }
 
 
 onNavigateToLanding() {

@@ -36,6 +36,11 @@ namespace HealthCareBackend.Repositories
         {
             return _context.DoctorSpecializationMaster.ToList();
         }
+
+        public List<AppointmentStatusDTO> GetAppointmentStatus()
+        {
+            return _context.AppointmentStatusMaster.ToList();
+        }
     }
 
 }
