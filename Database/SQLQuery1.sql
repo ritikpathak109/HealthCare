@@ -216,7 +216,34 @@ CREATE TABLE Appointments (
     CreatedDate DATETIME DEFAULT GETDATE(),
     UpdatedDate DATETIME DEFAULT GETDATE()
 );
-
+CREATE OR ALTER PROCEDURE GetAllAppointmentsWithDetails
+AS
+BEGIN
+    SELECT 
+        A.AppointmentId,
+        A.PatientId,
+        P.PatientFirstName + ' ' + P.PatientLastName AS PatientName,
+        -- Calculate Age
+        DATEDIFF(YEAR, P.DateofBirth, GETDATE()) - 
+            CASE 
+                WHEN MONTH(GETDATE()) < MONTH(P.DateofBirth) OR 
+                     (MONTH(GETDATE()) = MONTH(P.DateofBirth) AND DAY(GETDATE()) < DAY(P.DateofBirth))
+                THEN 1 ELSE 0 
+            END AS Age,
+        A.DoctorId,
+        D.DoctorFirstName + ' ' + D.DoctorLastName AS DoctorName,
+        A.AppointmentDate,
+        A.AppointmentTime,
+        A.ReasonForVisit,
+        ASM.[Status],
+        A.CreatedDate
+    FROM Appointments A
+    INNER JOIN PatientsDetails P ON A.PatientId = P.PatientId
+    INNER JOIN DoctorDetails D ON A.DoctorId = D.DoctorId
+    INNER JOIN AppointmentStatusMaster ASM ON A.StatusId = ASM.StatusId
+    WHERE A.IsDeleted = 0
+    ORDER BY A.AppointmentDate DESC, A.AppointmentTime DESC
+END
 
 
 
