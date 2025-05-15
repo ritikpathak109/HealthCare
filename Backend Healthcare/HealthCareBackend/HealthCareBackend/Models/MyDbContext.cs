@@ -1,5 +1,6 @@
 ﻿using HealthCareBackend.DTOs;
 using Microsoft.EntityFrameworkCore;
+using static HealthCareBackend.DTOs.AppointmentDTO;
 
 namespace HealthCareBackend.Models
 {
@@ -17,6 +18,9 @@ namespace HealthCareBackend.Models
         public DbSet<PatientDetails> PatientsDetails { get; set; }
         public DbSet<DoctorSpecializationDTO> DoctorSpecializationMaster { get; set; }
         public DbSet<AppointmentStatusDTO> AppointmentStatusMaster { get; set; }
+        public DbSet<Appointment> Appointments { get; set; }
+        public DbSet<AppointmentResponseDTO> GetAllAppointmentsWithDetails { get; set; } 
+
 
     }
 }
