@@ -216,7 +216,31 @@ CREATE TABLE Appointments (
     CreatedDate DATETIME DEFAULT GETDATE(),
     UpdatedDate DATETIME DEFAULT GETDATE()
 );
-ALTER PROCEDURE GetAllAppointmentsWithDetails
+
+select * from Appointments
+
+CREATE PROCEDURE USP_AddAppointment
+    @PatientId INT,
+    @DoctorId INT,
+    @AppointmentDate DATE,
+    @AppointmentTime TIME,
+    @ReasonForVisit NVARCHAR(255),
+    @StatusId INT
+AS
+BEGIN
+    INSERT INTO Appointments
+    (
+        PatientId, DoctorId, AppointmentDate, AppointmentTime, ReasonForVisit, StatusId )
+    VALUES
+    (
+        @PatientId, @DoctorId, @AppointmentDate, @AppointmentTime, @ReasonForVisit, @StatusId
+
+    )
+END
+
+
+
+create PROCEDURE USP_GetAllAppointmentsDetails
 AS
 BEGIN
     SELECT 
@@ -241,7 +265,7 @@ BEGIN
 END
 
 
-
+exec USP_GetAllAppointmentsDetails
 
 
 

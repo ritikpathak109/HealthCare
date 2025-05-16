@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "HealthCareBackend.Controllers.AppointmentController",
+    "Method": "AddAppointment",
+    "RelativePath": "api/Appointment/add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "HealthCareBackend.DTOs.AppointmentDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "HealthCareBackend.Controllers.DoctorRegistrationController",
     "Method": "RegisterDoctor",
     "RelativePath": "api/DoctorRegistration/Register-Doctor",
@@ -13,6 +29,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HealthCareBackend.Controllers.GetAppointmentDetailsController",
+    "Method": "GetAllAppointments",
+    "RelativePath": "api/GetAppointmentDetails/GetAllAppointments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
