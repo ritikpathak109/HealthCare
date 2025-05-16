@@ -1,167 +1,242 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html, body {
-    height: 100%;
-    width: 100%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    overflow-x: hidden;
-  }
-  
-  /* Navbar styles */
-  .navbar {
-    background-color: #00796b;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 10;
-  }
-  
-  .navbar .logo-container {
-    display: flex;
-    align-items: center;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #00796b;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.navbar .logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo-img {
+  height: 80px;
+  width: auto;
+  opacity: 0.9;
+  margin-right: 10px;
+}
+
+.navbar .portal-name {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Hamburger Icon Styles */
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  padding: 10px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 11;
+}
+
+.hamburger-icon div {
+  width: 100%;
+  height: 3px;
+  background-color: #00796b;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  margin: 6px 0;
+}
+
+/* Main Content Wrapper */
+.main-content {
+  background: linear-gradient(to right, #e0f7fa, #ffffff);
+  min-height: calc(100vh - 50px);
+  padding: 90px 20px 20px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 220px;
+  transition: margin-left 0.3s ease;
+}
+
+/* Container Styles */
+.container {
+  width: 100%;
+  max-width: 800px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 128, 128, 0.2);
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+h2 {
+  text-align: center;
+  color: #00796b;
+  margin-bottom: 25px;
+}
+
+.card {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f8f8f8;
+  margin-bottom: 20px;
+  border: 1px solid #e0e0e0;
+}
+
+.card h3 {
+  color: #00796b;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.card p {
+  margin-bottom: 10px;
+  color: #555;
+  font-size: 16px;
+}
+
+.card p strong {
+  color: #004d40;
+}
+
+/* Profile Section */
+.profile-section {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f1f8f9;
+  border: 1px solid #b2dfdb;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.profile-section h3 {
+  color: #00695c;
+  margin-bottom: 15px;
+}
+
+.image-preview img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #009688;
+  margin-bottom: 10px;
+}
+
+.image-preview p {
+  color: #757575;
+  font-style: italic;
+}
+
+input[type="file"] {
+  margin-top: 10px;
+}
+
+button {
+  margin-top: 10px;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #004d40;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background-color: #ffffff;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  padding-top: 20px;
+  z-index: 9;
+  transition: transform 0.3s ease;
+  transform: translateX(0);
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 15px 20px;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  display: block;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+  background-color: #00796b;
+  border-left: 4px solid #00796b;
+  padding-left: 26px;
+  color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
   .navbar .logo-img {
-    height: 80px;
-    width: auto;
-    opacity: 0.9;
-    margin-right: 10px;
+    height: 60px;
   }
-  
-  .navbar .portal-name {
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  /* Main Content Wrapper */
-  .main-content {
-    background: linear-gradient(to right, #e0f7fa, #ffffff);
-    min-height: calc(100vh - 50px);
-    padding: 90px 20px 20px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /* Container Styles */
+
   .container {
-    width: 100%;
-    max-width: 800px;
-    background-color: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 128, 128, 0.2);
-    margin-bottom: 20px;
-    margin-top: 30px;
-  }
-  
-  h2 {
-    text-align: center;
-    color: #00796b;
-    margin-bottom: 25px;
-  }
-  
-  .card {
     padding: 20px;
-    border-radius: 10px;
-    background-color: #f8f8f8;
-    margin-bottom: 20px;
-    border: 1px solid #e0e0e0;
+    margin-top: 80px;
   }
-  
-  .card h3 {
-    color: #00796b;
-    margin-bottom: 15px;
-    text-align: center;
+
+  .main-content {
+    padding-top: 80px;
   }
-  
-  .card p {
-    margin-bottom: 10px;
-    color: #555;
-    font-size: 16px;
-  }
-  
-  .card p strong {
-    color: #004d40;
-  }
-  
-  /* Profile Section */
-  .profile-section {
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #f1f8f9;
-    border: 1px solid #b2dfdb;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  .profile-section h3 {
-    color: #00695c;
-    margin-bottom: 15px;
-  }
-  
+
   .image-preview img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 2px solid #009688;
-    margin-bottom: 10px;
+    width: 120px;
+    height: 120px;
   }
-  
-  .image-preview p {
-    color: #757575;
-    font-style: italic;
+
+  .hamburger-icon {
+    display: flex;
   }
-  
-  input[type="file"] {
-    margin-top: 10px;
+
+  .sidebar {
+    transform: translateX(0);
   }
-  
-  button {
-    margin-top: 10px;
-    background-color: #00796b;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+
+  .main-content {
+    margin-left: 220px;
   }
-  
-  button:hover {
-    background-color: #004d40;
-  }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .navbar .logo-img {
-      height: 60px;
-    }
-  
-    .container {
-      padding: 20px;
-      margin-top: 80px;
-    }
-  
-    .main-content {
-      padding-top: 80px;
-    }
-  
-    .image-preview img {
-      width: 120px;
-      height: 120px;
-    }
-  }
-  
+}
