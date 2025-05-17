@@ -1,1 +1,50 @@
-<p>book-appointment works!</p>
+ <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<nav class="navbar">
+  <div class="logo-container">
+    <img src="assets/images/Logo.png" alt="HealthEase Logo" class="logo-img" />
+    <span class="portal-name">HealthEase</span>
+  </div>
+</nav>
+    <div class="sidebar" id="sidebar">
+        <div class="hamburger-icon" id="hamburger">
+             <i class="fa fa-bars" style="font-size:24px;color:#00796b;"></i>
+        </div>
+        <ul>
+             <li><a routerLink="/patient/dashboard">Dashboard</a></li>
+            <li><a routerLink="/patient/book-appointment">Book Appointment</a></li>
+            <li><a routerLink="/patient/manage-appointment">Manage Appointments</a></li>
+        </ul>
+    </div>
+
+<div class="main-content">
+  <div class="container appointment-form">
+    <h2>Book an Appointment</h2>
+      <form>
+      <div class="form-group">
+        <label for="doctorId">Select Doctor</label>
+        <select formControlName="doctorId" id="doctorId" required>
+          <option value="" disabled selected>Select a doctor</option>
+
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="appointmentDate">Date</label>
+        <input type="date" formControlName="appointmentDate" id="appointmentDate"  />
+      </div>
+
+      <div class="form-group">
+        <label for="appointmentTime">Time</label>
+        <input type="time" formControlName="appointmentTime" id="appointmentTime"  />
+      </div>
+
+      <div class="form-group">
+        <label for="reason">Reason for Visit</label>
+        <textarea formControlName="reason" id="reason" rows="3" ></textarea>
+      </div>
+
+      <button type="submit">Book Appointment</button>
+    </form>
+  </div>
+</div>

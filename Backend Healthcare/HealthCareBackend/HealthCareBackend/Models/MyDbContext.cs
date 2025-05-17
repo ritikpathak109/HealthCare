@@ -16,10 +16,12 @@ namespace HealthCareBackend.Models
         public DbSet<GenderDTO> GenderMaster { get; set; }
         public DbSet<PatientDetailsDTO> USP_GetPatientProfile { get; set; }
         public DbSet<PatientDetails> PatientsDetails { get; set; }
+        public DbSet<DoctorDetails> DoctorDetails { get; set; }
         public DbSet<DoctorSpecializationDTO> DoctorSpecializationMaster { get; set; }
         public DbSet<AppointmentStatusDTO> AppointmentStatusMaster { get; set; }
         public DbSet<Appointments> Appointments { get; set; }
         public DbSet<AppointmentResponseDTO> USP_GetAllAppointmentsDetails { get; set; } 
+
 
 
     }

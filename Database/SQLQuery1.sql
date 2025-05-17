@@ -217,26 +217,63 @@ CREATE TABLE Appointments (
     UpdatedDate DATETIME DEFAULT GETDATE()
 );
 
+ALTER TABLE Appointments
+ADD SlotId INT;
+
+ALTER TABLE Appointments
+ADD CONSTRAINT FK_Appointments_SlotMaster
+FOREIGN KEY (SlotId) REFERENCES SlotMaster(SlotId);
+
+-- Optional: Remove column if you're fully moving to SlotId-based system
+ALTER TABLE Appointments DROP COLUMN AppointmentTime;
+
+
+
 select * from Appointments
 
-CREATE PROCEDURE USP_AddAppointment
-    @PatientId INT,
+alter PROCEDURE USP_AddAppointment
+   @PatientId INT,
     @DoctorId INT,
     @AppointmentDate DATE,
-    @AppointmentTime TIME,
+    @SlotId INT,
     @ReasonForVisit NVARCHAR(255),
     @StatusId INT
 AS
 BEGIN
     INSERT INTO Appointments
     (
-        PatientId, DoctorId, AppointmentDate, AppointmentTime, ReasonForVisit, StatusId )
+        PatientId, DoctorId, AppointmentDate, SlotId, ReasonForVisit, StatusId
+    )
     VALUES
     (
-        @PatientId, @DoctorId, @AppointmentDate, @AppointmentTime, @ReasonForVisit, @StatusId
-
+        @PatientId, @DoctorId, @AppointmentDate, @SlotId, @ReasonForVisit, @StatusId
     )
 END
+
+exec USP_AddAppointment 2,6,'2025-05-18', 2,'Regular OPD', 1
+
+CREATE PROCEDURE USP_GetAvailableSlots
+    @DoctorId INT,
+    @AppointmentDate DATE
+AS
+BEGIN
+    SELECT 
+        SM.SlotId,
+        SM.SlotTime,
+        CASE 
+            WHEN A.SlotId IS NOT NULL THEN 1  -- Booked
+            ELSE 0                            -- Available
+        END AS IsBooked
+    FROM SlotMaster SM
+    LEFT JOIN Appointments A
+        ON SM.SlotId = A.SlotId
+        AND A.DoctorId = @DoctorId
+        AND A.AppointmentDate = @AppointmentDate
+        AND A.IsDeleted = 0
+END
+
+exec USP_GetAvailableSlots 6, '2025-05-18'
+
 
 
 
@@ -267,7 +304,13 @@ END
 
 exec USP_GetAllAppointmentsDetails
 
+CREATE TABLE SlotMaster (
+    SlotId INT PRIMARY KEY IDENTITY(1,1),
+    SlotTime TIME NOT NULL,
+    IsActive BIT DEFAULT 1
+);
 
+select * from SlotMaster
 
 
 --DOCTOR PORTAL TABLES
@@ -279,7 +322,7 @@ CREATE TABLE DoctorSpecializationMaster (
 );
 
 
-INSERT INTO DoctorSpecializationMaster (SpecializationName)
+INSERT INTO select * from DoctorSpecializationMaster (SpecializationName)
 VALUES 
 ('General Physician'),
 ('ENT Specialist'),
@@ -377,4 +420,7 @@ delete from DoctorDetails where doctorid=1
 select * from UsersLogin
 
 select * from DoctorDetails
+
+
+
 

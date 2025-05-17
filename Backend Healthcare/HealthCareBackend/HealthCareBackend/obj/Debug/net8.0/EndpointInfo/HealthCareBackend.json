@@ -36,6 +36,55 @@
         }
       }
     },
+    "/api/DoctorbySpecialization/GetDoctorsBySpecilization/{specializationId}": {
+      "get": {
+        "tags": [
+          "DoctorbySpecialization"
+        ],
+        "parameters": [
+          {
+            "name": "specializationId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DoctorBySpecializationDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DoctorBySpecializationDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DoctorBySpecializationDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/DoctorRegistration/Register-Doctor": {
       "post": {
         "tags": [
@@ -591,6 +640,24 @@
           "countryName": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DoctorBySpecializationDTO": {
+        "type": "object",
+        "properties": {
+          "doctorId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "doctorFullName": {
+            "type": "string",
+            "nullable": true
+          },
+          "specializationId": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
