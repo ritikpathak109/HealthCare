@@ -24,5 +24,9 @@ export class DoctorService {
   getGenders(){
     return this.http.get('http://localhost:5165/api/MasterTable/Get-Gender')
   }
-  
+  getDoctorbySpecialization(specializationId:any){
+    return this.http.get(`http://localhost:5165/api/DoctorbySpecialization/GetDoctorsBySpecilization/${specializationId}`)
+  }
+ 
+
 }

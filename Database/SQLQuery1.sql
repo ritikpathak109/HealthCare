@@ -204,7 +204,7 @@ VALUES
 
 
 
-CREATE TABLE Appointments (
+CREATE TABLE select * from Appointments (
     AppointmentId INT PRIMARY KEY IDENTITY(1,1),
     PatientId INT foreign key references PatientsDetails(PatientId),
     DoctorId INT foreign key references DoctorDetails(DoctorId) ,
@@ -253,6 +253,44 @@ END
 
 exec USP_AddAppointment 2,6,'2025-05-18', 2,'Regular OPD', 1
 
+EXEC USP_AddAppointment 1, 7, '2025-05-27', 1, 'General Checkup', 1;
+EXEC USP_AddAppointment 2, 8, '2025-05-27', 2, 'ENT Consultation', 1;
+EXEC USP_AddAppointment 3, 9, '2025-05-27', 3, 'Fever and Cold', 1;
+EXEC USP_AddAppointment 4, 10, '2025-05-27', 4, 'Blood Pressure Check', 1;
+EXEC USP_AddAppointment 5, 11, '2025-05-27', 5, 'Diabetes Review', 1;
+EXEC USP_AddAppointment 6, 12, '2025-05-27', 6, 'Back Pain', 1;
+EXEC USP_AddAppointment 7, 13, '2025-05-27', 7, 'Skin Allergy', 1;
+EXEC USP_AddAppointment 16, 14, '2025-05-27', 8, 'Stomach Pain', 1;
+EXEC USP_AddAppointment 9, 15, '2025-05-27', 9, 'Follow-up Visit', 1;
+EXEC USP_AddAppointment 10, 16, '2025-05-27', 10, 'Routine Checkup', 1;
+EXEC USP_AddAppointment 11, 17, '2025-05-27', 11, 'Migraine Evaluation', 1;
+EXEC USP_AddAppointment 12, 18, '2025-05-27', 12, 'Post Surgery Follow-up', 1;
+EXEC USP_AddAppointment 13, 19, '2025-05-27', 13, 'Sore Throat', 1;
+EXEC USP_AddAppointment 14, 20, '2025-05-27', 14, 'Weight Loss Consultation', 1;
+EXEC USP_AddAppointment 15, 21, '2025-05-27', 15, 'Asthma Review', 1;
+EXEC USP_AddAppointment 16, 22, '2025-05-27', 16, 'Diet Advice', 1;
+EXEC USP_AddAppointment 17, 23, '2025-05-27', 17, 'General Weakness', 1;
+EXEC USP_AddAppointment 18, 24, '2025-05-27', 18, 'Fatigue Check', 1;
+EXEC USP_AddAppointment 1, 25, '2025-05-27', 19, 'Hair Fall Consultation', 1;
+EXEC USP_AddAppointment 2, 26, '2025-05-27', 20, 'Ear Infection', 1;
+EXEC USP_AddAppointment 3, 27, '2025-05-27', 21, 'Eye Pain', 1;
+EXEC USP_AddAppointment 4, 28, '2025-05-27', 22, 'Knee Pain', 1;
+EXEC USP_AddAppointment 5, 29, '2025-05-27', 23, 'Cough and Cold', 1;
+EXEC USP_AddAppointment 6, 30, '2025-05-27', 24, 'Dental Cavity', 1;
+EXEC USP_AddAppointment 7, 7, '2025-05-27', 25, 'Blurred Vision', 1;
+EXEC USP_AddAppointment 17, 8, '2025-05-27', 26, 'Infection Checkup', 1;
+EXEC USP_AddAppointment 9, 9, '2025-05-27', 27, 'Urine Infection', 1;
+EXEC USP_AddAppointment 10, 10, '2025-05-27', 28, 'Headache', 1;
+EXEC USP_AddAppointment 11, 11, '2025-05-27', 29, 'Swollen Ankle', 1;
+EXEC USP_AddAppointment 12, 12, '2025-05-27', 30, 'Foot Pain', 1;
+EXEC USP_AddAppointment 13, 13, '2025-05-27', 31, 'Chest Discomfort', 1;
+EXEC USP_AddAppointment 14, 14, '2025-05-27', 32, 'Pre-natal Check', 1;
+EXEC USP_AddAppointment 15, 15, '2025-05-27', 33, 'Post-natal Visit', 1;
+
+
+
+
+
 CREATE PROCEDURE USP_GetAvailableSlots
     @DoctorId INT,
     @AppointmentDate DATE
@@ -273,9 +311,9 @@ BEGIN
         AND A.IsDeleted = 0
 END
 
-exec USP_GetAvailableSlots 6, '2025-05-18'
+exec USP_GetAvailableSlots 9, '2025-05-27'
 
-
+DELETE FROM Appointments;
 
 
 create PROCEDURE USP_GetAllAppointmentsDetails

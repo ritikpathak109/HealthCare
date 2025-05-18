@@ -16,6 +16,37 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "HealthCareBackend.Controllers.AvailableSlotController",
+    "Method": "GetAvailableSlots",
+    "RelativePath": "api/AvailableSlot/GetAvailable-Slots",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "doctorId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "appointmentDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[HealthCareBackend.DTOs.SlotDTO, HealthCareBackend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "HealthCareBackend.Controllers.DoctorbySpecializationController",
     "Method": "GetDoctorsBySpecializationId",
     "RelativePath": "api/DoctorbySpecialization/GetDoctorsBySpecilization/{specializationId}",
