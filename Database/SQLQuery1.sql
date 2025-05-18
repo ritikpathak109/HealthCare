@@ -240,6 +240,7 @@ alter PROCEDURE USP_AddAppointment
     @StatusId INT
 AS
 BEGIN
+  SET NOCOUNT ON;
     INSERT INTO Appointments
     (
         PatientId, DoctorId, AppointmentDate, SlotId, ReasonForVisit, StatusId

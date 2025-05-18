@@ -22,12 +22,12 @@ namespace HealthCareBackend.Repositories
                 new SqlParameter("@PatientId", dto.PatientId),
                 new SqlParameter("@DoctorId", dto.DoctorId),
                 new SqlParameter("@AppointmentDate", dto.AppointmentDate),
-                new SqlParameter("@AppointmentTime", dto.AppointmentTime),
+                new SqlParameter("@SlotId", dto.SlotId),
                 new SqlParameter("@ReasonForVisit", dto.ReasonForVisit),
                 new SqlParameter("@StatusId", dto.StatusId)
             };
 
-            _context.Database.ExecuteSqlRaw( "EXEC USP_AddAppointment @PatientId, @DoctorId, @AppointmentDate, @AppointmentTime, @ReasonForVisit, @StatusId",
+            _context.Database.ExecuteSqlRaw("EXEC USP_AddAppointment @PatientId, @DoctorId, @AppointmentDate, @SlotId, @ReasonForVisit, @StatusId",
                 parameters
             );
         }
