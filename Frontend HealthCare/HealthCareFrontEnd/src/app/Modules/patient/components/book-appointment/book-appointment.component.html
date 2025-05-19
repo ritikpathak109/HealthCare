@@ -1,67 +1,84 @@
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link
+  href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap"
+  rel="stylesheet"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
 <nav class="navbar">
   <div class="logo-container">
     <img src="assets/images/Logo.png" alt="HealthEase Logo" class="logo-img" />
     <span class="portal-name">HealthEase</span>
   </div>
 </nav>
-    <div class="sidebar" id="sidebar">
-        <div class="hamburger-icon" id="hamburger">
-             <i class="fa fa-bars" style="font-size:24px;color:#00796b;"></i>
-        </div>
-        <ul>
-             <li><a routerLink="/patient/dashboard">Dashboard</a></li>
-            <li><a routerLink="/patient/book-appointment">Book Appointment</a></li>
-            <li><a routerLink="/patient/manage-appointment">Manage Appointments</a></li>
-        </ul>
-    </div>
+<div class="sidebar" id="sidebar">
+  <div class="hamburger-icon" id="hamburger">
+    <i class="fa fa-bars" style="font-size: 24px; color: #00796b"></i>
+  </div>
+  <ul>
+    <li><a routerLink="/patient/dashboard">Dashboard</a></li>
+    <li><a routerLink="/patient/book-appointment">Book Appointment</a></li>
+    <li><a routerLink="/patient/manage-appointment">Manage Appointments</a></li>
+  </ul>
+</div>
 
 <div class="main-content">
   <div class="container appointment-form">
     <h2>Book an Appointment</h2>
-               <form [formGroup]="bookAppointmentForm">
-                <div class="form-group">
-                    <label for="specialization">Specialization</label>
-                   <select formControlName="SpecializationId" id="specialization" class="form-control">
-                  <option value="">--Select--</option>
-                  <option *ngFor="let specialization of specialization" [value]="specialization.specializationId">
-          {{ specialization.specializationName }}
-        </option>
-      </select>
-                </div>
+    <form [formGroup]="bookAppointmentForm">
+      <div class="form-group">
+        <label for="specialization">Specialization</label>
+        <select
+          formControlName="SpecializationId"
+          id="specialization"
+          class="form-control"
+        >
+          <option value="">--Select--</option>
+          <option
+            *ngFor="let specialization of specialization"
+            [value]="specialization.specializationId"
+          >
+            {{ specialization.specializationName }}
+          </option>
+        </select>
+      </div>
 
-                <div class="form-group">
-                    <label for="doctor">Doctor</label>
-                    <select id="doctor" class="form-control" formControlName="DoctorId">
-                        <option value="">--Select Doctor--</option>
-                        <option *ngFor="let doctor of doctors" [value]="doctor.doctorId">
-                            {{ doctor.doctorFullName }} 
-                        </option>
-                    </select>
-                </div>
+      <div class="form-group">
+        <label for="doctor">Doctor</label>
+        <select id="doctor" class="form-control" formControlName="DoctorId">
+          <option value="">--Select Doctor--</option>
+          <option *ngFor="let doctor of doctors" [value]="doctor.doctorId">
+            {{ doctor.doctorFullName }}
+          </option>
+        </select>
+      </div>
 
+      <div class="form-group">
+        <label for="appointmentDate">Appointment Date</label>
+        <input type="date" id="appointmentDate" class="form-control" />
+      </div>
 
- 
+      <div class="form-group">
+        <label for="slot">Available Slot</label>
+        <select id="slot" class="form-control">
+          <option value="">Select Slot</option>
+        </select>
+      </div>
 
-                <div class="form-group">
-                    <label for="appointmentDate">Appointment Date</label>
-                    <input type="date" id="appointmentDate" class="form-control" />
-                </div>
+      <div class="form-group">
+        <label for="reason">Reason for Visit</label>
+        <textarea
+          id="reason"
+          class="form-control"
+          rows="3"
+          placeholder="Describe your issue..."
+        ></textarea>
+      </div>
 
-                <div class="form-group">
-                    <label for="slot">Available Slot</label>
-                    <select id="slot" class="form-control">
-                        <option value="">Select Slot</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="reason">Reason for Visit</label>
-                    <textarea id="reason" class="form-control" rows="3" placeholder="Describe your issue..."></textarea>
-                </div>
-
-                <button type="submit" class="btn btn-primary submit-button">Book Appointment</button>
-            </form>
+      <button type="submit" class="btn btn-primary submit-button">
+        Book Appointment
+      </button>
+    </form>
   </div>
 </div>
