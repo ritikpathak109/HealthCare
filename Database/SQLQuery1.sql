@@ -291,14 +291,15 @@ EXEC USP_AddAppointment 15, 15, '2025-05-27', 33, 'Post-natal Visit', 1;
 
 
 
-CREATE PROCEDURE USP_GetAvailableSlots
+alter PROCEDURE USP_GetAvailableSlots
     @DoctorId INT,
     @AppointmentDate DATE
 AS
 BEGIN
     SELECT 
         SM.SlotId,
-        SM.SlotTime,
+        SM.SlotTime AS StartTime,
+        DATEADD(MINUTE, 15, SM.SlotTime) AS EndTime,
         CASE 
             WHEN A.SlotId IS NOT NULL THEN 1  -- Booked
             ELSE 0                            -- Available
@@ -309,6 +310,7 @@ BEGIN
         AND A.DoctorId = @DoctorId
         AND A.AppointmentDate = @AppointmentDate
         AND A.IsDeleted = 0
+    WHERE SM.IsActive = 1
 END
 
 exec USP_GetAvailableSlots 9, '2025-05-27'

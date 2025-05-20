@@ -923,7 +923,11 @@
             "type": "integer",
             "format": "int32"
           },
-          "slotTime": {
+          "startTime": {
+            "type": "string",
+            "format": "date-span"
+          },
+          "endTime": {
             "type": "string",
             "format": "date-span"
           },

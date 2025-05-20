@@ -8,8 +8,7 @@ html,
 body {
   height: 100%;
   width: 100%;
-font-family: 'Roboto', sans-serif;
-
+  font-family: 'Roboto', sans-serif;
   overflow-x: hidden;
 }
 
@@ -187,7 +186,8 @@ button:hover {
 }
 
 .sidebar ul li {
-  padding: 0; /* Reset default padding on li */
+  padding: 0;
+  /* Reset default padding on li */
 }
 
 .sidebar ul li a {
@@ -195,7 +195,8 @@ button:hover {
   text-decoration: none;
   color: #333;
   font-size: 16px;
-  padding: 15px 20px; /* Keep some vertical padding */
+  padding: 15px 20px;
+  /* Keep some vertical padding */
   transition: background-color 0.3s ease, color 0.3s ease,
     padding-left 0.3s ease;
 }
@@ -203,7 +204,8 @@ button:hover {
 .sidebar ul li a:hover {
   background-color: #00796b;
   color: #ffffff;
-  padding-left: 26px; /* Increased padding-left on hover */
+  padding-left: 26px;
+  /* Increased padding-left on hover */
 }
 
 /* Responsive */
@@ -338,4 +340,26 @@ label {
 
 .btn {
   width: 100%;
+}
+
+/* Style for disabled dropdown options */
+select option:disabled {
+  color: #808080;
+  /* Gray out the text */
+  background-color: #e0e0e0;
+  /* Gray out the background */
+  cursor: not-allowed;
+  /* Change the cursor to indicate it's not clickable */
+  transition: background-color 0.2s ease, color 0.2s ease; /* Add smooth transition */
+}
+
+select option:disabled:hover {
+  background-color: #d0d0d0; /* Slightly lighter on hover, for better feedback */
+  color: #808080;
+}
+
+.booked-label {
+  color: red;
+  font-size: 14px;
+  margin-left: 5px;
 }
