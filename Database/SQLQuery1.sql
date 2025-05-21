@@ -230,7 +230,7 @@ ALTER TABLE Appointments DROP COLUMN AppointmentTime;
 
 
 select * from Appointments
-
+-- TO CREATE APPOINTMENT FOR THE PATIENT
 alter PROCEDURE USP_AddAppointment
    @PatientId INT,
     @DoctorId INT,
@@ -290,7 +290,7 @@ EXEC USP_AddAppointment 15, 15, '2025-05-27', 33, 'Post-natal Visit', 1;
 
 
 
-
+-- TO GET WHICH TIME SLOTS ARE AVAILABLE FOR BOOKING
 alter PROCEDURE USP_GetAvailableSlots
     @DoctorId INT,
     @AppointmentDate DATE
@@ -317,20 +317,24 @@ exec USP_GetAvailableSlots 9, '2025-05-27'
 
 DELETE FROM Appointments;
 
-
-create PROCEDURE USP_GetAllAppointmentsDetails
+--TO GET APPOINTMENT DETILS USING PATEINT ID
+alter PROCEDURE USP_GetAppointmentsByPatientId
+    @PatientId INT
 AS
 BEGIN
     SELECT 
         A.AppointmentId,
         A.PatientId,
         P.PatientFirstName + ' ' + P.PatientLastName AS PatientName,
-        
         DATEDIFF(YEAR, P.DateOfBirth, GETDATE()) AS Age,
         A.DoctorId,
         D.DoctorFirstName + ' ' + D.DoctorLastName AS DoctorName,
         A.AppointmentDate,
-        A.AppointmentTime,
+        
+        -- Raw slot time data
+        SM.SlotTime AS SlotStartTime,
+        DATEADD(MINUTE, 15, SM.SlotTime) AS SlotEndTime,
+
         A.ReasonForVisit,
         ASM.[Status],
         A.CreatedDate
@@ -338,12 +342,14 @@ BEGIN
     INNER JOIN PatientsDetails P ON A.PatientId = P.PatientId
     INNER JOIN DoctorDetails D ON A.DoctorId = D.DoctorId
     INNER JOIN AppointmentStatusMaster ASM ON A.StatusId = ASM.StatusId
-    WHERE A.IsDeleted = 0
-    ORDER BY A.AppointmentDate DESC, A.AppointmentTime DESC
+    INNER JOIN SlotMaster SM ON A.SlotId = SM.SlotId
+    WHERE A.IsDeleted = 0 AND A.PatientId = @PatientId
+    ORDER BY A.AppointmentDate DESC, SM.SlotTime DESC
 END
 
 
-exec USP_GetAllAppointmentsDetails
+exec USP_GetAppointmentsByPatientId 1
+
 
 CREATE TABLE SlotMaster (
     SlotId INT PRIMARY KEY IDENTITY(1,1),

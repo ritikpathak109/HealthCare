@@ -2,7 +2,7 @@
   {
     "ContainingType": "HealthCareBackend.Controllers.AppointmentController",
     "Method": "AddAppointment",
-    "RelativePath": "api/Appointment/add",
+    "RelativePath": "api/Appointment/add-appointment",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,

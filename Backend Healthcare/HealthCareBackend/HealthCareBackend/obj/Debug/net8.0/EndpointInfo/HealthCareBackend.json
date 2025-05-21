@@ -5,7 +5,7 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/Appointment/add": {
+    "/api/Appointment/add-appointment": {
       "post": {
         "tags": [
           "Appointment"

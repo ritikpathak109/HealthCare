@@ -62,7 +62,7 @@
       <div class="form-group">
         <label for="slot">Available Slot</label>
         <select id="slot" class="form-control" formControlName="SlotId">
-          <option value="">Select Slot</option>
+              <option value="">--Select Slot--</option>
          <option *ngFor="let slot of slotList" [value]="slot.slotId" [disabled]="slot.isBooked"> {{ slot.startTime }} to {{ slot.endTime }} 
            <span *ngIf="slot.isBooked">(Booked)</span>
         </option>
@@ -75,12 +75,14 @@
         <textarea
           id="reason"
           class="form-control"
+          formControlName="ReasonForVisit"
           rows="3"
           placeholder="Describe your issue..."
         ></textarea>
       </div>
 
-      <button type="submit" class="btn btn-primary submit-button">
+      <button type="submit" class="btn btn-primary submit-button" (click)="onBookAppointment()" 
+  [disabled]="bookAppointmentForm.invalid">
         Book Appointment
       </button>
     </form>

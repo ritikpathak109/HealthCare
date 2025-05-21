@@ -15,10 +15,12 @@ doctors: any;
 doctorId: any;
  appointmentDate: any;
  slotList: any;
+ patientId: any;
  constructor(private appservice: BookAppointmentService, private doctorService: DoctorService, private fb: FormBuilder) { }
 
 
  ngOnInit(){
+    this.patientId = localStorage.getItem('PatientId');
   this.loadSpecialization();
   this.bookAppointmentForm.get('SpecializationId')?.valueChanges.subscribe((specializationId) => {
   if (specializationId) {
@@ -70,5 +72,29 @@ doctorId: any;
   } else {
     this.slotList = []; 
   }
+  }
+ onBookAppointment(){
+   if (this.bookAppointmentForm.valid && this.patientId) {
+    if (confirm('Do you want to book appointment? ')) {
+    const appointmentData = {
+      patientId: Number(this.patientId),
+      doctorId: this.bookAppointmentForm.value.DoctorId,
+      appointmentDate: this.bookAppointmentForm.value.AppointmentDate,
+      slotId: this.bookAppointmentForm.value.SlotId,
+      reasonForVisit: this.bookAppointmentForm.value.ReasonForVisit,
+      statusId: 1 
+    };
+
+    this.appservice.bookAppointment(appointmentData).subscribe(() => {
+      alert('Appointment Booked Successfully!');
+      this.bookAppointmentForm.reset();
+      this.slotList = [];
+    });
+  }
+ } 
+ else {
+    alert('Please fill in all required fields.');
+  }
+
   }
 }

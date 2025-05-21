@@ -32,6 +32,7 @@ selectedFile: File | null = null;
   loadPatientDetails(userId: string){
     this.patientser.getPatientDetails(userId).subscribe((res:any)=> {
       this.patientDetails = res[0];
+       localStorage.setItem('PatientId', this.patientDetails.patientId);
       
 
     });
@@ -57,8 +58,6 @@ selectedFile: File | null = null;
       this.patientser.uploadProfilePicture(this.userId, this.selectedFile).subscribe(() => {
         this.loadProfilePicture(this.userId!);
         alert('Profile picture uploaded successfully.');
-  
-        // Reset file input
         this.selectedFile = null;
         const fileInput = document.getElementById('fileInput') as HTMLInputElement;
         if (fileInput) {

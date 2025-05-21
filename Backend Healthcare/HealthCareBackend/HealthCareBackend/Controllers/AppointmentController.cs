@@ -16,7 +16,7 @@ namespace HealthCareBackend.Controllers
                 _service = service;
             }
 
-            [HttpPost("add")]
+            [HttpPost("add-appointment")]
             public IActionResult AddAppointment([FromBody] AppointmentDTO dto)
             {
                 _service.AddAppointment(dto);
