@@ -63,6 +63,40 @@ body {
   font-size: 24px;
 }
 
+/* Sidebar Styles */
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background-color: #ffffff;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  padding-top: 20px;
+  z-index: 9;
+  transition: transform 0.3s ease;
+  transform: translateX(0);
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  padding: 15px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease, padding-left 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+  background-color: #00796b;
+  color: #ffffff;
+  padding-left: 26px;
+}
+
 /* Main Content Wrapper */
 .main-content {
   background: linear-gradient(to right, #e0f7fa, #ffffff);
@@ -83,8 +117,7 @@ body {
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 128, 128, 0.2);
-  margin-bottom: 20px;
-  margin-top: 30px;
+  margin: 30px auto 20px;
 }
 
 h2 {
@@ -166,95 +199,25 @@ button:hover {
   background-color: #004d40;
 }
 
-/* Sidebar Styles */
-.sidebar {
-  width: 220px;
-  height: 100vh;
-  background-color: #ffffff;
-  position: fixed;
-  top: 80px;
-  left: 0;
-  padding-top: 20px;
-  z-index: 9;
-  transition: transform 0.3s ease;
-  transform: translateX(0);
-}
-
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar ul li {
-  padding: 0;
-  /* Reset default padding on li */
-}
-
-.sidebar ul li a {
-  display: block;
-  text-decoration: none;
-  color: #333;
-  font-size: 16px;
-  padding: 15px 20px;
-  /* Keep some vertical padding */
-  transition: background-color 0.3s ease, color 0.3s ease,
-    padding-left 0.3s ease;
-}
-
-.sidebar ul li a:hover {
-  background-color: #00796b;
-  color: #ffffff;
-  padding-left: 26px;
-  /* Increased padding-left on hover */
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .navbar .logo-img {
-    height: 60px;
-  }
-
-  .container {
-    padding: 20px;
-    margin-top: 80px;
-  }
-
-  .main-content {
-    padding-top: 80px;
-  }
-
-  .image-preview img {
-    width: 120px;
-    height: 120px;
-  }
-
-  .hamburger-icon {
-    display: flex;
-  }
-
-  .sidebar {
-    transform: translateX(0);
-  }
-
-  .main-content {
-    margin-left: 220px;
-  }
-}
-
 /* Book Appointment Specific Styles */
 .appointment-form {
   background-color: #ffffff;
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 128, 128, 0.2);
-  margin-bottom: 20px;
-  margin-top: 30px;
+  margin: 30px auto 20px;
 }
 
 .appointment-form h2 {
   text-align: center;
   color: #00796b;
   margin-bottom: 25px;
+}
+
+.book-appointment-container {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
 }
 
 .form-group {
@@ -308,7 +271,62 @@ button:hover {
   background-color: #004d40;
 }
 
+label {
+  font-weight: bold;
+}
+
+.btn {
+  width: 100%;
+}
+
+/* Style for disabled dropdown options */
+select option:disabled {
+  color: #808080;
+  background-color: #e0e0e0;
+  cursor: not-allowed;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+select option:disabled:hover {
+  background-color: #d0d0d0;
+  color: #808080;
+}
+
+.booked-label {
+  color: red;
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
+  .navbar .logo-img {
+    height: 60px;
+  }
+
+  .container {
+    padding: 20px;
+    margin-top: 80px;
+  }
+
+  .main-content {
+    padding-top: 80px;
+    margin-left: 220px;
+  }
+
+  .image-preview img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .hamburger-icon {
+    display: flex;
+  }
+
+  .sidebar {
+    transform: translateX(0);
+  }
+
   .appointment-form {
     padding: 20px;
   }
@@ -322,44 +340,4 @@ button:hover {
   .submit-button {
     font-size: 16px;
   }
-}
-
-.book-appointment-container {
-  max-width: 500px;
-  margin: auto;
-  padding: 20px;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-label {
-  font-weight: bold;
-}
-
-.btn {
-  width: 100%;
-}
-
-/* Style for disabled dropdown options */
-select option:disabled {
-  color: #808080;
-  /* Gray out the text */
-  background-color: #e0e0e0;
-  /* Gray out the background */
-  cursor: not-allowed;
-  /* Change the cursor to indicate it's not clickable */
-  transition: background-color 0.2s ease, color 0.2s ease; /* Add smooth transition */
-}
-
-select option:disabled:hover {
-  background-color: #d0d0d0; /* Slightly lighter on hover, for better feedback */
-  color: #808080;
-}
-
-.booked-label {
-  color: red;
-  font-size: 14px;
-  margin-left: 5px;
 }
