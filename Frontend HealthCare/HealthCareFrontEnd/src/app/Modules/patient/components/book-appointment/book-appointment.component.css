@@ -109,10 +109,10 @@ body {
   transition: margin-left 0.3s ease;
 }
 
-/* Container Styles */
+/* Container Styles (used by appointment-form) */
 .container {
   width: 100%;
-  max-width: 800px;
+  max-width: 1100px; /* Adjusted max-width for container if it was meant to be different from the form */
   background-color: white;
   padding: 30px;
   border-radius: 12px;
@@ -126,82 +126,15 @@ h2 {
   margin-bottom: 25px;
 }
 
-.card {
-  padding: 20px;
-  border-radius: 10px;
-  background-color: #f8f8f8;
-  margin-bottom: 20px;
-  border: 1px solid #e0e0e0;
-}
-
-.card h3 {
-  color: #00796b;
-  margin-bottom: 15px;
-  text-align: center;
-}
-
-.card p {
-  margin-bottom: 10px;
-  color: #555;
-  font-size: 16px;
-}
-
-.card p strong {
-  color: #004d40;
-}
-
-/* Profile Section */
-.profile-section {
-  padding: 20px;
-  border-radius: 10px;
-  background-color: #f1f8f9;
-  border: 1px solid #b2dfdb;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.profile-section h3 {
-  color: #00695c;
-  margin-bottom: 15px;
-}
-
-
-button {
-  margin-top: 10px;
-  background-color: #00796b;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  font-size: 14px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #004d40;
-}
-
-/* Book Appointment Specific Styles */
+/* Book Appointment Specific Styles (renamed from .appointment-form for clarity as it's directly used by .container) */
 .appointment-form {
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 128, 128, 0.2);
-  margin: 30px auto 20px;
+  background-color: #ffffff; /* Redundant if .container already sets this, but kept for specificity */
+  padding: 30px; /* Redundant if .container already sets this, but kept for specificity */
+  border-radius: 12px; /* Redundant if .container already sets this, but kept for specificity */
+  box-shadow: 0 8px 20px rgba(0, 128, 128, 0.2); /* Redundant if .container already sets this, but kept for specificity */
+  margin: 30px auto 20px; /* Redundant if .container already sets this, but kept for specificity */
 }
 
-.appointment-form h2 {
-  text-align: center;
-  color: #00796b;
-  margin-bottom: 25px;
-}
-
-.book-appointment-container {
-  max-width: 500px;
-  margin: auto;
-  padding: 20px;
-}
 
 .form-group {
   margin-bottom: 15px;
@@ -256,10 +189,6 @@ button:hover {
 
 label {
   font-weight: bold;
-}
-
-.btn {
-  width: 100%;
 }
 
 /* Style for disabled dropdown options */

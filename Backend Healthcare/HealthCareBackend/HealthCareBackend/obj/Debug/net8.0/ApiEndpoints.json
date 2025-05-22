@@ -16,6 +16,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "HealthCareBackend.Controllers.AppointmentDetailsbyPatientIdController",
+    "Method": "GetAppointmentsByPatientId",
+    "RelativePath": "api/AppointmentDetailsbyPatientId/AppointmentDetailsbyPatientId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "patientId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "HealthCareBackend.Controllers.AvailableSlotController",
     "Method": "GetAvailableSlots",
     "RelativePath": "api/AvailableSlot/GetAvailable-Slots",
@@ -86,16 +102,6 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "HealthCareBackend.Controllers.GetAppointmentDetailsController",
-    "Method": "GetAllAppointments",
-    "RelativePath": "api/GetAppointmentDetails/GetAllAppointments",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
     "ReturnTypes": []
   },
   {

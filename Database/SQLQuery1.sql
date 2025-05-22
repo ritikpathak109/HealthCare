@@ -318,7 +318,7 @@ exec USP_GetAvailableSlots 9, '2025-05-27'
 DELETE FROM Appointments;
 
 --TO GET APPOINTMENT DETILS USING PATEINT ID
-alter PROCEDURE USP_GetAppointmentsByPatientId
+ALTER PROCEDURE USP_GetAppointmentsByPatientId
     @PatientId INT
 AS
 BEGIN
@@ -329,8 +329,9 @@ BEGIN
         DATEDIFF(YEAR, P.DateOfBirth, GETDATE()) AS Age,
         A.DoctorId,
         D.DoctorFirstName + ' ' + D.DoctorLastName AS DoctorName,
+        SMZ.SpecializationName, 
         A.AppointmentDate,
-        
+
         -- Raw slot time data
         SM.SlotTime AS SlotStartTime,
         DATEADD(MINUTE, 15, SM.SlotTime) AS SlotEndTime,
@@ -341,6 +342,7 @@ BEGIN
     FROM Appointments A
     INNER JOIN PatientsDetails P ON A.PatientId = P.PatientId
     INNER JOIN DoctorDetails D ON A.DoctorId = D.DoctorId
+    INNER JOIN DoctorSpecializationMaster SMZ ON D.SpecializationId = SMZ.SpecializationId 
     INNER JOIN AppointmentStatusMaster ASM ON A.StatusId = ASM.StatusId
     INNER JOIN SlotMaster SM ON A.SlotId = SM.SlotId
     WHERE A.IsDeleted = 0 AND A.PatientId = @PatientId

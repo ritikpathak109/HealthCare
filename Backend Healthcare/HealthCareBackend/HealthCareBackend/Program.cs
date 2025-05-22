@@ -34,12 +34,13 @@ builder.Services.AddScoped<DoctorRegistrationService>();
 builder.Services.AddScoped<DoctorRegistrationRepository>();
 builder.Services.AddScoped<AppointmentRepository>();
 builder.Services.AddScoped<AppointmentService>();
-builder.Services.AddScoped<GetAppointmentDetailsRepository>();
-builder.Services.AddScoped<GetAppointmentDetailsService>();
+builder.Services.AddScoped<AppointmentDetailsbyPatietntIdRepository>();
 builder.Services.AddScoped<DoctorbySpecializationRepository>();
 builder.Services.AddScoped<DoctorbySpecializationService>();
 builder.Services.AddScoped<AvailableSlotRepository>();
 builder.Services.AddScoped<AvailableSlotService>();
+builder.Services.AddScoped<AppointmentDetailsbyPatientIdService>();
+builder.Services.AddScoped<AppointmentDetailsbyPatietntIdRepository>();
 // Configure DbContext with the correct connection string
 builder.Services.AddDbContext<MyDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))

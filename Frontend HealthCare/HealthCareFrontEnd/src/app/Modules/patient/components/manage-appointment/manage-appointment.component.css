@@ -1,361 +1,220 @@
- * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-      /* Full height and width for body, setting default font and preventing horizontal overflow */
-      html,
-      body {
-        height: 100%;
-        width: 100%;
-        font-family: 'Roboto', sans-serif;
-        overflow-x: hidden;
-      }
+/* Full height and width for body, setting default font and preventing horizontal overflow */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+}
 
-      /* Navbar styles: fixed at top, teal background, flex layout */
-      .navbar {
-        background-color: #00796b;
-        padding: 10px 20px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        position: fixed;
-        width: 100%;
-        top: 0;
-        left: 0;
-        z-index: 10; /* Ensures navbar stays on top */
-      }
+/* Navbar styles: fixed at top, teal background, flex layout */
+.navbar {
+  background-color: #00796b;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10; /* Ensures navbar stays on top */
+}
 
-      /* Logo and portal name container in navbar */
-      .navbar .logo-container {
-        display: flex;
-        align-items: center;
-      }
+/* Logo and portal name container in navbar */
+.navbar .logo-container {
+  display: flex;
+  align-items: center;
+}
 
-      /* Styling for the logo image in the navbar */
-      .navbar .logo-img {
-        height: 80px;
-        width: auto;
-        opacity: 0.9;
-        margin-right: 10px;
-      }
+/* Styling for the logo image in the navbar */
+.navbar .logo-img {
+  height: 80px;
+  width: auto;
+  opacity: 0.9;
+  margin-right: 10px;
+}
 
-      /* Styling for the portal name text in the navbar */
-      .navbar .portal-name {
-        color: white;
-        font-size: 24px;
-        font-weight: bold;
-      }
+/* Styling for the portal name text in the navbar */
+.navbar .portal-name {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
 
-      /* Hamburger icon styles: for mobile menu toggle */
-      .hamburger-icon {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 30px;
-        height: 20px;
-        cursor: pointer;
-        padding: 10px;
-        margin-bottom: 20px;
-        position: relative;
-        z-index: 11; /* Ensures hamburger is above sidebar */
-      }
+/* Hamburger icon styles: for mobile menu toggle */
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  padding: 10px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 11; /* Ensures hamburger is above sidebar */
+}
 
-      /* Icon color and size for hamburger */
-      .hamburger-icon i {
-        color: #00796b;
-        font-size: 24px;
-      }
+/* Icon color and size for hamburger */
+.hamburger-icon i {
+  color: #00796b;
+  font-size: 24px;
+}
 
-      /* Sidebar styles: fixed position, white background, transitions for smooth movement */
-      .sidebar {
-        width: 220px;
-        height: 100vh;
-        background-color: #ffffff;
-        position: fixed;
-        top: 80px; /* Below the navbar */
-        left: 0;
-        padding-top: 20px;
-        z-index: 9; /* Below the navbar and hamburger */
-        transition: transform 0.3s ease;
-        transform: translateX(0); /* Default visible state */
-      }
+/* Sidebar styles: fixed position, white background, transitions for smooth movement */
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background-color: #ffffff;
+  position: fixed;
+  top: 80px; /* Below the navbar */
+  left: 0;
+  padding-top: 20px;
+  z-index: 9; /* Below the navbar and hamburger */
+  transition: transform 0.3s ease;
+  transform: translateX(0); /* Default visible state */
+}
 
-      /* Remove default list styling */
-      .sidebar ul {
-        list-style: none;
-        padding: 0;
-      }
+/* Remove default list styling */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
 
-      /* Anchor tag styling within sidebar list items */
-      .sidebar ul li a {
-        display: block;
-        text-decoration: none;
-        color: #333;
-        font-size: 16px;
-        padding: 15px 20px;
-        transition: background-color 0.3s ease, color 0.3s ease,
-          padding-left 0.3s ease; /* Smooth transitions for hover effects */
-      }
+/* Anchor tag styling within sidebar list items */
+.sidebar ul li a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  padding: 15px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    padding-left 0.3s ease; /* Smooth transitions for hover effects */
+}
 
-      /* Hover effect for sidebar links */
-      .sidebar ul li a:hover {
-        background-color: #00796b;
-        color: #ffffff;
-        padding-left: 26px; /* Increased padding-left on hover for visual feedback */
-      }
+/* Hover effect for sidebar links */
+.sidebar ul li a:hover {
+  background-color: #00796b;
+  color: #ffffff;
+  padding-left: 26px; /* Increased padding-left on hover for visual feedback */
+}
 
-      /* Main content wrapper: gradient background, padding, and margin to account for sidebar */
-      .main-content {
-        background: linear-gradient(to right, #e0f7fa, #ffffff);
-        min-height: calc(100vh - 50px); /* Adjust height to fit viewport minus navbar height */
-        padding: 90px 20px 20px 20px; /* Padding for content, top padding accounts for navbar */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 220px; /* Space for the sidebar */
-        transition: margin-left 0.3s ease; /* Smooth transition for sidebar toggle */
-      }
+/* Main content wrapper: gradient background, padding, and margin to account for sidebar */
+.main-content {
+  background: linear-gradient(to right, #e0f7fa, #ffffff);
+  min-height: calc(100vh - 50px); /* Adjust height to fit viewport minus navbar height */
+  padding: 90px 20px 20px 20px; /* Padding for content, top padding accounts for navbar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 220px; /* Space for the sidebar */
+  transition: margin-left 0.3s ease; /* Smooth transition for sidebar toggle */
+}
 
-      /* General container styles for forms/cards */
-      .container {
-        width: 100%;
-        max-width: 800px;
-        background-color: white;
-        padding: 30px;
-        border-radius: 12px;
-        box-shadow: 0 8px 20px rgba(0, 128, 128, 0.2); /* Teal-ish shadow */
-        margin: 30px auto 20px; /* Top margin, auto horizontal for centering, bottom margin */
-      }
+/* General container styles for forms/cards */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 128, 128, 0.2); /* Teal-ish shadow */
+  margin: 30px auto 20px; /* Top margin, auto horizontal for centering, bottom margin */
+}
 
-      /* Heading 2 styling */
-      h2 {
-        text-align: center;
-        color: #00796b;
-        margin-bottom: 25px;
-      }
+/* Heading 2 styling */
+h2 {
+  text-align: center;
+  color: #00796b;
+  margin-bottom: 25px;
+}
 
-      /* Card styles (if used for displaying information) */
-      .card {
-        padding: 20px;
-        border-radius: 10px;
-        background-color: #f8f8f8;
-        margin-bottom: 20px;
-        border: 1px solid #e0e0e0;
-      }
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .navbar .logo-img {
+    height: 60px;
+  }
 
-      /* Heading 3 inside cards */
-      .card h3 {
-        color: #00796b;
-        margin-bottom: 15px;
-        text-align: center;
-      }
+  .container {
+    padding: 20px;
+    margin-top: 80px;
+  }
 
-      /* Paragraphs inside cards */
-      .card p {
-        margin-bottom: 10px;
-        color: #555;
-        font-size: 16px;
-      }
+  .main-content {
+    padding-top: 80px;
+    margin-left: 0; /* Sidebar will overlay on mobile */
+    transition: margin-left 0.3s ease; /* Ensure smooth transition */
+  }
 
-      /* Strong text inside card paragraphs */
-      .card p strong {
-        color: #004d40;
-      }
+  .hamburger-icon {
+    display: flex; /* Ensure hamburger is visible on mobile */
+  }
 
-      /* Profile section styles */
-      .profile-section {
-        padding: 20px;
-        border-radius: 10px;
-        background-color: #f1f8f9;
-        border: 1px solid #b2dfdb;
-        margin-bottom: 20px;
-        text-align: center;
-      }
+  .sidebar {
+    transform: translateX(-100%); /* Hide sidebar by default on mobile */
+    top: 0; /* Adjust top for full height overlay */
+    height: 100vh; /* Full viewport height */
+  }
 
-      /* Heading 3 inside profile section */
-      .profile-section h3 {
-        color: #00695c;
-        margin-bottom: 15px;
-      }
+  /* Active state for sidebar on mobile */
+  .sidebar.active {
+    transform: translateX(0);
+  }
 
-  
+  /* Adjust main content when sidebar is active on mobile */
+  .main-content.sidebar-active {
+    margin-left: 220px; /* Push content to the right to show sidebar */
+  }
+}
 
-      /* General button styling */
-      button {
-        margin-top: 10px;
-        background-color: #00796b;
-        color: white;
-        border: none;
-        padding: 8px 16px;
-        font-size: 14px;
-        cursor: pointer;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-      }
+/* --- NEW TABLE STYLES --- */
+.appointment-table-container {
+  overflow-x: auto; /* Allows horizontal scrolling on small screens */
+  margin-top: 20px; /* Space below the heading */
+}
 
-      /* Button hover effect */
-      button:hover {
-        background-color: #004d40;
-      }
+.appointment-table {
+  width: 100%;
+  border-collapse: collapse; /* Removes space between table borders */
+  margin: 0 auto; /* Center the table if it's narrower than its container */
+  background-color: #ffffff; /* White background for the table */
+  border-radius: 8px; /* Rounded corners for the table */
+  overflow: hidden; /* Ensures rounded corners apply to content */
+  box-shadow: 0 4px 10px rgba(0, 128, 128, 0.1); /* Subtle shadow */
+}
 
-      /* Specific styles for appointment forms (reusing .container styles) */
-      .appointment-form {
-        background-color: #ffffff;
-        padding: 30px;
-        border-radius: 12px;
-        box-shadow: 0 8px 20px rgba(0, 128, 128, 0.2);
-        margin: 30px auto 20px; /* Centered with margins */
-      }
+.appointment-table th,
+.appointment-table td {
+  padding: 12px 15px; /* Comfortable padding */
+  text-align: left; /* Align text to the left */
+  border-bottom: 1px solid #e0e0e0; /* Light gray bottom border for rows */
+}
 
-      /* Heading for appointment forms */
-      .appointment-form h2 {
-        text-align: center;
-        color: #00796b;
-        margin-bottom: 25px;
-      }
+.appointment-table thead th {
+  background-color: #00796b; /* Teal background for header */
+  color: white; /* White text for header */
+  font-weight: bold;
+  text-transform: uppercase; /* Uppercase text for headers */
+  font-size: 14px;
+}
 
-      /* Max width for the book appointment container (if used) */
-     
+.appointment-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* Light gray for even rows (zebra stripping) */
+}
 
-      /* Form group spacing */
-      .form-group {
-        margin-bottom: 15px;
-      }
+.appointment-table tbody tr:hover {
+  background-color: #e0f2f1; /* Lighter teal on row hover for interaction feedback */
+  cursor: pointer; /* Indicate rows are interactive (if they were clickable) */
+}
 
-      /* Label styling within form groups */
-      .form-group label {
-        display: block;
-        margin-bottom: 5px;
-        color: #555;
-        font-weight: bold;
-      }
-
-      /* Input, select, and textarea styling */
-      .form-group input,
-      .form-group select,
-      .form-group textarea {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #e0e0e0;
-        border-radius: 5px;
-        font-size: 16px;
-      }
-
-      /* Textarea specific styling */
-      .form-group textarea {
-        resize: none;
-        height: 100px;
-      }
-
-      /* Focus styles for form inputs */
-      .form-group input:focus,
-      .form-group select:focus,
-      .form-group textarea:focus {
-        outline: none;
-        border-color: #00796b;
-        box-shadow: 0 0 5px rgba(0, 128, 128, 0.3);
-      }
-
-      /* Submit button styling */
-      .submit-button {
-        margin-top: 20px;
-        background-color: #00796b;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        font-size: 18px;
-        cursor: pointer;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-        width: 100%;
-      }
-
-      /* Submit button hover effect */
-      .submit-button:hover {
-        background-color: #004d40;
-      }
-
-      /* General label styling (can be redundant if form-group label is used) */
-      label {
-        font-weight: bold;
-      }
-
-      /* General button styling (can be redundant if submit-button is used) */
-      .btn {
-        width: 100%;
-      }
-
-      /* Style for disabled dropdown options */
-      select option:disabled {
-        color: #808080; /* Gray out the text */
-        background-color: #e0e0e0; /* Gray out the background */
-        /* cursor: not-allowed; */ /* Removed as per user request */
-        transition: background-color 0.2s ease, color 0.2s ease; /* Add smooth transition */
-      }
-
-      /* Hover effect for disabled dropdown options */
-      select option:disabled:hover {
-        background-color: #d0d0d0; /* Slightly lighter on hover, for better feedback */
-        color: #808080;
-      }
-
-      /* Styling for the "(Booked)" label next to slots */
-      .booked-label {
-        color: red;
-        font-size: 14px;
-        margin-left: 5px;
-      }
-
-      /* Responsive adjustments for smaller screens */
-      @media (max-width: 768px) {
-        .navbar .logo-img {
-          height: 60px;
-        }
-
-        .container {
-          padding: 20px;
-          margin-top: 80px;
-        }
-
-        .main-content {
-          padding-top: 80px;
-          margin-left: 0; /* Sidebar will overlay on mobile */
-          transition: margin-left 0.3s ease; /* Ensure smooth transition */
-        }
-
-
-        .hamburger-icon {
-          display: flex; /* Ensure hamburger is visible on mobile */
-        }
-
-        .sidebar {
-          transform: translateX(-100%); /* Hide sidebar by default on mobile */
-          top: 0; 
-          height: 100vh; 
-        }
-
-        .sidebar.active {
-          transform: translateX(0);
-        }
-
-        /* Adjust main content when sidebar is active on mobile */
-        .main-content.sidebar-active {
-          margin-left: 220px; /* Push content to the right to show sidebar */
-        }
-
-        .appointment-form {
-          padding: 20px;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-          font-size: 14px;
-        }
-
-        .submit-button {
-          font-size: 16px;
-        }
-      }
+/* Specific styling for the status column for better readability */
+.appointment-table td:last-child {
+  font-weight: 600;
+}

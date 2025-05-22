@@ -12,8 +12,10 @@ export class BookAppointmentService {
     return this.http.get( `http://localhost:5165/api/AvailableSlot/GetAvailable-Slots?doctorId=${doctorId}&appointmentDate=${appointmentDate}`)
 
   }
-
   bookAppointment(appointmentData:any){
     return this.http.post('http://localhost:5165/api/Appointment/add-appointment', appointmentData , {responseType: 'text'})
+  }
+  getAppointmentByPatientId(patientId:any){
+    return this.http.get(`http://localhost:5165/api/AppointmentDetailsbyPatientId/AppointmentDetailsbyPatientId?patientId=${patientId}`)
   }
 }

@@ -36,6 +36,28 @@
         }
       }
     },
+    "/api/AppointmentDetailsbyPatientId/AppointmentDetailsbyPatientId": {
+      "get": {
+        "tags": [
+          "AppointmentDetailsbyPatientId"
+        ],
+        "parameters": [
+          {
+            "name": "patientId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/AvailableSlot/GetAvailable-Slots": {
       "get": {
         "tags": [
@@ -165,18 +187,6 @@
             }
           }
         },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/GetAppointmentDetails/GetAllAppointments": {
-      "get": {
-        "tags": [
-          "GetAppointmentDetails"
-        ],
         "responses": {
           "200": {
             "description": "OK"
