@@ -165,23 +165,6 @@ h2 {
   margin-bottom: 15px;
 }
 
-.image-preview img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid #009688;
-  margin-bottom: 10px;
-}
-
-.image-preview p {
-  color: #757575;
-  font-style: italic;
-}
-
-input[type="file"] {
-  margin-top: 10px;
-}
 
 button {
   margin-top: 10px;
@@ -312,11 +295,6 @@ select option:disabled:hover {
   .main-content {
     padding-top: 80px;
     margin-left: 220px;
-  }
-
-  .image-preview img {
-    width: 120px;
-    height: 120px;
   }
 
   .hamburger-icon {

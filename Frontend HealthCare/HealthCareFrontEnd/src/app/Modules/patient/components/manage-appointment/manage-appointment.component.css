@@ -180,26 +180,7 @@
         margin-bottom: 15px;
       }
 
-      /* Image preview styling */
-      .image-preview img {
-        width: 150px;
-        height: 150px;
-        object-fit: cover;
-        border-radius: 50%;
-        border: 2px solid #009688;
-        margin-bottom: 10px;
-      }
-
-      /* Text in image preview */
-      .image-preview p {
-        color: #757575;
-        font-style: italic;
-      }
-
-      /* File input margin */
-      input[type="file"] {
-        margin-top: 10px;
-      }
+  
 
       /* General button styling */
       button {
@@ -236,11 +217,7 @@
       }
 
       /* Max width for the book appointment container (if used) */
-      .book-appointment-container {
-        max-width: 500px;
-        margin: auto;
-        padding: 20px;
-      }
+     
 
       /* Form group spacing */
       .form-group {
@@ -348,10 +325,6 @@
           transition: margin-left 0.3s ease; /* Ensure smooth transition */
         }
 
-        .image-preview img {
-          width: 120px;
-          height: 120px;
-        }
 
         .hamburger-icon {
           display: flex; /* Ensure hamburger is visible on mobile */
@@ -359,11 +332,10 @@
 
         .sidebar {
           transform: translateX(-100%); /* Hide sidebar by default on mobile */
-          top: 0; /* Adjust top for full height overlay */
-          height: 100vh; /* Full viewport height */
+          top: 0; 
+          height: 100vh; 
         }
 
-        /* Active state for sidebar on mobile */
         .sidebar.active {
           transform: translateX(0);
         }
