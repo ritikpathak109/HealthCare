@@ -18,4 +18,7 @@ export class BookAppointmentService {
   getAppointmentByPatientId(patientId:any){
     return this.http.get(`http://localhost:5165/api/AppointmentDetailsbyPatientId/AppointmentDetailsbyPatientId?patientId=${patientId}`)
   }
+  deleteAppointment(appointmentId: number) {
+  return this.http.put(`http://localhost:5165/api/DeleteAppointment/Delete-Appointment?appointmentId=${appointmentId}`,{}, { responseType: 'text' });
+  }
 }

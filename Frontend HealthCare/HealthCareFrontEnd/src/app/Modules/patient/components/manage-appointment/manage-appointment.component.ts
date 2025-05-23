@@ -23,6 +23,13 @@ export class ManageAppointmentComponent implements OnInit {
       console.log(this.appointmentList);
     });
   }
-
+  deleteAppointment(appointmentId: any) { 
+     if (confirm('Are you sure you want to delete this appointment?')) {
+    this.bookser.deleteAppointment(appointmentId).subscribe((res) => {
+      alert(res); 
+      this.getAppointmentByPatientId();
+    });
+  }
+  }
 
 }

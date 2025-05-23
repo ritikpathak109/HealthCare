@@ -353,6 +353,22 @@ END
 exec USP_GetAppointmentsByPatientId 1
 
 
+--TO DELETE APPOINTMENT 
+alter PROCEDURE usp_UpdateAppointmentIsDeleted
+ @AppointmentId INT
+AS
+BEGIN
+    UPDATE Appointments
+    SET IsDeleted = 1
+    WHERE AppointmentId = @AppointmentId;
+END;
+
+
+usp_UpdateAppointmentIsDeleted 135, 1
+
+
+
+
 CREATE TABLE SlotMaster (
     SlotId INT PRIMARY KEY IDENTITY(1,1),
     SlotTime TIME NOT NULL,

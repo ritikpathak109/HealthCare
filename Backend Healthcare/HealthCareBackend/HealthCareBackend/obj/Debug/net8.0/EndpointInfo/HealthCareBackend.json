@@ -114,6 +114,28 @@
         }
       }
     },
+    "/api/DeleteAppointment/Delete-Appointment": {
+      "put": {
+        "tags": [
+          "DeleteAppointment"
+        ],
+        "parameters": [
+          {
+            "name": "appointmentId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/DoctorbySpecialization/GetDoctorsBySpecilization/{specializationId}": {
       "get": {
         "tags": [

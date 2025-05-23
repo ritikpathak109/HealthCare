@@ -22,6 +22,7 @@ export class UserloginComponent implements OnInit {
     localStorage.removeItem('roleName');
     localStorage.removeItem('userId');
     localStorage.removeItem('userRoleId');
+    localStorage.removeItem('PatientId');
   }
 
 
