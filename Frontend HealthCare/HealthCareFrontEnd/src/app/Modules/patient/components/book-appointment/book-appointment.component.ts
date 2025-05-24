@@ -18,7 +18,7 @@ doctorId: any;
  patientId: any;
  constructor(private appservice: BookAppointmentService, private doctorService: DoctorService, private fb: FormBuilder) { }
 
-
+today = new Date().toISOString().split('T')[0];
  ngOnInit(){
     this.patientId = localStorage.getItem('PatientId');
   this.loadSpecialization();
