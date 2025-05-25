@@ -270,8 +270,7 @@
               "RelativeToolTip": "HealthCareBackend\\Controllers\\DeletedAppointmentDetailsController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T16:30:31.355Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-24T16:30:31.355Z"
             },
             {
               "$type": "Document",
@@ -283,8 +282,7 @@
               "RelativeToolTip": "HealthCareBackend\\Repositories\\DeleteAppointmentRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T14:37:01.983Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-23T14:37:01.983Z"
             },
             {
               "$type": "Document",
@@ -296,8 +294,7 @@
               "RelativeToolTip": "HealthCareBackend\\Repositories\\DeletedAppointmentDetailsRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T16:21:51.193Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-24T16:21:51.193Z"
             },
             {
               "$type": "Document",
@@ -309,8 +306,7 @@
               "RelativeToolTip": "HealthCareBackend\\Services\\DeleteAppointmentService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T14:41:58.946Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-23T14:41:58.946Z"
             },
             {
               "$type": "Document",
@@ -335,8 +331,7 @@
               "RelativeToolTip": "HealthCareBackend\\Services\\DeletedAppointmentDetailsService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T16:26:26.765Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-24T16:26:26.765Z"
             },
             {
               "$type": "Document",
@@ -348,8 +343,7 @@
               "RelativeToolTip": "HealthCareBackend\\Controllers\\AppointmentDetailsbyPatientIdController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T11:58:41.05Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-22T11:58:41.05Z"
             },
             {
               "$type": "Document",
@@ -361,8 +355,7 @@
               "RelativeToolTip": "HealthCareBackend\\Services\\DoctorRegistrationService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T16:45:04.369Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-09T16:45:04.369Z"
             },
             {
               "$type": "Document",
@@ -374,8 +367,7 @@
               "RelativeToolTip": "HealthCareBackend\\Services\\AppointmentDetailsbyPatientIdService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T11:57:24.001Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-22T11:57:24.001Z"
             },
             {
               "$type": "Document",
@@ -387,8 +379,7 @@
               "RelativeToolTip": "HealthCareBackend\\Repositories\\AppointmentDetailsbyPatietntIdRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T16:39:57.462Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-16T16:39:57.462Z"
             },
             {
               "$type": "Document",
@@ -412,8 +403,7 @@
               "RelativeToolTip": "HealthCareBackend\\Repositories\\LoginRepository.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAjwBcAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T13:25:47.016Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-17T13:25:47.016Z"
             },
             {
               "$type": "Document",

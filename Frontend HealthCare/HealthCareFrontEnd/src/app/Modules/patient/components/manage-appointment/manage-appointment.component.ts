@@ -9,18 +9,20 @@ import { BookAppointmentService } from 'src/app/Services/book-appointment.servic
 export class ManageAppointmentComponent implements OnInit {
 
   appointmentList: any;
+  deletedAppointmentList: any;
   constructor(private bookser: BookAppointmentService) { }
 
 
   ngOnInit(): void {
    this.getAppointmentByPatientId();
+   this.getDeletedAppointments();
   }
 
   getAppointmentByPatientId() {
     const patientId = localStorage.getItem('PatientId');
     this.bookser.getAppointmentByPatientId(patientId).subscribe((res: any) => {
       this.appointmentList = res;
-      console.log(this.appointmentList);
+
     });
   }
   deleteAppointment(appointmentId: any) { 
@@ -28,8 +30,16 @@ export class ManageAppointmentComponent implements OnInit {
     this.bookser.deleteAppointment(appointmentId).subscribe((res) => {
       alert(res); 
       this.getAppointmentByPatientId();
+      this.getDeletedAppointments();
     });
   }
+  }
+  getDeletedAppointments() {
+    const patientId = localStorage.getItem('PatientId');
+    this.bookser.getDeletedAppointments(patientId).subscribe((res: any) => {
+      this.deletedAppointmentList = res;
+   
+    });
   }
 
 }
