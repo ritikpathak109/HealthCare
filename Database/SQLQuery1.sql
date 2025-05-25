@@ -196,11 +196,12 @@ CREATE TABLE AppointmentStatusMaster (
     [Status] VARCHAR(50) NOT NULL
 );
 
-INSERT INTO AppointmentStatusMaster (Status)
+INSERT INTO select * from AppointmentStatusMaster (Status)
 VALUES 
 ('Approved'),
 ('Cancelled'),
 ('Completed');
+INSERT INTO AppointmentStatusMaster ([Status]) VALUES ('Deleted');
 
 
 
@@ -358,16 +359,59 @@ alter PROCEDURE usp_UpdateAppointmentIsDeleted
  @AppointmentId INT
 AS
 BEGIN
+    DECLARE @DeletedStatusId INT;
+
+    SELECT @DeletedStatusId = StatusId 
+    FROM AppointmentStatusMaster 
+    WHERE [Status] = 'Deleted';
+
     UPDATE Appointments
-    SET IsDeleted = 1
+    SET 
+        IsDeleted = 1,
+        StatusId = @DeletedStatusId,
+        UpdatedDate = GETDATE() 
     WHERE AppointmentId = @AppointmentId;
-END;
+END
 
 
 usp_UpdateAppointmentIsDeleted 135, 1
 
 
+-- TO GET DELETED APPOINTMENT BY PATIENTID
+CREATE or alter PROCEDURE GetDeletedAppointmentsByPatientId
+    @PatientId INT
+AS
+BEGIN
+    SELECT 
+        A.AppointmentId,
+        A.PatientId,
+        P.PatientFirstName + ' ' + P.PatientLastName AS PatientName,
+        DATEDIFF(YEAR, P.DateOfBirth, GETDATE()) AS Age,
+        A.DoctorId,
+        D.DoctorFirstName + ' ' + D.DoctorLastName AS DoctorName,
+        SMZ.SpecializationName, 
+        A.AppointmentDate,
 
+        -- Raw slot time data
+        SM.SlotTime AS SlotStartTime,
+        DATEADD(MINUTE, 15, SM.SlotTime) AS SlotEndTime,
+
+        A.ReasonForVisit,
+        ASM.[Status],
+        A.CreatedDate
+    FROM Appointments A
+    INNER JOIN PatientsDetails P ON A.PatientId = P.PatientId
+    INNER JOIN DoctorDetails D ON A.DoctorId = D.DoctorId
+    INNER JOIN DoctorSpecializationMaster SMZ ON D.SpecializationId = SMZ.SpecializationId 
+    INNER JOIN AppointmentStatusMaster ASM ON A.StatusId = ASM.StatusId
+    INNER JOIN SlotMaster SM ON A.SlotId = SM.SlotId
+    WHERE A.IsDeleted = 1 AND A.PatientId = @PatientId
+    ORDER BY A.AppointmentDate DESC, SM.SlotTime DESC
+END
+
+
+
+GetDeletedAppointmentsByPatientId 1
 
 CREATE TABLE SlotMaster (
     SlotId INT PRIMARY KEY IDENTITY(1,1),

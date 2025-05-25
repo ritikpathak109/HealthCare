@@ -136,6 +136,28 @@
         }
       }
     },
+    "/api/DeletedAppointmentDetails/GetDeletedAppointmentDetailsbyPatientId": {
+      "get": {
+        "tags": [
+          "DeletedAppointmentDetails"
+        ],
+        "parameters": [
+          {
+            "name": "patientId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/DoctorbySpecialization/GetDoctorsBySpecilization/{specializationId}": {
       "get": {
         "tags": [

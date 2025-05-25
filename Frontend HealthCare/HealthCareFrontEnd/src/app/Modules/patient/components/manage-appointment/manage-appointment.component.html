@@ -27,6 +27,7 @@
     <div class="main-content">
       <div class="container">
         <h2>Manage Appointments</h2>
+        <h3 style="color: #00796b; margin-top: 30px; margin-bottom: 15px;">Active Appointments</h3>
 
         <div class="appointment-table-container">
           <table class="appointment-table">
@@ -42,6 +43,41 @@
                 <th>Status</th>
                 <th>Created Date (mm/dd/yy)</th>
                  <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let appointment of appointmentList">
+                <td>{{ appointment.appointmentId }}</td>
+                <td>{{ appointment.age }}</td>
+                <td>{{ appointment.doctorName }}</td>
+                <td>{{ appointment.specializationName }}</td>
+                <td>{{ appointment.appointmentDate | date: 'shortDate' }}</td>
+                <td>{{ appointment.slotStartTime }}</td>
+                <td>{{ appointment.slotEndTime }}</td>
+                <td>{{ appointment.status }}
+                </td>
+                <td>{{ appointment.createdDate | date: 'shortDate' }}</td>
+                <td><button class="delete-button" (click)="deleteAppointment(appointment.appointmentId)">Delete</button></td>
+              </tr>
+              </tbody>
+    
+          </table>
+                    <h3 style="color: #00796b; margin-top: 30px; margin-bottom: 15px;">Deleted Appointments</h3>
+
+        <div class="appointment-table-container">
+          <table class="appointment-table">
+            <thead>
+              <tr>
+                <th>Appointment ID</th>
+                <th>Patient Age</th>
+                <th>Doctor Name</th>
+                <th>Specialization</th>
+                <th>Appointment Date (mm/dd/yy)</th>
+                <th>Slot Start Time</th>
+                <th>Slot End Time</th>
+                <th>Status</th>
+                <th>Created Date (mm/dd/yy)</th>
+         
               </tr>
             </thead>
             <tbody>

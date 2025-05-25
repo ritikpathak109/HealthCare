@@ -43,6 +43,8 @@ builder.Services.AddScoped<AppointmentDetailsbyPatientIdService>();
 builder.Services.AddScoped<AppointmentDetailsbyPatietntIdRepository>();
 builder.Services.AddScoped<DeleteAppointmentService>();
 builder.Services.AddScoped<DeleteAppointmentRepository>();
+builder.Services.AddScoped<DeletedAppointmentDetailsRepository>();
+builder.Services.AddScoped<DeletedAppointmentDetailsService>();
 // Configure DbContext with the correct connection string
 builder.Services.AddDbContext<MyDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))

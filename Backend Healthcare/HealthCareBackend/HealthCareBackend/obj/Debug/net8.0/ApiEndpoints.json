@@ -79,6 +79,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "HealthCareBackend.Controllers.DeletedAppointmentDetailsController",
+    "Method": "GetAppointmentsByPatientId",
+    "RelativePath": "api/DeletedAppointmentDetails/GetDeletedAppointmentDetailsbyPatientId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "patientId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "HealthCareBackend.Controllers.DoctorbySpecializationController",
     "Method": "GetDoctorsBySpecializationId",
     "RelativePath": "api/DoctorbySpecialization/GetDoctorsBySpecilization/{specializationId}",
