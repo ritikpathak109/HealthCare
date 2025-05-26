@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { PatientServiceService } from 'src/app/Services/patient-service.service';
 
 @Component({
@@ -15,7 +16,7 @@ export class PatientDashboardComponent implements OnInit {
   imageUrl: string | ArrayBuffer | null = null;
 
 selectedFile: File | null = null;
-  constructor(private patientser: PatientServiceService ) {}
+  constructor(private patientser: PatientServiceService, private router:Router ) {}
 
   ngOnInit(): void {
     this.userName = localStorage.getItem('userName');
@@ -65,6 +66,12 @@ selectedFile: File | null = null;
         }
       });
     }
+  }
+
+  logout(){
+
+     localStorage.clear();
+       this.router.navigate(['/login']);
   }
   
 }

@@ -24,6 +24,7 @@ body {
   top: 0;
   left: 0;
   z-index: 10;
+  justify-content: space-between;
 }
 
 .navbar .logo-container {
@@ -76,10 +77,13 @@ body {
   transition: transform 0.3s ease;
   transform: translateX(0);
 }
-
 .sidebar ul {
   list-style: none;
   padding: 0;
+}
+
+.sidebar ul li {
+  padding: 0; 
 }
 
 .sidebar ul li a {
@@ -208,6 +212,26 @@ select option:disabled:hover {
   color: red;
   font-size: 14px;
   margin-left: 5px;
+}
+.logout-btn {
+  /* Default state: Blend with the navbar background color */
+  background-color: #00796b; /* Same as your .navbar background */
+  color: white; /* Keep text and icon color white */
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  /* Smooth transitions for a professional feel */
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  margin-left: auto; /* Ensures it pushes to the far right */
+  box-shadow: none; /* No shadow by default, for a blended look */
+}
+
+
+.logout-btn:hover {
+  background-color: #bc1616; /* Darker maroon on hover */
+  transform: translateY(-1px); /* Slight lift effect on hover */
 }
 
 /* Responsive */

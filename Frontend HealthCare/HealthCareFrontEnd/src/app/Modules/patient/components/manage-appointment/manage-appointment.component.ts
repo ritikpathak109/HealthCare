@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { BookAppointmentService } from 'src/app/Services/book-appointment.service';
 
 @Component({
@@ -10,7 +11,7 @@ export class ManageAppointmentComponent implements OnInit {
 
   appointmentList: any;
   deletedAppointmentList: any;
-  constructor(private bookser: BookAppointmentService) { }
+  constructor(private bookser: BookAppointmentService, private router: Router) { }
 
 
   ngOnInit(): void {
@@ -41,5 +42,9 @@ export class ManageAppointmentComponent implements OnInit {
    
     });
   }
+    logout(){
 
+     localStorage.clear();
+       this.router.navigate(['/login']);
+  }
 }

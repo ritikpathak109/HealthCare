@@ -2,49 +2,61 @@
   href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap"
   rel="stylesheet"
 />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
 <nav class="navbar">
-        <div class="logo-container">
-            <img src="assets/images/Logo.png" alt="HealthEase Logo" class="logo-img" />
-            <span class="portal-name">HealthEase</span>
-        </div>
-    </nav>
-    <div class="sidebar" id="sidebar">
-        <div class="hamburger-icon" id="hamburger">
-             <i class="fa fa-bars" style="font-size:24px;color:#00796b;"></i>
-        </div>
-        <ul>
-             <li><a routerLink="/patient/dashboard">Dashboard</a></li>
-            <li><a routerLink="/patient/book-appointment">Book Appointment</a></li>
-            <li><a routerLink="/patient/manage-appointment">Manage Appointments</a></li>
-        </ul>
-    </div>
+  <div class="logo-container">
+    <img src="assets/images/Logo.png" alt="HealthEase Logo" class="logo-img" />
+    <span class="portal-name">HealthEase</span>
+  </div>
+ <button class="logout-btn" (click)="logout()">
+    <i class="fa fa-sign-out" aria-hidden="true"></i> Logout
+  </button>
+</nav>
+<div class="sidebar" id="sidebar">
+  <div class="hamburger-icon" id="hamburger">
+    <i class="fa fa-bars" style="font-size: 24px; color: #00796b"></i>
+  </div>
 
-    <div class="main-content">
-        <div class="container">
-            <h2>Patient Details</h2>
-            <div class="profile-section">
-                <h3>Profile Picture</h3>
-                <div class="image-preview">
-                    <img *ngIf="imageUrl" [src]="imageUrl" alt="Profile Picture" />
-                    <p *ngIf="!imageUrl">No profile picture uploaded yet.</p>
-                </div>
-                <input id="fileInput" type="file" (change)="onFileSelected($event)" />
-                <button (click)="uploadPicture()">Upload Picture</button>
-            </div>
-            <div class="card">
-                <h3>Patient Information</h3>
-                <p><strong>Patient ID:</strong> {{ patientDetails?.patientId }}</p>
-                <p><strong>First Name:</strong> {{ patientDetails?.patientFirstName }}</p>
-                <p><strong>Last Name:</strong> {{ patientDetails?.patientLastName }}</p>
-                <p><strong>User ID:</strong> {{ patientDetails?.userId }}</p>
-                <p><strong>Email:</strong> {{ patientDetails?.userEmail }}</p>
-                <p><strong>Phone Number:</strong> {{ patientDetails?.patientPhoneNumber }}</p>
-                <p><strong>Address:</strong> {{ patientDetails?.patientAddress }}</p>
-                <p><strong>Gender:</strong> {{ patientDetails?.gender }}</p>
-                <p><strong>Country:</strong> {{ patientDetails?.countryName }}</p>
-                <p><strong>State:</strong> {{ patientDetails?.stateName }}</p>
-                <p><strong>Age:</strong> {{ patientDetails?.age }} years</p>
-            </div>
-        </div>
+  <div class="nav-links">
+    <ul>
+      <li><a routerLink="/patient/dashboard"><i class="fa fa-home" aria-hidden="true"  style="font-size:21px"> &nbsp; </i> Dashboard</a></li>
+     <li><a routerLink="/patient/book-appointment"><i class="fa fa-calendar" aria-hidden="true"></i> &nbsp; Book Appointment </a></li>
+      <li><a routerLink="/patient/manage-appointment"><i class="fa fa-calendar-check-o" aria-hidden="true"></i> &nbsp; Manage Appointments</a></li>
+    </ul>
+  </div>
+  
+</div>
+
+<div class="main-content">
+  <div class="container">
+    <h2>Patient Details</h2>
+    <div class="profile-section">
+      <h3>Profile Picture</h3>
+      <div class="image-preview">
+        <img *ngIf="imageUrl" [src]="imageUrl" alt="Profile Picture" />
+        <p *ngIf="!imageUrl">No profile picture uploaded yet.</p>
+      </div>
+      <input id="fileInput" type="file" (change)="onFileSelected($event)" />
+      <button (click)="uploadPicture()">Upload Picture</button>
     </div>
+    <div class="card">
+      <h3>Patient Information</h3>
+      <p><strong>Patient ID:</strong> {{ patientDetails?.patientId }}</p>
+      <p><strong>First Name:</strong> {{ patientDetails?.patientFirstName }}</p>
+      <p><strong>Last Name:</strong> {{ patientDetails?.patientLastName }}</p>
+      <p><strong>User ID:</strong> {{ patientDetails?.userId }}</p>
+      <p><strong>Email:</strong> {{ patientDetails?.userEmail }}</p>
+      <p>
+        <strong>Phone Number:</strong> {{ patientDetails?.patientPhoneNumber }}
+      </p>
+      <p><strong>Address:</strong> {{ patientDetails?.patientAddress }}</p>
+      <p><strong>Gender:</strong> {{ patientDetails?.gender }}</p>
+      <p><strong>Country:</strong> {{ patientDetails?.countryName }}</p>
+      <p><strong>State:</strong> {{ patientDetails?.stateName }}</p>
+      <p><strong>Age:</strong> {{ patientDetails?.age }} years</p>
+    </div>
+  </div>
+</div>

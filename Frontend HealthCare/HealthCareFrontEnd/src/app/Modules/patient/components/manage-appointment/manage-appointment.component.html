@@ -1,4 +1,4 @@
- <link
+<link
   href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap"
   rel="stylesheet"
 />
@@ -11,17 +11,22 @@
                 <img src="assets/images/Logo.png" alt="HealthEase Logo" class="logo-img" />
         <span class="portal-name">HealthEase</span>
       </div>
+      <button class="logout-btn" (click)="logout()">
+    <i class="fa fa-sign-out" aria-hidden="true"></i> Logout
+  </button>
     </nav>
 
    <div class="sidebar" id="sidebar">
   <div class="hamburger-icon" id="hamburger">
     <i class="fa fa-bars" style="font-size: 24px; color: #00796b"></i>
   </div>
-  <ul>
-    <li><a routerLink="/patient/dashboard">Dashboard</a></li>
-    <li><a routerLink="/patient/book-appointment">Book Appointment</a></li>
-    <li><a routerLink="/patient/manage-appointment">Manage Appointments</a></li>
-  </ul>
+  <div class="nav-links">
+    <ul>
+      <li><a routerLink="/patient/dashboard"><i class="fa fa-home" aria-hidden="true"  style="font-size:21px"> &nbsp; </i> Dashboard</a></li>
+     <li><a routerLink="/patient/book-appointment"><i class="fa fa-calendar" aria-hidden="true"></i> &nbsp; Book Appointment </a></li>
+      <li><a routerLink="/patient/manage-appointment"><i class="fa fa-calendar-check-o" aria-hidden="true"></i> &nbsp; Manage Appointments</a></li>
+    </ul>
+  </div>
 </div>
 
     <div class="main-content">

@@ -24,7 +24,8 @@ body {
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 10; /* Ensures navbar stays on top */
+  z-index: 10;
+  justify-content: space-between;
 }
 
 /* Logo and portal name container in navbar */
@@ -136,7 +137,7 @@ h2 {
   margin-bottom: 25px;
 }
 button {
-  margin-top: 10px;
+
   background-color: #00796b;
   color: white;
   border: none;
@@ -365,6 +366,27 @@ body {
   transition: margin-left 0.3s ease; /* Smooth transition for sidebar toggle */
 }
 
+.logout-btn {
+  /* Default state: Blend with the navbar background color */
+  background-color: #00796b; /* Same as your .navbar background */
+  color: white; /* Keep text and icon color white */
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  /* Smooth transitions for a professional feel */
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  margin-left: auto; /* Ensures it pushes to the far right */
+  box-shadow: none; /* No shadow by default, for a blended look */
+}
+
+
+.logout-btn:hover {
+  background-color: #bc1616; /* Darker maroon on hover */
+  transform: translateY(-1px); /* Slight lift effect on hover */
+}
+
 /* General container styles for forms/cards */
 .container {
   width: 100%;
@@ -386,7 +408,6 @@ h2 {
 
 /* General button styling */
 button {
-  margin-top: 10px;
   background-color: #00796b;
   color: white;
   border: none;
@@ -512,10 +533,3 @@ button:hover {
   color: #6c757d; /* Gray for completed */
 }
 
-/* No data message styling */
-.no-data-message {
-  text-align: center;
-  padding: 20px;
-  color: #757575;
-  font-style: italic;
-}

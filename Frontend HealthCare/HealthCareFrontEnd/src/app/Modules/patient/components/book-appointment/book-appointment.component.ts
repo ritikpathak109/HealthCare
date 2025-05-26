@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { BookAppointmentService } from 'src/app/Services/book-appointment.service';
 import { DoctorService } from 'src/app/Services/doctor.service';
 
@@ -16,7 +17,7 @@ doctorId: any;
  appointmentDate: any;
  slotList: any;
  patientId: any;
- constructor(private appservice: BookAppointmentService, private doctorService: DoctorService, private fb: FormBuilder) { }
+ constructor(private appservice: BookAppointmentService, private doctorService: DoctorService, private fb: FormBuilder, private router: Router) { }
 
 today = new Date().toISOString().split('T')[0];
  ngOnInit(){
@@ -96,5 +97,10 @@ today = new Date().toISOString().split('T')[0];
     alert('Please fill in all required fields.');
   }
 
+  }
+    logout(){
+
+     localStorage.clear();
+       this.router.navigate(['/login']);
   }
 }
