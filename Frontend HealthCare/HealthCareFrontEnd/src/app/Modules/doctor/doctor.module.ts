@@ -5,11 +5,14 @@ import { DoctorRoutingModule } from './doctor-routing.module';
 import { DoctorRegistrationComponent } from './components/doctor-registration/doctor-registration.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DoctorDashboardComponent } from './components/doctor-dashboard/doctor-dashboard.component';
+import { CommonsharedModule } from '../commonshared/commonshared.module';
 
 
 @NgModule({
   declarations: [
-    DoctorRegistrationComponent
+    DoctorRegistrationComponent,
+    DoctorDashboardComponent
   ],
   imports: [
     CommonModule,
@@ -17,6 +20,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    CommonsharedModule
   ]
 })
 export class DoctorModule { }

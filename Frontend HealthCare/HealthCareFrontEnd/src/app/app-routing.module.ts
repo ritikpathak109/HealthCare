@@ -9,9 +9,11 @@ const routes: Routes = [
   { path: 'admin', loadChildren: () => import('./Modules/admin/admin.module').then(m => m.AdminModule) },
   { path: 'doctor', loadChildren: () => import('./Modules/doctor/doctor.module').then(m => m.DoctorModule) },
   { path: 'patient', loadChildren: () => import('./Modules/patient/patient.module').then(m => m.PatientModule) },
-  {path:'book-appointment', loadChildren: () => import('./Modules/patient/patient.module').then(m => m.PatientModule)},
-    {path:'manage-appointment', loadChildren: () => import('./Modules/patient/patient.module').then(m => m.PatientModule)},
-  { path: '', redirectTo: 'login', pathMatch: 'full' }, 
+  { path: 'book-appointment', loadChildren: () => import('./Modules/patient/patient.module').then(m => m.PatientModule) },
+  { path: 'manage-appointment', loadChildren: () => import('./Modules/patient/patient.module').then(m => m.PatientModule) },
+  { path: 'doctor-dashboard', loadChildren: () => import('./Modules/doctor/doctor.module').then(m => m.DoctorModule) },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+
 ];
 
 
