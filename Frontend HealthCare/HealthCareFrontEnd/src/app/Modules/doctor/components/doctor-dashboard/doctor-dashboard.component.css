@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #00796b;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  justify-content: space-between;
+}
+
+.navbar .logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo-img {
+  height: 80px;
+  width: auto;
+  opacity: 0.9;
+  margin-right: 10px;
+}
+
+.navbar .portal-name {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Hamburger Icon Styles */
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  padding: 10px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 11;
+}
+
+.hamburger-icon i {
+  color: #00796b;
+  font-size: 24px;
+}
+
+/* Main Content Wrapper */
+.main-content {
+  background: linear-gradient(to right, #e0f7fa, #ffffff);
+  min-height: calc(100vh - 50px);
+  padding: 90px 20px 20px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 220px;
+  transition: margin-left 0.3s ease;
+}
+
+/* Container Styles */
+.container {
+  width: 100%;
+  max-width: 800px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 128, 128, 0.2);
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+h2 {
+  text-align: center;
+  color: #00796b;
+  margin-bottom: 25px;
+}
+
+.card {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f8f8f8;
+  margin-bottom: 20px;
+  border: 1px solid #e0e0e0;
+}
+
+.card h3 {
+  color: #00796b;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.card p {
+  margin-bottom: 10px;
+  color: #555;
+  font-size: 16px;
+}
+
+.card p strong {
+  color: #004d40;
+}
+
+/* Profile Section */
+.profile-section {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f1f8f9;
+  border: 1px solid #b2dfdb;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.profile-section h3 {
+  color: #00695c;
+  margin-bottom: 15px;
+}
+
+.image-preview img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #009688;
+  margin-bottom: 10px;
+}
+
+.image-preview p {
+  color: #757575;
+  font-style: italic;
+}
+
+input[type="file"] {
+  margin-top: 10px;
+}
+
+button {
+
+  background-color: #00796b;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #004d40;
+}
+
+/* Update the .logout-btn styles */
+.logout-btn {
+  /* Default state: Blend with the navbar background color */
+  background-color: #00796b; /* Same as your .navbar background */
+  color: white; /* Keep text and icon color white */
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  /* Smooth transitions for a professional feel */
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  margin-left: auto; /* Ensures it pushes to the far right */
+  box-shadow: none; /* No shadow by default, for a blended look */
+}
+
+
+.logout-btn:hover {
+  background-color: #bc1616; /* Darker maroon on hover */
+  transform: translateY(-1px); /* Slight lift effect on hover */
+}
+
+
+/* Sidebar Styles */
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background-color: #ffffff;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  padding-top: 20px;
+  z-index: 9;
+  transition: transform 0.3s ease;
+  transform: translateX(0);
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+
+}
+
+.sidebar ul li {
+  padding: 0; 
+}
+
+.sidebar ul li a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  padding: 15px 20px; /* Keep some vertical padding */
+  transition: background-color 0.3s ease, color 0.3s ease,
+    padding-left 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+  background-color: #00796b;
+  color: #ffffff;
+  padding-left: 26px; /* Increased padding-left on hover */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar .logo-img {
+    height: 60px;
+  }
+
+  .container {
+    padding: 20px;
+    margin-top: 80px;
+  }
+
+  .main-content {
+    padding-top: 80px;
+  }
+
+  .image-preview img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .hamburger-icon {
+    display: flex;
+  }
+
+  .sidebar {
+    transform: translateX(0);
+  }
+
+  .main-content {
+    margin-left: 220px;
+  }
+}
+
+
+
+
