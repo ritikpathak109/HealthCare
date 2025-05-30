@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\ProfilePicture\\bc968638-7f57-47ff-ae0e-fe60231d98c1.jpeg"
     },
     {
+      "Id": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\wwwroot\\ProfilePicture\\default.jpg",
+      "PackagePath": "staticwebassets\\ProfilePicture\\default.jpg"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.HealthCareBackend.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },

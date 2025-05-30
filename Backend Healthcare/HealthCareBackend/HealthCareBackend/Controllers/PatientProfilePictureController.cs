@@ -58,7 +58,8 @@ namespace HealthCareBackend.Controllers
 
             if (string.IsNullOrEmpty(fileName))
             {
-                return NotFound("No profile picture found for this user.");
+                
+                fileName = "default.jpg";
             }
 
             var filePath = Path.Combine(_environment.WebRootPath, "ProfilePicture", fileName);

@@ -70,7 +70,7 @@ VALUES
 
 
 --STORES LOGIN INFORMATION AND ROLE (ADMIN, PATIENT, DOCTOR)
-CREATE TABLE UsersLogin (
+CREATE TABLE select * from UsersLogin (
     UserId INT IDENTITY(1,1) PRIMARY KEY,
     UserName NVARCHAR(150) NOT NULL,
     UserEmail NVARCHAR(150) NOT NULL UNIQUE,
@@ -101,6 +101,7 @@ CREATE TABLE PatientsDetails (
     UpdatedDate DATETIME DEFAULT GETDATE()
 );
 select * from PatientsDetails
+select * from UsersLogin
 
 ALTER TABLE PatientsDetails
 ADD ProfilePicture NVARCHAR(MAX) NULL;
@@ -186,7 +187,7 @@ BEGIN
         p.UserId = @UserId AND p.IsDeleted = 0;
 END;
 
-exec usp_getpatientprofile 1
+exec usp_getpatientprofile 3
 
 
 

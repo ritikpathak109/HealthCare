@@ -48,7 +48,7 @@ onLogin() {
       if (res.roleName === 'Admin') {
         this.router.navigate(['/admin']);
       } else if (res.roleName === 'Doctor') {
-        this.router.navigate(['/doctor']);
+        this.router.navigate(['/doctor/doctor-dashboard']);
       } else if (res.roleName === 'Patient') {
         this.router.navigate(['/patient/dashboard']);
       } else {

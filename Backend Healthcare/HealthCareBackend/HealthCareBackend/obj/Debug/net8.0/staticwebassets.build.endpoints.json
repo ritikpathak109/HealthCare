@@ -165,6 +165,88 @@
           "Value": "ProfilePicture/bc968638-7f57-47ff-ae0e-fe60231d98c1.jpeg"
         }
       ]
+    },
+    {
+      "Route": "ProfilePicture/default.jpg",
+      "AssetFile": "ProfilePicture/default.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1031"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nFRkStyIA444rfcK1UIT/ARYddbVfejiOKamf0kODHM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 30 May 2025 17:19:07 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-nFRkStyIA444rfcK1UIT/ARYddbVfejiOKamf0kODHM="
+        }
+      ]
+    },
+    {
+      "Route": "ProfilePicture/default.ke5d4hltip.jpg",
+      "AssetFile": "ProfilePicture/default.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1031"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nFRkStyIA444rfcK1UIT/ARYddbVfejiOKamf0kODHM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 30 May 2025 17:19:07 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ke5d4hltip"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-nFRkStyIA444rfcK1UIT/ARYddbVfejiOKamf0kODHM="
+        },
+        {
+          "Name": "label",
+          "Value": "ProfilePicture/default.jpg"
+        }
+      ]
     }
   ]
 }
