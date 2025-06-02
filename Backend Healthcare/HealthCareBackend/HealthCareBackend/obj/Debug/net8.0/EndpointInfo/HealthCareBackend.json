@@ -207,6 +207,55 @@
         }
       }
     },
+    "/api/DoctorDetails/Get-DoctorDetails/{userId}": {
+      "get": {
+        "tags": [
+          "DoctorDetails"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DoctorDetailsDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DoctorDetailsDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DoctorDetailsDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/DoctorRegistration/Register-Doctor": {
       "post": {
         "tags": [
@@ -766,6 +815,68 @@
             "nullable": true
           },
           "specializationId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DoctorDetailsDTO": {
+        "type": "object",
+        "properties": {
+          "doctorId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "doctorFirstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "doctorLastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "doctorEmail": {
+            "type": "string",
+            "nullable": true
+          },
+          "age": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "gender": {
+            "type": "string",
+            "nullable": true
+          },
+          "countryName": {
+            "type": "string",
+            "nullable": true
+          },
+          "stateName": {
+            "type": "string",
+            "nullable": true
+          },
+          "doctorProfilePicture": {
+            "type": "string",
+            "nullable": true
+          },
+          "doctorAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "doctorPhoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "specializationName": {
+            "type": "string",
+            "nullable": true
+          },
+          "experienceYears": {
             "type": "integer",
             "format": "int32"
           }

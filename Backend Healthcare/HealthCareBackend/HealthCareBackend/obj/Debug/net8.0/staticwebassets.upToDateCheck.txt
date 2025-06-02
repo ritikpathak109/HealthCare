@@ -1,3 +1,4 @@
 wwwroot\ProfilePicture\0b3b3ebc-3b9a-439d-9a32-d5f19870e2e2.jpg
+wwwroot\ProfilePicture\5f0c579d-0e31-457a-9d43-3fb843a58fca.png
 wwwroot\ProfilePicture\bc968638-7f57-47ff-ae0e-fe60231d98c1.jpeg
 wwwroot\ProfilePicture\default.jpg

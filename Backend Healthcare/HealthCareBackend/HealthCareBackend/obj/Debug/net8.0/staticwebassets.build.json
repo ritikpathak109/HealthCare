@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Fc3z6dNIVOklWLrM/p9nIplWBhG0YTuXujNy8izVYzs=",
+  "Hash": "y2rCK+T2cySWHwtv2GAxT6Z6WsmX5rSGcMPuFuwzlFc=",
   "Source": "HealthCareBackend",
   "BasePath": "_content/HealthCareBackend",
   "Mode": "Default",
@@ -36,6 +36,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\ProfilePicture\\0b3b3ebc-3b9a-439d-9a32-d5f19870e2e2.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\wwwroot\\ProfilePicture\\5f0c579d-0e31-457a-9d43-3fb843a58fca.png",
+      "SourceId": "HealthCareBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\wwwroot\\",
+      "BasePath": "_content/HealthCareBackend",
+      "RelativePath": "ProfilePicture/5f0c579d-0e31-457a-9d43-3fb843a58fca#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "let0li1xvh",
+      "Integrity": "3aFihxV09SxyY+Myh2nVxnWsdtV0ijre4kzPkhYpsCY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\ProfilePicture\\5f0c579d-0e31-457a-9d43-3fb843a58fca.png"
     },
     {
       "Identity": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\wwwroot\\ProfilePicture\\bc968638-7f57-47ff-ae0e-fe60231d98c1.jpeg",
@@ -160,6 +181,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-L0YQ5IHEuhV+GDgtixlJkwfKXNpkkrYO02yGFaDHkB4="
+        }
+      ]
+    },
+    {
+      "Route": "ProfilePicture/5f0c579d-0e31-457a-9d43-3fb843a58fca.let0li1xvh.png",
+      "AssetFile": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\wwwroot\\ProfilePicture\\5f0c579d-0e31-457a-9d43-3fb843a58fca.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "104396"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"3aFihxV09SxyY+Myh2nVxnWsdtV0ijre4kzPkhYpsCY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 30 May 2025 17:37:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "let0li1xvh"
+        },
+        {
+          "Name": "label",
+          "Value": "ProfilePicture/5f0c579d-0e31-457a-9d43-3fb843a58fca.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-3aFihxV09SxyY+Myh2nVxnWsdtV0ijre4kzPkhYpsCY="
+        }
+      ]
+    },
+    {
+      "Route": "ProfilePicture/5f0c579d-0e31-457a-9d43-3fb843a58fca.png",
+      "AssetFile": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\wwwroot\\ProfilePicture\\5f0c579d-0e31-457a-9d43-3fb843a58fca.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "104396"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"3aFihxV09SxyY+Myh2nVxnWsdtV0ijre4kzPkhYpsCY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 30 May 2025 17:37:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-3aFihxV09SxyY+Myh2nVxnWsdtV0ijre4kzPkhYpsCY="
         }
       ]
     },

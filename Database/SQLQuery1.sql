@@ -490,7 +490,48 @@ CREATE TABLE DoctorDetails (
     UpdatedDate DATETIME Default getDate()
 );
 
-drop table DoctorDetails
+ALTER TABLE DoctorDetails
+ADD DoctorProfilePicture NVARCHAR(MAX);
+
+
+create PROCEDURE USP_GetDoctorProfile
+    @UserId INT
+AS
+BEGIN
+    SELECT 
+        d.DoctorId,
+        d.UserId,
+        d.DoctorEmail,
+        d.DoctorFirstName,
+        d.DoctorLastName,
+		d.DoctorProfilePicture,
+		ds.SpecializationName,
+		d.ExperienceYears,
+        d.DoctorPhoneNumber,
+        d.DoctorAddress,
+        g.Gender,
+        c.CountryName,
+        s.StateName,
+        DATEDIFF(YEAR, d.DoctorDateofBirth, GETDATE()) AS Age
+    FROM 
+        DoctorDetails d
+    JOIN 
+        GenderMaster g ON d.GenderId = g.GenderId
+    JOIN 
+        CountryMaster c ON d.CountryId = c.CountryId
+    JOIN 
+        StateMaster s ON d.StateId = s.StateId
+    JOIN 
+        UsersLogin u ON d.UserId = u.UserId
+		Join
+		DoctorSpecializationMaster ds on d.SpecializationId=ds.SpecializationId
+    WHERE 
+        d.UserId = @UserId AND d.IsDeleted = 0;
+END;
+
+
+exec USP_GetDoctorProfile 25
+
 
 --STORED PROCEDURE TO REGISTER DOCTOR
 

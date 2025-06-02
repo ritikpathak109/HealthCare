@@ -121,6 +121,32 @@
     ]
   },
   {
+    "ContainingType": "HealthCareBackend.Controllers.DoctorDetailsController",
+    "Method": "GetFDoctorDetailsbyId",
+    "RelativePath": "api/DoctorDetails/Get-DoctorDetails/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[HealthCareBackend.DTOs.DoctorDetailsDTO, HealthCareBackend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "HealthCareBackend.Controllers.DoctorRegistrationController",
     "Method": "RegisterDoctor",
     "RelativePath": "api/DoctorRegistration/Register-Doctor",

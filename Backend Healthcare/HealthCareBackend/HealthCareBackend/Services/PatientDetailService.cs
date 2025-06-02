@@ -1,4 +1,5 @@
 ﻿using HealthCareBackend.DTOs;
+using HealthCareBackend.Models;
 using HealthCareBackend.Repositories;
 
 namespace HealthCareBackend.Services
@@ -6,13 +7,13 @@ namespace HealthCareBackend.Services
     public class PatientDetailService
     {
         private readonly PatientDetailsRepository _patientDetailsRepository;
-        public PatientDetailService(PatientDetailsRepository masterTableRepository)
+        public PatientDetailService(PatientDetailsRepository patientDetailsRepository)
         {
-            _patientDetailsRepository = masterTableRepository;
+            _patientDetailsRepository = patientDetailsRepository;
         }
-        public List<PatientDetailsDTO> GetPateientDetailsById(int countryId)
+        public List<PatientDetailsDTO> GetPateientDetailsById(int userId)
         {
-            return _patientDetailsRepository.GetPateintbyId(countryId);
+            return _patientDetailsRepository.GetPateintbyId(userId);
         }
 
     }
