@@ -131,7 +131,6 @@ C:\Users\ritik\Desktop\HealthCare Project\Backend Healthcare\HealthCareBackend\H
 C:\Users\ritik\Desktop\HealthCare Project\Backend Healthcare\HealthCareBackend\HealthCareBackend\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.HealthCareBackend.props
 C:\Users\ritik\Desktop\HealthCare Project\Backend Healthcare\HealthCareBackend\HealthCareBackend\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.HealthCareBackend.props
 C:\Users\ritik\Desktop\HealthCare Project\Backend Healthcare\HealthCareBackend\HealthCareBackend\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\ritik\Desktop\HealthCare Project\Backend Healthcare\HealthCareBackend\HealthCareBackend\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\ritik\Desktop\HealthCare Project\Backend Healthcare\HealthCareBackend\HealthCareBackend\obj\Debug\net8.0\HealthCa.208A72F2.Up2Date
 C:\Users\ritik\Desktop\HealthCare Project\Backend Healthcare\HealthCareBackend\HealthCareBackend\obj\Debug\net8.0\HealthCareBackend.dll
 C:\Users\ritik\Desktop\HealthCare Project\Backend Healthcare\HealthCareBackend\HealthCareBackend\obj\Debug\net8.0\refint\HealthCareBackend.dll
@@ -140,3 +139,4 @@ C:\Users\ritik\Desktop\HealthCare Project\Backend Healthcare\HealthCareBackend\H
 C:\Users\ritik\Desktop\HealthCare Project\Backend Healthcare\HealthCareBackend\HealthCareBackend\obj\Debug\net8.0\ref\HealthCareBackend.dll
 C:\Users\ritik\Desktop\HealthCare Project\Backend Healthcare\HealthCareBackend\HealthCareBackend\obj\Debug\net8.0\HealthCareBackend.sourcelink.json
 C:\Users\ritik\Desktop\HealthCare Project\Backend Healthcare\HealthCareBackend\HealthCareBackend\bin\Debug\net8.0\HealthCareBackend.staticwebassets.runtime.json
+C:\Users\ritik\Desktop\HealthCare Project\Backend Healthcare\HealthCareBackend\HealthCareBackend\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

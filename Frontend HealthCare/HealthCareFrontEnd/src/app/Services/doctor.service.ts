@@ -27,6 +27,8 @@ export class DoctorService {
   getDoctorbySpecialization(specializationId:any){
     return this.http.get(`http://localhost:5165/api/DoctorbySpecialization/GetDoctorsBySpecilization/${specializationId}`)
   }
+  getDoctorDetails(userId:any){
+    return this.http.get(`http://localhost:5165/api/DoctorDetails/Get-DoctorDetails/${userId}`)
+  }
  
-
 }
