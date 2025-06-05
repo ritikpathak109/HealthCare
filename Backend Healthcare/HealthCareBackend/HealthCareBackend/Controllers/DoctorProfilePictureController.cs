@@ -6,12 +6,12 @@ namespace HealthCareBackend.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PatientProfilePictureController : ControllerBase
+    public class DoctorProfilePictureController : ControllerBase
     {
-        private readonly PatientProfilePictureService _service;
+        private readonly DoctorProfilePictureService _service;
         private readonly IWebHostEnvironment _environment;
 
-        public PatientProfilePictureController(PatientProfilePictureService service, IWebHostEnvironment environment)
+        public DoctorProfilePictureController(DoctorProfilePictureService service, IWebHostEnvironment environment)
         {
             _service = service;
             _environment = environment;

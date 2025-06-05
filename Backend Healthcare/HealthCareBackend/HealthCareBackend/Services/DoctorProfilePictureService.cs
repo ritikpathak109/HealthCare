@@ -2,11 +2,11 @@
 
 namespace HealthCareBackend.Services
 {
-    public class PatientProfilePictureService
+    public class DoctorProfilePictureService
     {
-        private readonly PatientProfilePictureRepository _repository;
+        private readonly DoctorProfilePictureRepository _repository;
 
-        public PatientProfilePictureService(PatientProfilePictureRepository repository)
+        public DoctorProfilePictureService(DoctorProfilePictureRepository repository)
         {
             _repository = repository;
         }

@@ -18,6 +18,7 @@ namespace HealthCareBackend.Models
         public DbSet<DoctorDetailsDTO> USP_GetDoctorProfile { get; set; }
         public DbSet<PatientDetails> PatientsDetails { get; set; }
         public DbSet<DoctorDetails> DoctorDetails { get; set; }
+     
         public DbSet<DoctorSpecializationDTO> DoctorSpecializationMaster { get; set; }
         public DbSet<AppointmentStatusDTO> AppointmentStatusMaster { get; set; }
         public DbSet<Appointments> Appointments { get; set; }

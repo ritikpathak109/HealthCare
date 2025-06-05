@@ -30,5 +30,17 @@ export class DoctorService {
   getDoctorDetails(userId:any){
     return this.http.get(`http://localhost:5165/api/DoctorDetails/Get-DoctorDetails/${userId}`)
   }
+
+  uploadDoctorProfilePicture(userId: string, file: File) {
+    const formData = new FormData();
+    formData.append('file', file);
+  
+    return this.http.post(`http://localhost:5165/api/DoctorProfilePicture/Upload/${userId}`, formData);
+  }
+  getDoctorProfilePicture(userId: string) {
+    return this.http.get(`http://localhost:5165/api/DoctorProfilePicture/Get/${userId}`, {
+      responseType: 'blob'
+    });
+  }
  
 }

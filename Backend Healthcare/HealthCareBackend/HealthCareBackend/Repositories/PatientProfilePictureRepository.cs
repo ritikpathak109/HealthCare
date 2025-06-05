@@ -12,16 +12,16 @@ namespace HealthCareBackend.Repositories
             _context = context;
         }
 
-        public async Task<bool> SaveProfilePictureAsync(int userId, string fileName)
+        public bool SaveProfilePicture(int userId, string fileName)
         {
-            var patient = await _context.PatientsDetails.SingleOrDefaultAsync(p => p.UserId == userId);
+        
+            var patient = _context.PatientsDetails.SingleOrDefault(p => p.UserId == userId);
 
             if (patient == null)
             {
                 throw new Exception("Patient not found.");
             }
 
-            // Optional: Delete old picture if exists
             if (!string.IsNullOrEmpty(patient.ProfilePicture))
             {
                 var oldFilePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/ProfilePicture", patient.ProfilePicture);
@@ -31,22 +31,19 @@ namespace HealthCareBackend.Repositories
                 }
             }
 
-            // Save new profile picture name
             patient.ProfilePicture = fileName;
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
 
             return true;
         }
 
-
-        public async Task<string?> GetProfilePictureFileNameAsync(int userId)
+        public string? GetProfilePictureFileName(int userId)
         {
-            var patient = await _context.PatientsDetails
+            var patient = _context.PatientsDetails
                 .AsNoTracking()
-                .SingleOrDefaultAsync(p => p.UserId == userId);
+                .SingleOrDefault(p => p.UserId == userId);
 
             return patient?.ProfilePicture;
         }
-
     }
 }

@@ -147,6 +147,43 @@
     ]
   },
   {
+    "ContainingType": "HealthCareBackend.Controllers.DoctorProfilePictureController",
+    "Method": "GetProfilePicture",
+    "RelativePath": "api/DoctorProfilePicture/Get/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HealthCareBackend.Controllers.DoctorProfilePictureController",
+    "Method": "UploadProfilePicture",
+    "RelativePath": "api/DoctorProfilePicture/Upload/{userId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "HealthCareBackend.Controllers.DoctorRegistrationController",
     "Method": "RegisterDoctor",
     "RelativePath": "api/DoctorRegistration/Register-Doctor",

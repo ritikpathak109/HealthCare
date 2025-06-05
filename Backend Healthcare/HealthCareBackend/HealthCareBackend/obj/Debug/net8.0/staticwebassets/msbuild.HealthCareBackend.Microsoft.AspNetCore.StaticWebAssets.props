@@ -18,6 +18,42 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\ProfilePicture\0b3b3ebc-3b9a-439d-9a32-d5f19870e2e2.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\ProfilePicture\11103188-1a8d-473f-9fa0-be6f4545fe3a.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>HealthCareBackend</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HealthCareBackend</BasePath>
+      <RelativePath>ProfilePicture/11103188-1a8d-473f-9fa0-be6f4545fe3a.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>96shcx2ii5</Fingerprint>
+      <Integrity>4fhTQn+ikRdwlQ9AZHFEhFV7vhldP3fmXpYRGvx3MmQ=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\ProfilePicture\11103188-1a8d-473f-9fa0-be6f4545fe3a.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\ProfilePicture\2a3dbd89-e484-49ef-8483-b07c3902d57e.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>HealthCareBackend</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HealthCareBackend</BasePath>
+      <RelativePath>ProfilePicture/2a3dbd89-e484-49ef-8483-b07c3902d57e.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>wj33kx790t</Fingerprint>
+      <Integrity>vJwfjZ0N94pNOx+Xq+k6Br27gCUdwKyjGnskLfK26Wc=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\ProfilePicture\2a3dbd89-e484-49ef-8483-b07c3902d57e.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\ProfilePicture\5f0c579d-0e31-457a-9d43-3fb843a58fca.png'))">
       <SourceType>Package</SourceType>
       <SourceId>HealthCareBackend</SourceId>
@@ -36,23 +72,23 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\ProfilePicture\5f0c579d-0e31-457a-9d43-3fb843a58fca.png'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\ProfilePicture\bc968638-7f57-47ff-ae0e-fe60231d98c1.jpeg'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\ProfilePicture\b687d4c3-c813-4390-8cb0-b3bd15163efe.png'))">
       <SourceType>Package</SourceType>
       <SourceId>HealthCareBackend</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/HealthCareBackend</BasePath>
-      <RelativePath>ProfilePicture/bc968638-7f57-47ff-ae0e-fe60231d98c1.jpeg</RelativePath>
+      <RelativePath>ProfilePicture/b687d4c3-c813-4390-8cb0-b3bd15163efe.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>wj33kx790t</Fingerprint>
-      <Integrity>vJwfjZ0N94pNOx+Xq+k6Br27gCUdwKyjGnskLfK26Wc=</Integrity>
+      <Fingerprint>4jcb29jzbw</Fingerprint>
+      <Integrity>MApH9GT/FJF692UbQ7dSzXYsbYJMqzlJi0xVGS9FeUo=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\ProfilePicture\bc968638-7f57-47ff-ae0e-fe60231d98c1.jpeg'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\ProfilePicture\b687d4c3-c813-4390-8cb0-b3bd15163efe.png'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\ProfilePicture\default.jpg'))">
       <SourceType>Package</SourceType>

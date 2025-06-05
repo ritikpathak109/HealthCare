@@ -162,11 +162,69 @@ h2 {
   font-style: italic;
 }
 
-input[type="file"] {
-  margin-top: 10px;
+/* --- UPDATED STYLES FOR CUSTOM FILE UPLOAD BUTTON AND LAYOUT --- */
+
+/* Container for both the file input group and the upload button side-by-side */
+.profile-picture-actions {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+  justify-content: center; /* Center items horizontally */
+  /* IMPORTANT: Align items to the center of their flex line */
+  align-items: center; /* This should ensure perfect horizontal alignment */
+  gap: 30px; /* Increased space between the file selection group and the upload button */
+  margin-top: 15px; /* Spacing from the image preview */
+  margin-bottom: 20px; /* Spacing before the card below */
 }
 
-button {
+/* Group for the custom file button and its text */
+.file-selection-group {
+  display: flex;
+  flex-direction: column; /* Column to stack button and text */
+  align-items: center; /* Center items horizontally within the column */
+  gap: 5px; /* Space between the custom button and the selected file name */
+  min-width: 0; /* Allow content to shrink */
+  /* Added a small margin to ensure it sits flush if other elements affect vertical space */
+  margin-bottom: 0;
+}
+
+/* Styling for the custom 'Choose File' button (the label) */
+.custom-file-upload {
+  display: inline-flex; /* Use flex for icon and text alignment */
+  align-items: center; /* Center icon and text */
+  background: #00796b; /* Same teal as your theme */
+  color: #fff; /* White text */
+  padding: 8px 16px; /* Padding similar to other buttons */
+  font-size: 14px; /* Consistent font size */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Indicate it's clickable */
+  transition: background 0.3s; /* Smooth hover transition */
+  border: 1px solid #00796b; /* Border matching background for subtle effect */
+  /* Ensure no unexpected margins */
+  margin-bottom: 0;
+}
+
+.custom-file-upload i {
+  margin-right: 8px; /* Space between icon and text */
+}
+
+.custom-file-upload:hover {
+  background: #004d40; /* Darker teal on hover */
+}
+
+/* Styling for the selected file name text */
+.selected-file-name {
+  font-size: 14px;
+  color: #555;
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Add ellipsis for overflow text */
+  max-width: 150px; /* Limit width to prevent it from pushing elements too much */
+  line-height: 1.2; /* Ensure consistent line height */
+  text-align: center; /* Center the text below the button */
+}
+
+/* Specific style for the Upload Picture button within the new container */
+.upload-picture-btn {
   background: #00796b;
   color: #fff;
   border: none;
@@ -175,16 +233,52 @@ button {
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s;
+  /* Crucial: Ensure no top margin that could cause misalignment */
+  margin-top: 0;
+  margin-bottom: 20px; /* Also ensure no bottom margin */
 }
-button:hover {
+
+.upload-picture-btn:hover {
   background: #004d40;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .logo-img { height: 60px; }
-  .container { padding: 20px; margin-top: 80px; }
-  .main-content { padding-top: 80px; margin-left: 0; }
-  .image-preview img { width: 120px; height: 120px; }
-  .sidebar { width: 100%; height: auto; position: static; }
+  .logo-img {
+    height: 60px;
+  }
+  .container {
+    padding: 20px;
+    margin-top: 80px;
+  }
+  .main-content {
+    padding-top: 80px;
+    margin-left: 0;
+  }
+  .image-preview img {
+    width: 120px;
+    height: 120px;
+  }
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: static;
+  }
+
+  /* Ensure actions stack vertically on small screens for better readability */
+  .profile-picture-actions {
+    flex-direction: column;
+    gap: 10px; /* Adjusted gap for vertical stacking */
+  }
+
+  .file-selection-group {
+    flex-direction: column; /* Still column for button and text */
+    align-items: center; /* Center text and button */
+    gap: 5px; /* Consistent small gap */
+  }
+
+  .selected-file-name {
+    text-align: center; /* Center text when stacked */
+    max-width: 100%; /* Allow full width when stacked */
+  }
 }
