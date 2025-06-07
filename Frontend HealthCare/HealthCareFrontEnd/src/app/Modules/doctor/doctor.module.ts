@@ -6,13 +6,15 @@ import { DoctorRegistrationComponent } from './components/doctor-registration/do
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DoctorDashboardComponent } from './components/doctor-dashboard/doctor-dashboard.component';
+import { TodaysAppointmentComponent } from './components/todays-appointment/todays-appointment.component';
 
 
 
 @NgModule({
   declarations: [
     DoctorRegistrationComponent,
-    DoctorDashboardComponent
+    DoctorDashboardComponent,
+    TodaysAppointmentComponent
   ],
   imports: [
     CommonModule,
