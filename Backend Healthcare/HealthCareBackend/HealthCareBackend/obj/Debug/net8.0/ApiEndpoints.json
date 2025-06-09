@@ -200,6 +200,32 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "HealthCareBackend.Controllers.DoctorTodaysAppointmentController",
+    "Method": "GetFDoctorDetailsbyId",
+    "RelativePath": "api/DoctorTodaysAppointment/Get-TodaysDoctorAppointments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "doctorId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[HealthCareBackend.DTOs.DoctorDetailsDTO, HealthCareBackend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "HealthCareBackend.Controllers.LoginController",
     "Method": "Login",
     "RelativePath": "api/Login/LoginUser",

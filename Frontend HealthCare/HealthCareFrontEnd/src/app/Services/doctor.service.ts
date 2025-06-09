@@ -42,5 +42,8 @@ export class DoctorService {
       responseType: 'blob'
     });
   }
- 
+  getDoctorTodayAppointment(doctorId: any) {
+    return this.http.get(`http://localhost:5165/api/DoctorTodaysAppointment/Get-TodaysDoctorAppointments?doctorId=${doctorId}`);
+  }
+
 }

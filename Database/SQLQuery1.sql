@@ -574,4 +574,37 @@ select * from DoctorDetails
 
 
 
+--STORED PROCEDURE TO GET TODAYS APPOINTMENT FOR DOCOTR PORTAL
+alter PROCEDURE USP_GetTodayApprovedAppointmentsForDoctor
+    @DoctorId INT
+AS
+BEGIN
+    SELECT 
+        A.AppointmentId,
+        P.PatientId,
+        P.PatientFirstName + ' ' + ISNULL(P.PatientLastName, '') AS PatientName,
+		GM.Gender,
+		DATEDIFF(YEAR, P.DateOfBirth, GETDATE()) AS Age,
+		A.ReasonForVisit,
+        A.AppointmentDate,
+        SM.SlotTime AS AppointmentTime
+
+
+    FROM Appointments A
+    INNER JOIN PatientsDetails P ON A.PatientId = P.PatientId
+   
+    INNER JOIN SlotMaster SM ON A.SlotId = SM.SlotId
+    INNER JOIN GenderMaster GM ON P.GenderId = GM.GenderId
+    WHERE 
+        A.DoctorId = @DoctorId
+        AND A.AppointmentDate = CAST(GETDATE() AS DATE)
+        AND A.StatusId = 1  -- Approved
+        AND A.IsDeleted = 0
+    ORDER BY SM.SlotTime;
+END;
+
+exec USP_GetTodayApprovedAppointmentsForDoctor 4
+
+
+
 

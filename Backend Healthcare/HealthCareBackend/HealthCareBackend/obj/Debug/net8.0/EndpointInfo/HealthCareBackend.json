@@ -353,6 +353,54 @@
         }
       }
     },
+    "/api/DoctorTodaysAppointment/Get-TodaysDoctorAppointments": {
+      "get": {
+        "tags": [
+          "DoctorTodaysAppointment"
+        ],
+        "parameters": [
+          {
+            "name": "doctorId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DoctorDetailsDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DoctorDetailsDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DoctorDetailsDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/Login/LoginUser": {
       "post": {
         "tags": [
