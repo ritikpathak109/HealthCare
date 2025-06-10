@@ -18,261 +18,14 @@ body {
   background-color: #00796b;
   padding: 10px 20px;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  justify-content: space-between;
-}
-
-/* Logo and portal name container in navbar */
-.navbar .logo-container {
-  display: flex;
-  align-items: center;
-}
-
-/* Styling for the logo image in the navbar */
-.navbar .logo-img {
-  height: 80px;
-  width: auto;
-  opacity: 0.9;
-  margin-right: 10px;
-}
-
-/* Styling for the portal name text in the navbar */
-.navbar .portal-name {
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-/* Hamburger icon styles: for mobile menu toggle */
-.hamburger-icon {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 20px;
-  cursor: pointer;
-  padding: 10px;
-  margin-bottom: 20px;
-  position: relative;
-  z-index: 11; /* Ensures hamburger is above sidebar */
-}
-
-/* Icon color and size for hamburger */
-.hamburger-icon i {
-  color: #00796b;
-  font-size: 24px;
-}
-
-/* Sidebar styles: fixed position, white background, transitions for smooth movement */
-.sidebar {
-  width: 220px;
-  height: 100vh;
-  background-color: #ffffff;
-  position: fixed;
-  top: 80px; /* Below the navbar */
-  left: 0;
-  padding-top: 20px;
-  z-index: 9; /* Below the navbar and hamburger */
-  transition: transform 0.3s ease;
-  transform: translateX(0); /* Default visible state */
-}
-
-/* Remove default list styling */
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-}
-
-/* Anchor tag styling within sidebar list items */
-.sidebar ul li a {
-  display: block;
-  text-decoration: none;
-  color: #333;
-  font-size: 16px;
-  padding: 15px 20px;
-  transition: background-color 0.3s ease, color 0.3s ease,
-    padding-left 0.3s ease; /* Smooth transitions for hover effects */
-}
-
-/* Hover effect for sidebar links */
-.sidebar ul li a:hover {
-  background-color: #00796b;
-  color: #ffffff;
-  padding-left: 26px; /* Increased padding-left on hover for visual feedback */
-}
-
-/* Main content wrapper: gradient background, padding, and margin to account for sidebar */
-.main-content {
-  background: linear-gradient(to right, #e0f7fa, #ffffff);
-  min-height: calc(100vh - 50px); /* Adjust height to fit viewport minus navbar height */
-  padding: 90px 20px 20px 20px; /* Padding for content, top padding accounts for navbar */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 220px; /* Space for the sidebar */
-  transition: margin-left 0.3s ease; /* Smooth transition for sidebar toggle */
-}
-
-/* General container styles for forms/cards */
-.container {
-  width: 100%;
-  max-width: 1100px;
-  background-color: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 128, 128, 0.2); /* Teal-ish shadow */
-  margin: 30px auto 20px; /* Top margin, auto horizontal for centering, bottom margin */
-}
-
-/* Heading 2 styling */
-h2 {
-  text-align: center;
-  color: #00796b;
-  margin-bottom: 25px;
-}
-button {
-
-  background-color: #00796b;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  font-size: 14px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-/* Button hover effect */
-button:hover {
-  background-color: #004d40;
-}
-
-/* Specific styling for the delete button */
-.delete-button {
-  background-color: #f44336; /* Red color for delete action */
-  padding: 6px 12px; /* Slightly smaller padding for a table button */
-  font-size: 12px; /* Smaller font size for a table button */
-  margin-top: 0; /* Remove top margin that might be inherited from general button */
-}
-
-.delete-button:hover {
-  background-color: #d32f2f; /* Darker red on hover */
-}
-
-/* Responsive adjustments for smaller screens */
-@media (max-width: 768px) {
-  .navbar .logo-img {
-    height: 60px;
-  }
-
-  .container {
-    padding: 20px;
-    margin-top: 80px;
-  }
-
-  .main-content {
-    padding-top: 80px;
-    margin-left: 0; /* Sidebar will overlay on mobile */
-    transition: margin-left 0.3s ease; /* Ensure smooth transition */
-  }
-
-  .hamburger-icon {
-    display: flex; /* Ensure hamburger is visible on mobile */
-  }
-
-  .sidebar {
-    transform: translateX(-100%); /* Hide sidebar by default on mobile */
-    top: 0; /* Adjust top for full height overlay */
-    height: 100vh; /* Full viewport height */
-  }
-
-  /* Active state for sidebar on mobile */
-  .sidebar.active {
-    transform: translateX(0);
-  }
-
-  /* Adjust main content when sidebar is active on mobile */
-  .main-content.sidebar-active {
-    margin-left: 220px; /* Push content to the right to show sidebar */
-  }
-}
-
-/* --- NEW TABLE STYLES --- */
-.appointment-table-container {
-  overflow-x: auto; /* Allows horizontal scrolling on small screens */
-  margin-top: 20px; /* Space below the heading */
-}
-
-.appointment-table {
-  width: 100%;
-  border-collapse: collapse; /* Removes space between table borders */
-  margin: 0 auto; /* Center the table if it's narrower than its container */
-  background-color: #ffffff; /* White background for the table */
-  border-radius: 8px; /* Rounded corners for the table */
-  overflow: hidden; /* Ensures rounded corners apply to content */
-  box-shadow: 0 4px 10px rgba(0, 128, 128, 0.1); /* Subtle shadow */
-}
-
-.appointment-table th,
-.appointment-table td {
-  padding: 12px 15px; /* Comfortable padding */
-  text-align: left; /* Align text to the left */
-  border-bottom: 1px solid #e0e0e0; /* Light gray bottom border for rows */
-}
-
-.appointment-table thead th {
-  background-color: #00796b; /* Teal background for header */
-  color: white; /* White text for header */
-  font-weight: bold;
-  text-transform: uppercase; /* Uppercase text for headers */
-  font-size: 14px;
-}
-
-.appointment-table tbody tr:nth-child(even) {
-  background-color: #f9f9f9; /* Light gray for even rows (zebra stripping) */
-}
-
-.appointment-table tbody tr:hover {
-  background-color: #e0f2f1; /* Lighter teal on row hover for interaction feedback */
-  cursor: pointer; /* Indicate rows are interactive (if they were clickable) */
-}
-
-/* Specific styling for the status column for better readability */
-.appointment-table td:last-child {
-  font-weight: 600;
-}* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Full height and width for body, setting default font and preventing horizontal overflow */
-html,
-body {
-  height: 100%;
-  width: 100%;
-  font-family: 'Roboto', sans-serif;
-  overflow-x: hidden;
-}
-
-/* Navbar styles: fixed at top, teal background, flex layout */
-.navbar {
-  background-color: #00796b;
-  padding: 10px 20px;
-  display: flex;
-  justify-content: flex-start;
+  /* Removed 'justify-content: flex-start;' as it's overridden by 'space-between' */
   align-items: center;
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 10; /* Ensures navbar stays on top */
+  justify-content: space-between;
 }
 
 /* Logo and portal name container in navbar */
@@ -310,11 +63,11 @@ body {
   z-index: 11; /* Ensures hamburger is above sidebar */
 }
 
-/* Icon color and size for hamburger */
-.hamburger-icon i {
-  color: #00796b;
-  font-size: 24px;
-}
+/* Icon color and size for hamburger - font-size and color removed as they are set inline in HTML */
+/* .hamburger-icon i {
+  /* color: #00796b; */
+  /* font-size: 24px; 
+} */
 
 /* Sidebar styles: fixed position, white background, transitions for smooth movement */
 .sidebar {
@@ -435,6 +188,20 @@ button:hover {
   background-color: #d32f2f; /* Darker red on hover */
 }
 
+/* Removed the '.consult-button' styles as they are not used in your HTML */
+/*
+.consult-button {
+  background-color: #f44336;
+  padding: 6px 12px;
+  font-size: 12px;
+  margin-top: 0;
+}
+
+.consult-button:hover {
+  background-color: #d32f2f;
+}
+*/
+
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
   .navbar .logo-img {
@@ -519,17 +286,18 @@ button:hover {
   font-weight: 600;
 }
 
-/* Status colors (example, you might need to map actual statuses) */
+/* Removed status colors as they are not applied via class in the HTML */
+/*
 .appointment-table .status-confirmed {
-  color: #28a745; /* Green for confirmed */
+  color: #28a745;
 }
 .appointment-table .status-pending {
-  color: #ffc107; /* Orange for pending */
+  color: #ffc107;
 }
 .appointment-table .status-cancelled {
-  color: #dc3545; /* Red for cancelled */
+  color: #dc3545;
 }
 .appointment-table .status-completed {
-  color: #6c757d; /* Gray for completed */
+  color: #6c757d;
 }
-
+*/

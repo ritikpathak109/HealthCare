@@ -607,4 +607,33 @@ exec USP_GetTodayApprovedAppointmentsForDoctor 4
 
 
 
+alter PROCEDURE USP_GetConsultationInfoByAppointmentId
+@AppointmentId INT
+AS
+BEGIN
+    SELECT 
+        a.AppointmentId,
+        p.PatientId,
+        p.PatientFirstName + ' ' + ISNULL(p.PatientLastName, '') AS PatientName,
+        g.Gender,
+        DATEDIFF(YEAR, p.DateOfBirth, GETDATE()) AS Age,
+        p.PatientPhoneNumber,
+        
+        d.DoctorId,
+        d.DoctorFirstName + ' ' + ISNULL(d.DoctorLastName, '') AS DoctorName,
+        s.SpecializationName
+        
+    FROM 
+        Appointments a
+    JOIN PatientsDetails p ON a.PatientId = p.PatientId
+    JOIN GenderMaster g ON p.GenderId = g.GenderId
+    JOIN DoctorDetails d ON a.DoctorId = d.DoctorId
+    JOIN DoctorSpecializationMaster s ON d.SpecializationId = s.SpecializationId
+    WHERE 
+        a.AppointmentId = @AppointmentId
+        AND a.IsDeleted = 0;
+END
+
+
+exec USP_GetConsultationInfoByAppointmentId 147
 

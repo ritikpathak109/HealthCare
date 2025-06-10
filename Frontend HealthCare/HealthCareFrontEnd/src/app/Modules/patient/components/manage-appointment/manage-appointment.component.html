@@ -57,8 +57,8 @@
                 <td>{{ appointment.doctorName }}</td>
                 <td>{{ appointment.specializationName }}</td>
                 <td>{{ appointment.appointmentDate | date: 'shortDate' }}</td>
-                <td>{{ appointment.slotStartTime }}</td>
-                <td>{{ appointment.slotEndTime }}</td>
+                <td>{{ appointment.slotStartTime.substring(0, 5)  }}</td>
+                <td>{{ appointment.slotEndTime.substring(0, 5)  }}</td>
                 <td>{{ appointment.status }}
                 </td>
                 <td>{{ appointment.createdDate | date: 'shortDate' }}</td>
@@ -92,8 +92,8 @@
                 <td>{{ appointments.doctorName }}</td>
                 <td>{{ appointments.specializationName }}</td>
                 <td>{{ appointments.appointmentDate | date: 'shortDate' }}</td>
-                <td>{{ appointments.slotStartTime }}</td>
-                <td>{{ appointments.slotEndTime }}</td>
+                <td>{{ appointments.slotStartTime.substring(0, 5)  }}</td>
+                <td>{{ appointments.slotEndTime.substring(0, 5)  }}</td>
                 <td>{{ appointments.status }}</td>
                 <td>{{ appointments.createdDate | date: 'shortDate' }}</td>
               </tr>
