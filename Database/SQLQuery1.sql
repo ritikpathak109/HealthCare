@@ -571,8 +571,15 @@ delete from DoctorDetails where doctorid=1
 select * from UsersLogin
 
 select * from DoctorDetails
+SELECT * FROM DoctorDetails WHERE DoctorId = 4;
 
+SELECT * FROM PatientsDetails WHERE PatientId = 1;
 
+SELECT * FROM Appointments WHERE AppointmentId = 147;
+
+SELECT AppointmentId, DoctorId, PatientId
+FROM Appointments
+WHERE AppointmentId = 147;
 
 --STORED PROCEDURE TO GET TODAYS APPOINTMENT FOR DOCOTR PORTAL
 alter PROCEDURE USP_GetTodayApprovedAppointmentsForDoctor
@@ -606,7 +613,7 @@ END;
 exec USP_GetTodayApprovedAppointmentsForDoctor 4
 
 
-
+--STORED PROCEDURE FOR THE NON EDITABLE FIELDS LIKE NAME AND OTHE PATIENT DETILS OF FINAL CONSULTAION FORM
 alter PROCEDURE USP_GetConsultationInfoByAppointmentId
 @AppointmentId INT
 AS
@@ -636,4 +643,107 @@ END
 
 
 exec USP_GetConsultationInfoByAppointmentId 147
+
+
+--CONSULTION TABLE FOR THE SOAP NOTES
+CREATE TABLE ConsultationDetails (
+    ConsultationId INT IDENTITY(1,1) PRIMARY KEY,
+    AppointmentId INT NOT NULL foreign key references Appointments(AppointmentId),
+    PatientId INT NOT NULL foreign key references PatientsDetails(PatientId),
+    DoctorId INT NOT NULL foreign key references DoctorDetails(DoctorId),
+
+    -- SOAP Notes
+    SubjectiveNotes NVARCHAR(MAX),
+    
+    -- Objective Section
+    BloodPressure NVARCHAR(20),
+    Pulse NVARCHAR(20),
+    Temperature NVARCHAR(20),
+    ObjectiveNotes NVARCHAR(MAX),
+
+    -- Assessment (Diagnosis)
+    Assessment NVARCHAR(MAX),
+
+    -- Plan - general advice
+    GeneralAdvice NVARCHAR(MAX),
+    CreatedAt DATETIME DEFAULT GETDATE(),
+    IsDeleted BIT DEFAULT 0,
+);
+INSERT INTO ConsultationDetails (
+    AppointmentId,
+    PatientId,
+    DoctorId,
+    SubjectiveNotes,
+    BloodPressure,
+    Pulse,
+    Temperature,
+    ObjectiveNotes,
+    Assessment,
+    GeneralAdvice
+)
+VALUES (
+    147,  -- AppointmentId
+    1,    -- PatientId
+    4,    -- DoctorId
+    'Test Subjective',
+    '120/80',
+    '72',
+    '98.6',
+    'Test Objective',
+    'Test Assessment',
+    'Test Advice'
+);
+
+select * from ConsultationDetails
+sp_helpconstraint ConsultationDetails
+
+delete from ConsultationDetails where ConsultationId=3
+
+--SP FOR THE CONSULTATION TABLE 
+
+CREATE PROCEDURE USP_AddConsultationDetails
+    @AppointmentId INT,
+    @PatientId INT,
+    @DoctorId INT,
+    @SubjectiveNotes NVARCHAR(MAX),
+    @BloodPressure NVARCHAR(50),
+    @Pulse NVARCHAR(50),
+    @Temperature NVARCHAR(50),
+    @ObjectiveNotes NVARCHAR(MAX),
+    @Assessment NVARCHAR(MAX),
+    @GeneralAdvice NVARCHAR(MAX)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    INSERT INTO ConsultationDetails (
+        AppointmentId,
+        PatientId,
+        DoctorId,
+        SubjectiveNotes,
+        BloodPressure,
+        Pulse,
+        Temperature,
+        ObjectiveNotes,
+        Assessment,
+        GeneralAdvice,
+        CreatedAt
+    )
+    VALUES (
+        @AppointmentId,
+        @PatientId,
+        @DoctorId,
+        @SubjectiveNotes,
+        @BloodPressure,
+        @Pulse,
+        @Temperature,
+        @ObjectiveNotes,
+        @Assessment,
+        @GeneralAdvice,
+        GETDATE()
+    );
+END;
+
+
+
 

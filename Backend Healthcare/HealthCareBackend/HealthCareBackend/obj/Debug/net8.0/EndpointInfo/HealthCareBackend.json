@@ -114,6 +114,37 @@
         }
       }
     },
+    "/api/Consultation/Add-Consultaion": {
+      "post": {
+        "tags": [
+          "Consultation"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConsultationDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConsultationDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConsultationDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/DeleteAppointment/Delete-Appointment": {
       "put": {
         "tags": [
@@ -897,6 +928,52 @@
             "format": "int32"
           },
           "status": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ConsultationDTO": {
+        "type": "object",
+        "properties": {
+          "appointmentId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "doctorId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "patientId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "subjectiveNotes": {
+            "type": "string",
+            "nullable": true
+          },
+          "bloodPressure": {
+            "type": "string",
+            "nullable": true
+          },
+          "pulse": {
+            "type": "string",
+            "nullable": true
+          },
+          "temperature": {
+            "type": "string",
+            "nullable": true
+          },
+          "objectiveNotes": {
+            "type": "string",
+            "nullable": true
+          },
+          "assessment": {
+            "type": "string",
+            "nullable": true
+          },
+          "generalAdvice": {
             "type": "string",
             "nullable": true
           }

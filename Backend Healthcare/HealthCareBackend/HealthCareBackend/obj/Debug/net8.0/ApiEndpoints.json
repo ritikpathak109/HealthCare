@@ -63,6 +63,22 @@
     ]
   },
   {
+    "ContainingType": "HealthCareBackend.Controllers.ConsultationController",
+    "Method": "AddConsultation",
+    "RelativePath": "api/Consultation/Add-Consultaion",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "consultationDTO",
+        "Type": "HealthCareBackend.DTOs.ConsultationDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "HealthCareBackend.Controllers.DeleteAppointmentController",
     "Method": "SoftDeleteAppointment",
     "RelativePath": "api/DeleteAppointment/Delete-Appointment",
