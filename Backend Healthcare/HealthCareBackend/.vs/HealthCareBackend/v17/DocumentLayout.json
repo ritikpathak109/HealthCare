@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\Repositories\\ConsultationRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HealthCareBackend\\Repositories\\ConsultationRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1F3F3976-B9CA-430F-84FE-0B5E0C28DDB8}|HealthCareBackend\\HealthCareBackend.csproj|c:\\users\\ritik\\desktop\\healthcare project\\backend healthcare\\healthcarebackend\\healthcarebackend\\repositories\\consultationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F3F3976-B9CA-430F-84FE-0B5E0C28DDB8}|HealthCareBackend\\HealthCareBackend.csproj|solutionrelative:healthcarebackend\\repositories\\consultationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1F3F3976-B9CA-430F-84FE-0B5E0C28DDB8}|HealthCareBackend\\HealthCareBackend.csproj|c:\\users\\ritik\\desktop\\healthcare project\\backend healthcare\\healthcarebackend\\healthcarebackend\\repositories\\patientdetailsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -295,16 +295,16 @@
       "RelativeMoniker": "D:0:0:{1F3F3976-B9CA-430F-84FE-0B5E0C28DDB8}|HealthCareBackend\\HealthCareBackend.csproj|solutionrelative:healthcarebackend\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\DTOs\\ConsultationDTO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HealthCareBackend\\DTOs\\ConsultationDTO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1F3F3976-B9CA-430F-84FE-0B5E0C28DDB8}|HealthCareBackend\\HealthCareBackend.csproj|c:\\users\\ritik\\desktop\\healthcare project\\backend healthcare\\healthcarebackend\\healthcarebackend\\dtos\\consultationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F3F3976-B9CA-430F-84FE-0B5E0C28DDB8}|HealthCareBackend\\HealthCareBackend.csproj|solutionrelative:healthcarebackend\\dtos\\consultationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\Controllers\\ConsultationController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HealthCareBackend\\Controllers\\ConsultationController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1F3F3976-B9CA-430F-84FE-0B5E0C28DDB8}|HealthCareBackend\\HealthCareBackend.csproj|c:\\users\\ritik\\desktop\\healthcare project\\backend healthcare\\healthcarebackend\\healthcarebackend\\controllers\\consultationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F3F3976-B9CA-430F-84FE-0B5E0C28DDB8}|HealthCareBackend\\HealthCareBackend.csproj|solutionrelative:healthcarebackend\\controllers\\consultationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ritik\\Desktop\\HealthCare Project\\Backend Healthcare\\HealthCareBackend\\HealthCareBackend\\Services\\ConsultationService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HealthCareBackend\\Services\\ConsultationService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1F3F3976-B9CA-430F-84FE-0B5E0C28DDB8}|HealthCareBackend\\HealthCareBackend.csproj|c:\\users\\ritik\\desktop\\healthcare project\\backend healthcare\\healthcarebackend\\healthcarebackend\\services\\consultationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F3F3976-B9CA-430F-84FE-0B5E0C28DDB8}|HealthCareBackend\\HealthCareBackend.csproj|solutionrelative:healthcarebackend\\services\\consultationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [

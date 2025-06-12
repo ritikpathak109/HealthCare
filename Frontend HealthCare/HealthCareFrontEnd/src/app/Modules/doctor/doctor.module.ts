@@ -7,6 +7,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DoctorDashboardComponent } from './components/doctor-dashboard/doctor-dashboard.component';
 import { TodaysAppointmentComponent } from './components/todays-appointment/todays-appointment.component';
+import { DoctorConsultationComponent } from './components/doctor-consultation/doctor-consultation.component';
+import { FinalConsultationSlipComponent } from './components/final-consultation-slip/final-consultation-slip.component';
 
 
 
@@ -14,7 +16,9 @@ import { TodaysAppointmentComponent } from './components/todays-appointment/toda
   declarations: [
     DoctorRegistrationComponent,
     DoctorDashboardComponent,
-    TodaysAppointmentComponent
+    TodaysAppointmentComponent,
+    DoctorConsultationComponent,
+    FinalConsultationSlipComponent
   ],
   imports: [
     CommonModule,

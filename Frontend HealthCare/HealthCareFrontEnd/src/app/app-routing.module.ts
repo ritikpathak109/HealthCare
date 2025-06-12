@@ -13,6 +13,8 @@ const routes: Routes = [
   { path: 'manage-appointment', loadChildren: () => import('./Modules/patient/patient.module').then(m => m.PatientModule) },
   { path: 'doctor-dashboard', loadChildren: () => import('./Modules/doctor/doctor.module').then(m => m.DoctorModule) },
   { path: 'todays-appointment', loadChildren: () => import('./Modules/doctor/doctor.module').then(m => m.DoctorModule) },
+  { path: 'doctor-consultation', loadChildren: () => import('./Modules/doctor/doctor.module').then(m => m.DoctorModule) },
+  { path: 'finalConsultationSlip', loadChildren: () => import('./Modules/doctor/doctor.module').then(m => m.DoctorModule) },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
 
 ];

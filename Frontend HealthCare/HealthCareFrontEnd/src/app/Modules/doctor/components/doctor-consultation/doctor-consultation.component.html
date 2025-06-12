@@ -1,0 +1,115 @@
+<link
+  href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap"
+  rel="stylesheet"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<nav class="navbar">
+  <div class="logo-container">
+    <img src="assets/images/Logo.png" alt="HealthEase Logo" class="logo-img" />
+    <span class="portal-name">HealthEase</span>
+  </div>
+  <button class="logout-btn" (click)="logout()">
+    <i class="fa fa-sign-out" aria-hidden="true"></i> Logout
+  </button>
+</nav>
+
+<div class="sidebar" id="sidebar">
+  <div class="hamburger-icon" id="hamburger">
+    <i class="fa fa-bars" style="font-size: 24px; color: #00796b"></i>
+  </div>
+  <div class="nav-links">
+    <ul>
+      <li>
+        <a routerLink="/doctor/doctor-dashboard"
+          ><i class="fa fa-home" aria-hidden="true" style="font-size: 21px">
+            &nbsp;
+          </i>
+          Dashboard</a
+        >
+      </li>
+      </ul>
+  </div>
+</div>
+
+<div class="main-content">
+  <div class="container">
+    <h2>Consultation Form</h2>
+
+    <div class="consultation-form">
+      <div class="form-section">
+        <h3>Subjective</h3>
+        <textarea
+          id="subjective"
+          name="subjective"
+          rows="6"
+          placeholder="Describe patient's complaints"
+        ></textarea>
+      </div>
+
+      <div class="form-section">
+        <h3>Objective (Vitals)</h3>
+        <div class="form-group-inline">
+          <div class="form-group">
+            <label for="bp">BP</label>
+            <input type="text" id="bp" name="bp" placeholder="e.g. 120/80" />
+          </div>
+          <div class="form-group">
+            <label for="pulse">Pulse</label>
+            <input type="text" id="pulse" name="pulse" placeholder="e.g. 72 bpm" />
+          </div>
+          <div class="form-group">
+            <label for="temperature">Temperature</label>
+            <input
+              type="text"
+              id="temperature"
+              name="temperature"
+              placeholder="e.g. 98.6 °F"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h3>Assessment</h3>
+        <textarea
+          id="assessment"
+          name="assessment"
+          rows="6"
+          placeholder="Doctor's diagnosis or findings"
+        ></textarea>
+      </div>
+
+      <div class="form-section">
+        <h3>Plan</h3>
+        <div class="form-group">
+          <label for="medicines">Medicines</label>
+          <input
+            type="text"
+            id="medicines"
+            name="medicines"
+            placeholder="e.g. Paracetamol 500mg"
+          />
+        </div>
+        <div class="form-group">
+          <label for="tests">Tests</label>
+          <input type="text" id="tests" name="tests" placeholder="e.g. CBC, X-Ray" />
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h3>Advice</h3>
+        <textarea
+          id="advice"
+          name="advice"
+          rows="6"
+          placeholder="e.g. Drink plenty of fluids, take rest, follow-up in 3 days"
+        ></textarea>
+      </div>
+
+      <button type="submit" class="primary-button">Save Consultation</button>
+    </div>
+    </div>
+</div>

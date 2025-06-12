@@ -1,0 +1,316 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Full height and width for body, setting default font and preventing horizontal overflow */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Navbar styles: fixed at top, teal background, flex layout */
+.navbar {
+  background-color: #00796b;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10; /* Ensures navbar stays on top */
+  justify-content: space-between; /* This overrides flex-start if it was present */
+}
+
+/* Logo and portal name container in navbar */
+.navbar .logo-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Styling for the logo image in the navbar */
+.navbar .logo-img {
+  height: 80px;
+  width: auto;
+  opacity: 0.9;
+  margin-right: 10px;
+}
+
+/* Styling for the portal name text in the navbar */
+.navbar .portal-name {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Hamburger icon styles: for mobile menu toggle */
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  padding: 10px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 11; /* Ensures hamburger is above sidebar */
+}
+
+/* Sidebar styles: fixed position, white background, transitions for smooth movement */
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background-color: #ffffff;
+  position: fixed;
+  top: 80px; /* Below the navbar */
+  left: 0;
+  padding-top: 20px;
+  z-index: 9; /* Below the navbar and hamburger */
+  transition: transform 0.3s ease;
+  transform: translateX(0); /* Default visible state */
+}
+
+/* Remove default list styling */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Anchor tag styling within sidebar list items */
+.sidebar ul li a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  padding: 15px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    padding-left 0.3s ease; /* Smooth transitions for hover effects */
+}
+
+/* Hover effect for sidebar links */
+.sidebar ul li a:hover {
+  background-color: #00796b;
+  color: #ffffff;
+  padding-left: 26px; /* Increased padding-left on hover for visual feedback */
+}
+
+/* Main content wrapper: gradient background, padding, and margin to account for sidebar */
+.main-content {
+  background: linear-gradient(to right, #e0f7fa, #ffffff);
+  min-height: calc(100vh - 50px); /* Adjust height to fit viewport minus navbar height */
+  padding: 90px 20px 20px 20px; /* Padding for content, top padding accounts for navbar */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align items to the start (top) to allow content to flow */
+  margin-left: 220px; /* Space for the sidebar */
+  transition: margin-left 0.3s ease; /* Smooth transition for sidebar toggle */
+}
+
+.logout-btn {
+  /* Default state: Blend with the navbar background color */
+  background-color: #00796b; /* Same as your .navbar background */
+  color: white; /* Keep text and icon color white */
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  /* Smooth transitions for a professional feel */
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+  margin-left: auto; /* Ensures it pushes to the far right */
+  box-shadow: none; /* No shadow by default, for a blended look */
+}
+
+.logout-btn:hover {
+  background-color: #bc1616; /* Darker maroon on hover */
+  transform: translateY(-1px); /* Slight lift effect on hover */
+}
+
+/* General container styles for forms/cards */
+.container {
+  width: 100%;
+  max-width: 90%; /* Use percentage for flexibility */
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 128, 128, 0.2); /* Teal-ish shadow */
+  margin: 30px auto 20px; /* Top margin, auto horizontal for centering, bottom margin */
+  box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+/* Heading 2 styling */
+h2 {
+  text-align: center;
+  color: #00796b;
+  margin-bottom: 25px;
+}
+
+/* General button styling */
+button {
+  background-color: #00796b;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #004d40;
+}
+
+/* --- NEW CONSULTATION FORM STYLES --- */
+
+.consultation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between sections */
+}
+
+.form-section {
+  background-color: #f8fcfd; /* Light background for sections */
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e0f7fa; /* Light border */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.form-section h3 {
+  color: #00796b;
+  margin-bottom: 15px;
+  font-size: 1.2em; /* Slightly larger for main section headings */
+  font-weight: 600; /* Bolder for section headings */
+}
+
+/* Apply consistent styling to all form inputs and textareas */
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500; /* Slightly lighter than h3 for labels */
+  color: #333;
+}
+
+.form-group input[type='text'],
+.form-section textarea { /* Target textarea within form-section directly */
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #b2dfdb; /* Light teal border */
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box; /* Include padding in width */
+  /* Remove default browser styles for consistency */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.form-group input[type='text']:focus,
+.form-section textarea:focus {
+  border-color: #00796b; /* Darker teal on focus */
+  box-shadow: 0 0 0 3px rgba(0, 121, 107, 0.2); /* Soft teal glow */
+  outline: none;
+}
+
+.form-section textarea {
+  resize: vertical; /* Allow vertical resizing */
+  min-height: 100px; /* Increased minimum height for textareas */
+}
+
+.form-group-inline {
+  display: flex;
+  gap: 20px; /* Space between inline form groups */
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+.form-group-inline .form-group {
+  flex: 1; /* Distribute space evenly */
+  min-width: 180px; /* Increased minimum width for inputs before wrapping */
+  margin-bottom: 0; /* Remove extra margin if already handled by gap */
+}
+
+.primary-button {
+  display: block; /* Make button full width or centered */
+  width: auto; /* Auto width */
+  min-width: 180px; /* A bit wider */
+  margin: 30px auto 0; /* Center horizontally, add top margin */
+  padding: 12px 25px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #00796b; /* Primary teal color */
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.primary-button:hover {
+  background-color: #004d40; /* Darker teal on hover */
+  transform: translateY(-2px); /* Slight lift */
+  box-shadow: 0 4px 10px rgba(0, 121, 107, 0.4); /* More pronounced shadow */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .navbar .logo-img {
+    height: 60px;
+  }
+
+  .container {
+    padding: 20px;
+    margin-top: 80px;
+    max-width: 95%; /* Even wider on small screens */
+  }
+
+  .main-content {
+    padding-top: 80px;
+    margin-left: 0; /* Sidebar will overlay on mobile */
+    transition: margin-left 0.3s ease; /* Ensure smooth transition */
+  }
+
+  .hamburger-icon {
+    display: flex; /* Ensure hamburger is visible on mobile */
+  }
+
+  .sidebar {
+    transform: translateX(-100%); /* Hide sidebar by default on mobile */
+    top: 0; /* Adjust top for full height overlay */
+    height: 100vh; /* Full viewport height */
+  }
+
+  /* Active state for sidebar on mobile */
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  /* Adjust main content when sidebar is active on mobile */
+  .main-content.sidebar-active {
+    margin-left: 220px; /* Push content to the right to show sidebar */
+  }
+
+  .form-group-inline {
+    flex-direction: column; /* Stack inline inputs vertically on small screens */
+    gap: 15px; /* Adjust gap for stacked items */
+  }
+
+  .form-group-inline .form-group {
+    min-width: 100%; /* Full width for stacked inputs */
+  }
+
+  .primary-button {
+    width: 100%; /* Full width button on small screens */
+    min-width: unset;
+  }
+}

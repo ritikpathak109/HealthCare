@@ -28,10 +28,13 @@ export class TodaysAppointmentComponent implements OnInit {
 
   }
 
-  logout(){
-
-     localStorage.clear();
-       this.router.navigate(['/login']);
+  startConsultation(appointmentId: any) {
+    this.router.navigate(['/doctor/doctor-consultation', appointmentId]);
   }
-  
+
+  logout() {
+    localStorage.clear();
+    this.router.navigate(['/login']);
+  }
+
 }
