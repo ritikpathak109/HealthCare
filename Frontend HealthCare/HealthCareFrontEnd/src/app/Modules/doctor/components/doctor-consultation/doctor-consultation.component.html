@@ -1,10 +1,6 @@
-<link
-  href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap"
-  rel="stylesheet"
-/>
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap"
+  rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 />
 <nav class="navbar">
   <div class="logo-container">
@@ -93,10 +89,15 @@
             placeholder="e.g. Paracetamol 500mg"
           />
         </div>
-        <div class="form-group">
+        <div *ngFor="let test of getTestsFormControls(); let i = index" class="form-group">
           <label for="tests">Tests</label>
-          <input type="text" id="tests" name="tests" placeholder="e.g. CBC, X-Ray" />
+          <input  formControlName="Tests" type="text" id="tests" name="tests" placeholder="e.g. CBC, X-Ray" />
+          <br> 
+             <button (click)="removeTest(i)">Remove Test</button>
         </div>
+
+        <br>
+         <button (click)="addTest()">Add new test</button>
       </div>
 
       <div class="form-section">
