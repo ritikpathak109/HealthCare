@@ -31,8 +31,7 @@ export class DoctorConsultationComponent implements OnInit {
         //  DoctorAddress: ['', [Validators.required,  Validators.minLength(5)]],
         //  DoctorPhoneNumber: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]], 
         //  SpecializationId: ['', [Validators.required]],
-        //  ExperienceYears: ['', [Validators.required ]],
-       
+        //  ExperienceYears: ['', [Validators.required ]],       
        });
 
 

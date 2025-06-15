@@ -745,5 +745,44 @@ BEGIN
 END;
 
 
+--MEDICINE CATEGORY TABLE
+CREATE TABLE MedicineCategoryMaster (
+    CategoryId INT PRIMARY KEY IDENTITY(1,1),
+    CategoryName NVARCHAR(100) NOT NULL UNIQUE,
+    IsDeleted BIT DEFAULT 0,
+    CreatedDate DATETIME DEFAULT GETDATE()
+);
+
+
+--MEDICINE TABLE
+CREATE TABLE MedicineMaster (
+    MedicineId INT PRIMARY KEY IDENTITY(1,1),
+    MedicineName NVARCHAR(100) NOT NULL UNIQUE,
+    CategoryId INT NOT NULL foreign key references MedicineCategoryMaster(CategoryId) ,
+    MedicineType NVARCHAR(50) NOT NULL, -- e.g., Tablet, Syrup
+    Manufacturer NVARCHAR(100),
+    PricePerUnit DECIMAL(10,2),
+    IsDeleted BIT DEFAULT 0,
+    CreatedDate DATETIME DEFAULT GETDATE(),
+); 
+
+
+--MEDICINE INVENTORY
+CREATE TABLE MedicineInventory (
+    InventoryId INT PRIMARY KEY IDENTITY(1,1),
+    MedicineId INT NOT NULL foreign key references MedicineMaster (MedicineId) ,
+    BatchNumber NVARCHAR(50), -- Optional but useful
+    Quantity INT NOT NULL,
+    ExpiryDate DATE,
+    ReceivedDate DATE,
+    IsDeleted BIT DEFAULT 0,
+    CreatedDate DATETIME DEFAULT GETDATE()
+	);
+
+
+
+
+
+
 
 
