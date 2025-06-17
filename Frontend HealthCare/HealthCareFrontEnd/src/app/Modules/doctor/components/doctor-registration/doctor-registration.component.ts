@@ -42,8 +42,6 @@ specialization: any;
         RoleId: selectedRoleId
       });
     }
-    
-    
     this.loadCountries();
      this.doctorRegisterForm.get('CountryId')?.valueChanges.subscribe((countryId) => {
       if (countryId) {
