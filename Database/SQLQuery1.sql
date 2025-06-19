@@ -754,6 +754,19 @@ CREATE TABLE MedicineCategoryMaster (
 );
 
 
+
+INSERT INTO MedicineCategoryMaster (CategoryName)
+VALUES 
+('Antibiotic'),
+('Analgesic'),
+('Antipyretic'),
+('Antihistamine'),
+('Antacid'),
+('Antiseptic'),
+('Antifungal'),
+('Cough Suppressant');
+
+
 --MEDICINE TABLE
 CREATE TABLE MedicineMaster (
     MedicineId INT PRIMARY KEY IDENTITY(1,1),
@@ -765,6 +778,19 @@ CREATE TABLE MedicineMaster (
     IsDeleted BIT DEFAULT 0,
     CreatedDate DATETIME DEFAULT GETDATE(),
 ); 
+
+INSERT INTO MedicineMaster (MedicineName, CategoryId, MedicineType, Manufacturer, PricePerUnit)
+VALUES
+('Paracetamol 500mg', 3, 'Tablet', 'Cipla', 2.50),
+('Amoxicillin 250mg', 1, 'Capsule', 'Sun Pharma', 5.00),
+('Cetirizine 10mg', 4, 'Tablet', 'Zydus', 1.20),
+('Pantoprazole 40mg', 5, 'Tablet', 'Lupin', 3.00),
+('Betadine Ointment', 6, 'Ointment', 'Himalaya', 7.00),
+('Clotrimazole Cream', 7, 'Cream', 'Glenmark', 6.50),
+('Dolo 650mg', 3, 'Tablet', 'Micro Labs', 2.75),
+('Cough Syrup DX', 8, 'Syrup', 'Abbott', 10.00);
+
+
 
 
 --MEDICINE INVENTORY
@@ -780,9 +806,81 @@ CREATE TABLE MedicineInventory (
 	);
 
 
+	-- Paracetamol batch
+INSERT INTO MedicineInventory (MedicineId, BatchNumber, Quantity, ExpiryDate, ReceivedDate)
+VALUES (1, 'PARA-A1001', 500, '2026-01-01', '2025-06-10');
+
+-- Amoxicillin batch
+INSERT INTO MedicineInventory (MedicineId, BatchNumber, Quantity, ExpiryDate, ReceivedDate)
+VALUES (2, 'AMOX-B203', 300, '2026-12-01', '2025-06-05');
+
+-- Cetirizine batch
+INSERT INTO MedicineInventory (MedicineId, BatchNumber, Quantity, ExpiryDate, ReceivedDate)
+VALUES (3, 'CETI-CX101', 200, '2025-11-15', '2025-06-01');
+
+-- Dolo 650 batch
+INSERT INTO MedicineInventory (MedicineId, BatchNumber, Quantity, ExpiryDate, ReceivedDate)
+VALUES (7, 'DOLO-DX550', 1000, '2027-01-01', '2025-06-09');
 
 
 
 
+select * from MedicineCategoryMaster
+select * from MedicineMaster
+select * from MedicineInventory
 
 
+CREATE PROCEDURE  USP_GetAvailableMedicinesForDoctor
+AS
+BEGIN
+    /*
+        Purpose:
+        Returns a list of medicines that are available for doctors to prescribe during consultations.
+
+        Logic:
+        - Only includes medicines that:
+            - Are not soft-deleted
+            - Have at least one inventory batch
+            - That batch is not soft-deleted
+            - That batch has not expired and is not expiring within the next 15 days
+            - That batch has a positive quantity
+
+        Grouped to return total valid quantity per medicine.
+
+        Note:
+        - This hides nearly-expiring batches (within 15 days) from the doctor's dropdown.
+        - Pharmacy system will handle batch-wise deduction separately.
+    */
+
+    SELECT 
+        mm.MedicineId,
+        mm.MedicineName,
+        mm.MedicineType,
+        mm.Manufacturer,
+        mm.PricePerUnit,
+        cm.CategoryName,
+        SUM(mi.Quantity) AS TotalStock
+    FROM 
+        MedicineMaster mm
+    INNER JOIN 
+        MedicineCategoryMaster cm ON mm.CategoryId = cm.CategoryId
+    INNER JOIN 
+        MedicineInventory mi ON mm.MedicineId = mi.MedicineId
+    WHERE 
+        mm.IsDeleted = 0
+        AND mi.IsDeleted = 0
+        AND mi.ExpiryDate >= DATEADD(DAY, 15, CONVERT(DATE, GETDATE()))
+        AND mi.Quantity > 0
+    GROUP BY 
+        mm.MedicineId,
+        mm.MedicineName,
+        mm.MedicineType,
+        mm.Manufacturer,
+        mm.PricePerUnit,
+        cm.CategoryName
+    ORDER BY 
+        mm.MedicineName;
+END;
+
+
+exec USP_GetAvailableMedicinesForDoctor
