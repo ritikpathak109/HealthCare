@@ -432,6 +432,44 @@
         }
       }
     },
+    "/api/GetMedicines/Get-Medicine": {
+      "get": {
+        "tags": [
+          "GetMedicines"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CountryDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CountryDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CountryDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/Login/LoginUser": {
       "post": {
         "tags": [
@@ -844,45 +882,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          }
-        }
-      }
-    },
-    "/WeatherForecast": {
-      "get": {
-        "tags": [
-          "WeatherForecast"
-        ],
-        "operationId": "GetWeatherForecast",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
-                }
-              }
-            }
           }
         }
       }
@@ -1320,29 +1319,6 @@
             "nullable": true
           },
           "userPassword": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "WeatherForecast": {
-        "type": "object",
-        "properties": {
-          "date": {
-            "type": "string",
-            "format": "date"
-          },
-          "temperatureC": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "temperatureF": {
-            "type": "integer",
-            "format": "int32",
-            "readOnly": true
-          },
-          "summary": {
             "type": "string",
             "nullable": true
           }

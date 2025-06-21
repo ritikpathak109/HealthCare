@@ -242,6 +242,26 @@
     ]
   },
   {
+    "ContainingType": "HealthCareBackend.Controllers.GetMedicinesController",
+    "Method": "GetCountries",
+    "RelativePath": "api/GetMedicines/Get-Medicine",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[HealthCareBackend.DTOs.CountryDTO, HealthCareBackend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "HealthCareBackend.Controllers.LoginController",
     "Method": "Login",
     "RelativePath": "api/Login/LoginUser",
@@ -461,26 +481,5 @@
       }
     ],
     "ReturnTypes": []
-  },
-  {
-    "ContainingType": "HealthCareBackend.Controllers.WeatherForecastController",
-    "Method": "Get",
-    "RelativePath": "WeatherForecast",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[HealthCareBackend.WeatherForecast, HealthCareBackend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ],
-    "EndpointName": "GetWeatherForecast"
   }
 ]

@@ -53,6 +53,8 @@ builder.Services.AddScoped<DoctorTodaysAppointmentRepository>();
 builder.Services.AddScoped<DoctorTodaysAppointmentService>();
 builder.Services.AddScoped<ConsultationRepository>();
 builder.Services.AddScoped<ConsultationService>();
+builder.Services.AddScoped<GetMedicinesRepository>();
+builder.Services.AddScoped<GetMedicinesService>();
 
 // Configure DbContext with the correct connection string
 builder.Services.AddDbContext<MyDbContext>(options =>

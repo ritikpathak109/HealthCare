@@ -26,6 +26,7 @@ namespace HealthCareBackend.Models
         public DbSet<SlotDTO> USP_GetAvailableSlots { get; set; }
         public DbSet<DoctorTodaysAppointmentDTO> USP_GetTodayApprovedAppointmentsForDoctor { get; set; }
         public DbSet<ConsultationDTO> USP_AddConsultationDetails { get; set; }
+        public DbSet<MedicinesDTO> USP_GetAvailableMedicinesForDoctor { get; set; }
 
 
     }

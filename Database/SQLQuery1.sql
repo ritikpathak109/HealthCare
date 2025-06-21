@@ -745,7 +745,7 @@ BEGIN
 END;
 
 
---MEDICINE CATEGORY TABLE
+--MEDICINE CATEGORY TABLE WHICH TYPE OF MEDICINE IT IS 
 CREATE TABLE MedicineCategoryMaster (
     CategoryId INT PRIMARY KEY IDENTITY(1,1),
     CategoryName NVARCHAR(100) NOT NULL UNIQUE,
@@ -793,7 +793,7 @@ VALUES
 
 
 
---MEDICINE INVENTORY
+--MEDICINE INVENTORY TABLE SHOWS THE NUMBER OF MEDECINES IN THE STOCK
 CREATE TABLE MedicineInventory (
     InventoryId INT PRIMARY KEY IDENTITY(1,1),
     MedicineId INT NOT NULL foreign key references MedicineMaster (MedicineId) ,
@@ -829,7 +829,7 @@ select * from MedicineCategoryMaster
 select * from MedicineMaster
 select * from MedicineInventory
 
-
+--STORED PROCEDURE TO GET THE NAME OF MEDICINES AND TOTAL NUMBER OF MEDICINES IN ALL BATCHES AND OTHER DETILS ALSO
 CREATE PROCEDURE  USP_GetAvailableMedicinesForDoctor
 AS
 BEGIN
@@ -884,3 +884,49 @@ END;
 
 
 exec USP_GetAvailableMedicinesForDoctor
+
+
+--THIS TABLES SHOWS WHAT TYPE OF TEST IT IS
+CREATE TABLE TestTypeMaster (
+    TestTypeId INT PRIMARY KEY IDENTITY(1,1),
+    TestTypeName NVARCHAR(100) NOT NULL UNIQUE    -- e.g., Radiology, Pathology
+);
+
+
+--table shows the test which are available
+CREATE TABLE TestMaster (
+    TestId INT PRIMARY KEY IDENTITY(1,1),
+    TestName NVARCHAR(150) NOT NULL UNIQUE         -- e.g., CBC, X-Ray, LFT
+);
+
+
+--TABLE SHOWS DETILS OF THE TEST ARE AVAILABLE
+CREATE TABLE TestDetails (
+    TestDetailId INT PRIMARY KEY IDENTITY(1,1),
+    TestId INT FOREIGN KEY REFERENCES TestMaster(TestId),
+    TestTypeId INT FOREIGN KEY REFERENCES TestTypeMaster(TestTypeId),
+    TestPrice DECIMAL(12,2),                           -- e.g., 250.00
+    TestDescription NVARCHAR(250),                 -- e.g., What is this test for?
+    PreparationInstructions NVARCHAR(250),         -- e.g., Fasting required or not
+    IsDeleted BIT DEFAULT 0,
+    CreatedDate DATETIME DEFAULT GETDATE()
+);
+
+--SP FOR THE AVAILABLE TEST 
+CREATE PROCEDURE USP_GetAvailableTests
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT 
+        td.TestDetailId,
+        tm.TestName,
+        ttm.TestTypeName,
+        td.Price,
+        td.TestDescription,
+        td.PreparationInstructions
+    FROM TestDetails td
+    INNER JOIN TestMaster tm ON td.TestId = tm.TestId
+    INNER JOIN TestTypeMaster ttm ON td.TestTypeId = ttm.TestTypeId
+    WHERE td.IsDeleted = 0;
+END;
